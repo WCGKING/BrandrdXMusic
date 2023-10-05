@@ -1,13 +1,13 @@
 <h2 align="center">
-    ──「 ⛦🦋ѵ͠αℓeɳсι͢а⍣̥ ❥ 」──
+    ──「⛦🦋 𝗕𝗥𝗔𝗡𝗗𝗥𝗗 ✘ 𝗠𝗨𝗦𝗜𝗖 🦋⛦」──
 </h2>
 
 <p align="center">
-  <img src="https://te.legra.ph/file/8593cfb40b5515b05c773.jpg">
+  <img src="https://te.legra.ph/file/29626078a1324cf58ce2a.jpg">
 </p>
 
 <p align="center">
-<a href="https://github.com/CoderXPiyush/ValenciaXMusic/stargazers"><img src="https://img.shields.io/github/stars/CoderXPiyush/ValenciaXMusic?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/WCGKING/stargazers"><img src="https://img.shields.io/github/stars/CoderXPiyush/ValenciaXMusic?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
 <a href="https://github.com/CoderXPiyush/ValenciaXMusic/network/members"> <img src="https://img.shields.io/github/forks/CoderXPiyush/ValenciaXMusic?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
 <a href="https://github.com/CoderXPiyush/ValenciaXMusic/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /> </a>
