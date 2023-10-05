@@ -16,6 +16,12 @@
 <a href="https://github.com/CoderXPiyush/ValenciaXMusic/commits/CoderXPiyush"> <img src="https://img.shields.io/github/last-commit/CoderXPiyush/ValenciaXMusic?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
 </p>
 
+━━━━━━━━━━━━━━━━━━━━
+
+<p align="center">
+  <img src="https://te.legra.ph/file/8a552f795414972ea1ba9.jpg">
+</p>
+
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
