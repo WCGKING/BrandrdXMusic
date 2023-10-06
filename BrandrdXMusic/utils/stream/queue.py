@@ -1,8 +1,8 @@
 import asyncio
 from typing import Union
 
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils.formatters import check_duration, seconds_to_min
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils.formatters import check_duration, seconds_to_min
 from config import autoclean, time_to_seconds
 
 
