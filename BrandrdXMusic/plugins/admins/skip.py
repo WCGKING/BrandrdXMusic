@@ -2,14 +2,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from ValenciaXMusic import YouTube, app
-from ValenciaXMusic.core.call import Hotty
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils.database import get_loop
-from ValenciaXMusic.utils.decorators import AdminRightsCheck
-from ValenciaXMusic.utils.inline import close_markup, stream_markup
-from ValenciaXMusic.utils.stream.autoclear import auto_clean
-from ValenciaXMusic.utils.thumbnails import get_thumb
+from BrandrdXMusic import YouTube, app
+from BrandrdXMusic.core.call import Hotty
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils.database import get_loop
+from BrandrdXMusic.utils.decorators import AdminRightsCheck
+from BrandrdXMusic.utils.inline import close_markup, stream_markup
+from BrandrdXMusic.utils.stream.autoclear import auto_clean
+from BrandrdXMusic.utils.thumbnails import get_thumb
 from config import BANNED_USERS
 
 
