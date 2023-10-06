@@ -16,10 +16,10 @@ from config import (
     SONG_DOWNLOAD_DURATION,
     SONG_DOWNLOAD_DURATION_LIMIT,
 )
-from ValenciaXMusic import YouTube, app
-from ValenciaXMusic.utils.decorators.language import language, languageCB
-from ValenciaXMusic.utils.formatters import convert_bytes
-from ValenciaXMusic.utils.inline.song import song_markup
+from BrandrdXMusic import YouTube, app
+from BrandrdXMusic.utils.decorators.language import language, languageCB
+from BrandrdXMusic.utils.formatters import convert_bytes
+from BrandrdXMusic.utils.inline.song import song_markup
 
 # Song Module
 
