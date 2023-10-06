@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.types import Message
 from unidecode import unidecode
 
-from ValenciaXMusic import app
+from BrandrdXMusic import app
 from config import OWNER_ID
-from ValenciaXMusic.utils.database import (
+from BrandrdXMusic.utils.database import (
     get_active_chats,
     get_active_video_chats,
     remove_active_chat,
