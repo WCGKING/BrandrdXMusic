@@ -5,8 +5,8 @@ from pyrogram.types import (
 )
 from youtubesearchpython.__future__ import VideosSearch
 
-from ValenciaXMusic import app
-from ValenciaXMusic.utils.inlinequery import answer
+from BrandrdXMusic import app
+from BrandrdXMusic.utils.inlinequery import answer
 from config import BANNED_USERS
 
 
