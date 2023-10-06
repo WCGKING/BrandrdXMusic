@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from ValenciaXMusic import app
-from ValenciaXMusic.core.call import Hotty
-from ValenciaXMusic.utils.database import is_music_playing, music_off
-from ValenciaXMusic.utils.decorators import AdminRightsCheck
-from ValenciaXMusic.utils.inline import close_markup
+from BrandrdXMusic import app
+from BrandrdXMusic.core.call import Hotty
+from BrandrdXMusic.utils.database import is_music_playing, music_off
+from BrandrdXMusic.utils.decorators import AdminRightsCheck
+from BrandrdXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
