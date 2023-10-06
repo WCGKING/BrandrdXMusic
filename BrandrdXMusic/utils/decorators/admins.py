@@ -1,9 +1,9 @@
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from ValenciaXMusic import app
-from ValenciaXMusic.misc import SUDOERS, db
-from ValenciaXMusic.utils.database import (
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import SUDOERS, db
+from BrandrdXMusic.utils.database import (
     get_authuser_names,
     get_cmode,
     get_lang,
