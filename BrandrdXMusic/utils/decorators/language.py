@@ -1,6 +1,6 @@
 from strings import get_string
-from ValenciaXMusic.misc import SUDOERS
-from ValenciaXMusic.utils.database import (get_lang, is_maintenance)
+from BrandrdXMusic.misc import SUDOERS
+from BrandrdXMusic.utils.database import (get_lang, is_maintenance)
 
 
 def language(mystic):
