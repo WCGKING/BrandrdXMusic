@@ -1,8 +1,8 @@
-from ValenciaXMusic.core.bot import Hotty
-from ValenciaXMusic.core.dir import dirr
-from ValenciaXMusic.core.git import git
-from ValenciaXMusic.core.userbot import Userbot
-from ValenciaXMusic.misc import dbb, heroku
+from BrandrdXMusic.core.bot import Hotty
+from BrandrdXMusic.core.dir import dirr
+from BrandrdXMusic.core.git import git
+from BrandrdXMusic.core.userbot import Userbot
+from BrandrdXMusic.misc import dbb, heroku
 
 from .logging import LOGGER
 
