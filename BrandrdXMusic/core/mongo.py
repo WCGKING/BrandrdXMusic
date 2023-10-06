@@ -30,4 +30,3 @@ else:
     _mongo_sync_ = MongoClient(config.MONGO_DB_URI)
     mongodb = _mongo_async_.Valencia
     pymongodb = _mongo_sync_.Valencia
-
