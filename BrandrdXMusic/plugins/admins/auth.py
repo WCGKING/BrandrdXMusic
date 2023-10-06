@@ -1,16 +1,16 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from ValenciaXMusic import app
-from ValenciaXMusic.utils import extract_user, int_to_alpha
-from ValenciaXMusic.utils.database import (
+from BrandrdXMusic import app
+from BrandrdXMusic.utils import extract_user, int_to_alpha
+from BrandrdXMusic.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from ValenciaXMusic.utils.decorators import AdminActual, language
-from ValenciaXMusic.utils.inline import close_markup
+from BrandrdXMusic.utils.decorators import AdminActual, language
+from BrandrdXMusic.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 
 
