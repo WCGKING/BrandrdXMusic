@@ -1,9 +1,4 @@
 ━━━━━━━━━━━━━━━━━━━━
-<p align="center">
-🇮🇳 𝐕𝐈𝐒𝐈𝐓𝐎𝐑𝐒 🇮🇳
-
-<!--
-**WCGKING/WCGKING** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 <h2 align="center">
     ──「⛦🦋 𝗕𝗥𝗔𝗡𝗗𝗥𝗗 ✘ 𝗠𝗨𝗦𝗜𝗖 🦋⛦」──
