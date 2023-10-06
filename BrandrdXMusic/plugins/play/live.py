@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from ValenciaXMusic import YouTube, app
-from ValenciaXMusic.utils.channelplay import get_channeplayCB
-from ValenciaXMusic.utils.decorators.language import languageCB
-from ValenciaXMusic.utils.stream.stream import stream
+from BrandrdXMusic import YouTube, app
+from BrandrdXMusic.utils.channelplay import get_channeplayCB
+from BrandrdXMusic.utils.decorators.language import languageCB
+from BrandrdXMusic.utils.stream.stream import stream
 from config import BANNED_USERS
 
 
