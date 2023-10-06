@@ -3,10 +3,10 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from ValenciaXMusic import app
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils.decorators import AdminRightsCheck
-from ValenciaXMusic.utils.inline import close_markup
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils.decorators import AdminRightsCheck
+from BrandrdXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
