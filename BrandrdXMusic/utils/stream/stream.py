@@ -5,15 +5,15 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from ValenciaXMusic import Carbon, YouTube, app
-from ValenciaXMusic.core.call import Hotty
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils.database import add_active_video_chat, is_active_chat
-from ValenciaXMusic.utils.exceptions import AssistantErr
-from ValenciaXMusic.utils.inline import aq_markup, close_markup, stream_markup
-from ValenciaXMusic.utils.pastebin import HottyBin
-from ValenciaXMusic.utils.stream.queue import put_queue, put_queue_index
-from ValenciaXMusic.utils.thumbnails import get_thumb
+from BrandrdXMusic import Carbon, YouTube, app
+from BrandrdXMusic.core.call import Hotty
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils.database import add_active_video_chat, is_active_chat
+from BrandrdXMusic.utils.exceptions import AssistantErr
+from BrandrdXMusic.utils.inline import aq_markup, close_markup, stream_markup
+from BrandrdXMusic.utils.pastebin import HottyBin
+from BrandrdXMusic.utils.stream.queue import put_queue, put_queue_index
+from BrandrdXMusic.utils.thumbnails import get_thumb
 
 
 async def stream(
