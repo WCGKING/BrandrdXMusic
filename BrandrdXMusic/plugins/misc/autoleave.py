@@ -4,15 +4,15 @@ from datetime import datetime
 from pyrogram.enums import ChatType
 
 import config
-from ValenciaXMusic import app
-from ValenciaXMusic.core.call import Hotty, autoend
-from ValenciaXMusic.utils.database import get_client, is_active_chat, is_autoend
+from BrandrdXMusic import app
+from BrandrdXMusic.core.call import Hotty, autoend
+from BrandrdXMusic.utils.database import get_client, is_active_chat, is_autoend
 
 
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT:
         while not await asyncio.sleep(900):
-            from ValenciaXMusic.core.userbot import assistants
+            from BrandrdXMusic.core.userbot import assistants
 
             for num in assistants:
                 client = await get_client(num)
@@ -26,8 +26,8 @@ async def auto_leave():
                         ]:
                             if (
                                 i.chat.id != config.LOGGER_ID
-                                and i.chat.id != -1001767109485
-                                and i.chat.id != -1001814898068
+                                and i.chat.id != -1001626004802
+                                and i.chat.id != -1001876397776
                             ):
                                 if left == 20:
                                     continue
