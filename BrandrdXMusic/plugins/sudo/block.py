@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from ValenciaXMusic import app
-from ValenciaXMusic.misc import SUDOERS
-from ValenciaXMusic.utils.database import add_gban_user, remove_gban_user
-from ValenciaXMusic.utils.decorators.language import language
-from ValenciaXMusic.utils.extraction import extract_user
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import SUDOERS
+from BrandrdXMusic.utils.database import add_gban_user, remove_gban_user
+from BrandrdXMusic.utils.decorators.language import language
+from BrandrdXMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
