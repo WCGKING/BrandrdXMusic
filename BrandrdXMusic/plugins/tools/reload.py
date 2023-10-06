@@ -5,12 +5,12 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
-from ValenciaXMusic import app
-from ValenciaXMusic.core.call import Hotty
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils.database import get_assistant, get_authuser_names, get_cmode
-from ValenciaXMusic.utils.decorators import ActualAdminCB, AdminActual, language
-from ValenciaXMusic.utils.formatters import alpha_to_int, get_readable_time
+from BrandrdXMusic import app
+from BrandrdXMusic.core.call import Hotty
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils.database import get_assistant, get_authuser_names, get_cmode
+from BrandrdXMusic.utils.decorators import ActualAdminCB, AdminActual, language
+from BrandrdXMusic.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
 
 rel = {}
