@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from ValenciaXMusic import app
-from ValenciaXMusic.misc import SUDOERS
-from ValenciaXMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from ValenciaXMusic.utils.decorators.language import language
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import SUDOERS
+from BrandrdXMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from BrandrdXMusic.utils.decorators.language import language
 from config import BANNED_USERS
 
 
