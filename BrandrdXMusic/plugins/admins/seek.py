@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from ValenciaXMusic import YouTube, app
-from ValenciaXMusic.core.call import Hotty
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils import AdminRightsCheck, seconds_to_min
-from ValenciaXMusic.utils.inline import close_markup
+from BrandrdXMusic import YouTube, app
+from BrandrdXMusic.core.call import Hotty
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils import AdminRightsCheck, seconds_to_min
+from BrandrdXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
