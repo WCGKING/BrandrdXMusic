@@ -2,7 +2,7 @@ import math
 
 from pyrogram.types import InlineKeyboardButton
 
-from ValenciaXMusic.utils.formatters import time_to_seconds
+from BrandrdXMusic.utils.formatters import time_to_seconds
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
@@ -68,10 +68,10 @@ def stream_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/JoinIndianNavy_007"
+                text="⛦ ᴏᴡɴᴇʀ 🦋", url=f"https://t.me/BRANDRD_BOT"
             ),
             InlineKeyboardButton(
-                text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/Cherished_Community"
+                text="⛦ ᴄʜᴀᴛ 🦋", url=f"https://t.me/BRANDED_WORLD"
             ),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -90,10 +90,10 @@ def stream_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/JoinIndianNavy_007"
+                text="⛦ ᴏᴡɴᴇʀ 🦋", url=f"https://t.me/BRANDRD_BOT"
             ),
             InlineKeyboardButton(
-                text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/Cherished_Community"
+                text="⛦ ᴄʜᴀᴛ 🦋", url=f"https://t.me/BRANDED_WORLD"
             ),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
