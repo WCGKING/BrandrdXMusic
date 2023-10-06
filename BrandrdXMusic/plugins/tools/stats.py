@@ -9,13 +9,13 @@ from pyrogram.types import InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from ValenciaXMusic import app
-from ValenciaXMusic.core.userbot import assistants
-from ValenciaXMusic.misc import SUDOERS, mongodb
-from ValenciaXMusic.plugins import ALL_MODULES
-from ValenciaXMusic.utils.database import get_served_chats, get_served_users, get_sudoers, get_queries
-from ValenciaXMusic.utils.decorators.language import language, languageCB
-from ValenciaXMusic.utils.inline.stats import back_stats_buttons, stats_buttons
+from BrandrdXMusic import app
+from BrandrdXMusic.core.userbot import assistants
+from BrandrdXMusic.misc import SUDOERS, mongodb
+from BrandrdXMusic.plugins import ALL_MODULES
+from BrandrdXMusic.utils.database import get_served_chats, get_served_users, get_sudoers, get_queries
+from BrandrdXMusic.utils.decorators.language import language, languageCB
+from BrandrdXMusic.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
 
 
