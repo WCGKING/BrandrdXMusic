@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardButton
 
 import config
-from ValenciaXMusic import app
+from BrandrdXMusic import app
 
 
 def start_panel(_):
