@@ -10,16 +10,16 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import filters
 
 import config
-from ValenciaXMusic import app
-from ValenciaXMusic.misc import HAPP, XCB
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import HAPP, XCB
 from config import OWNER_ID
-from ValenciaXMusic.utils.database import (
+from BrandrdXMusic.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from ValenciaXMusic.utils.decorators.language import language
-from ValenciaXMusic.utils.pastebin import HottyBin
+from BrandrdXMusic.utils.decorators.language import language
+from BrandrdXMusic.utils.pastebin import HottyBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
