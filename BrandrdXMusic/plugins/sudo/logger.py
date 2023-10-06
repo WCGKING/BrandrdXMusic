@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from ValenciaXMusic import app
-from ValenciaXMusic.misc import SUDOERS
-from ValenciaXMusic.utils.database import add_off, add_on
-from ValenciaXMusic.utils.decorators.language import language
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import SUDOERS
+from BrandrdXMusic.utils.database import add_off, add_on
+from BrandrdXMusic.utils.decorators.language import language
 
 
 @app.on_message(filters.command(["logger"]) & SUDOERS)
