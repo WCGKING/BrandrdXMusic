@@ -6,8 +6,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from ValenciaXMusic import app
-from ValenciaXMusic.utils.formatters import (
+from BrandrdXMusic import app
+from BrandrdXMusic.utils.formatters import (
     check_duration,
     convert_bytes,
     get_readable_time,
