@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from ValenciaXMusic import app
-from ValenciaXMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from ValenciaXMusic.utils.decorators import language
-from ValenciaXMusic.utils.inline.settings import playmode_users_markup
+from BrandrdXMusic import app
+from BrandrdXMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from BrandrdXMusic.utils.decorators import language
+from BrandrdXMusic.utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS
 
 
