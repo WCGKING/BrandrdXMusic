@@ -6,8 +6,8 @@ import lyricsgenius as lg
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from ValenciaXMusic import app
-from ValenciaXMusic.utils.decorators.language import language
+from BrandrdXMusic import app
+from BrandrdXMusic.utils.decorators.language import language
 
 from config import BANNED_USERS, lyrical
 
