@@ -1,7 +1,7 @@
 import asyncio
 
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils.database import get_active_chats, is_music_playing
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils.database import get_active_chats, is_music_playing
 
 
 async def timer():
