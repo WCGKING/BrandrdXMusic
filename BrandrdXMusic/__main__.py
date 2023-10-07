@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
-from BrandrdXMusic import LOGGER, app, userbot
+from BrandrdXMusic import LOGGER
 from BrandrdXMusic.core.call import  Hotty
 from BrandrdXMusic.plugins import ALL_MODULES
 from BrandrdXMusic.utils.database import get_banned_users, get_gbanned
