@@ -13,14 +13,3 @@ heroku()
 
 app = Hotty()
 userbot = Userbot()
-
-
-from .platforms import *
-
-
-Carbon = CarbonAPI()
-SoundCloud = SoundAPI()
-Spotify = SpotifyAPI()
-Resso = RessoAPI()
-Telegram = TeleAPI()
-YouTube = YouTubeAPI()
