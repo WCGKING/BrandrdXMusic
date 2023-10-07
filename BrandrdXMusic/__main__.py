@@ -5,13 +5,13 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from config import BANNED_USERS
-from BrandrdXMusic import LOGGER
-from BrandrdXMusic.core.call import  Hotty
+from BrandrdXMusic import LOGGER, app, userbot
+from BrandrdXMusic.core.call import Hotty
+from BrandrdXMusic.misc import sudo
 from BrandrdXMusic.plugins import ALL_MODULES
 from BrandrdXMusic.utils.database import get_banned_users, get_gbanned
+from config import BANNED_USERS
 
-loop = asyncio.get_event_loop()
 
 
 async def init():
