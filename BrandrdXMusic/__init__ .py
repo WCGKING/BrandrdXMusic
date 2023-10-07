@@ -1,8 +1,8 @@
-from VipX.core.bot import VipXBot
-from VipX.core.dir import dirr
-from VipX.core.git import git
-from VipX.core.userbot import Userbot
-from VipX.misc import dbb, heroku, sudo
+from BrandrdXMusic.core.bot import Hotty
+from BrandrdXMusic.core.dir import dirr
+from BrandrdXMusic.core.git import git
+from BrandrdXMusic.core.userbot import Userbot
+from BrandrdXMusic.misc import dbb, heroku, sudo
 from aiohttp import ClientSession
 
 from .logging import LOGGER
@@ -19,7 +19,7 @@ heroku()
 sudo()
 
 # Clients
-app = VipXBot()
+app = Hotty()
 
 userbot = Userbot()
 
