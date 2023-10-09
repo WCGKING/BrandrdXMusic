@@ -94,7 +94,7 @@ update
 packages
 node
 installation
-pprint "\n\n\n\n\nWCGKINGXMusic Installation Completed !" "cgreen"
+pprint "\n\n\n\n\nWCGKING Installation Completed !" "cgreen"
 sleep 1
 clear
 
