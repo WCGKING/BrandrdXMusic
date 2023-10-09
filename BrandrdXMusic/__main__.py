@@ -5,7 +5,7 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from BrandrdXMusic import config, app, userbot
+from BrandrdXMusic import LOGGER, app, userbot
 from BrandrdXMusic.core.call import Hotty
 from BrandrdXMusic.misc import sudo
 from BrandrdXMusic.plugins import ALL_MODULES
