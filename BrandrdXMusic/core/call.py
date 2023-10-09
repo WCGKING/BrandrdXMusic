@@ -17,9 +17,9 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from ValenciaXMusic import LOGGER, YouTube, app
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils.database import (
+from BrandrdXMusic import LOGGER, YouTube, app
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
