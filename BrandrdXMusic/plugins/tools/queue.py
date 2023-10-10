@@ -6,12 +6,12 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from ValenciaXMusic import app
-from ValenciaXMusic.misc import db
-from ValenciaXMusic.utils import HottyBin, get_channeplayCB, seconds_to_min
-from ValenciaXMusic.utils.database import get_cmode, is_active_chat, is_music_playing
-from ValenciaXMusic.utils.decorators.language import language, languageCB
-from ValenciaXMusic.utils.inline import queue_back_markup, queue_markup
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils import HottyBin, get_channeplayCB, seconds_to_min
+from BrandrdXMusic.utils.database import get_cmode, is_active_chat, is_music_playing
+from BrandrdXMusic.utils.decorators.language import language, languageCB
+from BrandrdXMusic.utils.inline import queue_back_markup, queue_markup
 from config import BANNED_USERS
 
 basic = {}
@@ -156,7 +156,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     basic[videoid] = False
     buttons = queue_back_markup(_, what)
     med = InputMediaPhoto(
-        media="https://telegra.ph//file/6f7d35131f69951c74ee5.jpg",
+        media="https://te.legra.ph/file/2bb19e9e46b60083ed79a.jpg",
         caption=_["queue_1"],
     )
     await CallbackQuery.edit_message_media(media=med)
