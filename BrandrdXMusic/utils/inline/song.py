@@ -1,4 +1,4 @@
-rom pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton
 import config
 
 def song_markup(_, vidid):
