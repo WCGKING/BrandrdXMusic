@@ -63,7 +63,7 @@ async def on_left_chat_member(_, message: Message):
         title = message.chat.title
         username = f"@{message.chat.username}" if message.chat.username else "𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘾𝙃𝘼𝙏"
         chat_id = message.chat.id
-        left = f"✫ <b><u>#𝙇𝙀𝙁𝙏_𝙂𝙍𝙊𝙐𝙋</u></b> ✫\n\𝙉𝘾𝙃𝘼𝙏 𝙏𝙄𝙏𝙇𝙀 : {title}\n\𝙉𝘾𝙃𝘼𝙏 𝙄𝘿 : {chat_id}\n\n𝙍𝙀𝙈𝙊𝙑𝙀𝘿 𝘽𝙔 : {remove_by}\n\nʙᴏᴛ: @{app.username}"
+        left = f"✫ <b><u>#𝙇𝙀𝙁𝙏_𝙂𝙍𝙊𝙐𝙋</u></b> ✫\n\𝘾𝙃𝘼𝙏 𝙏𝙄𝙏𝙇𝙀 : {title}\n\𝘾𝙃𝘼𝙏 𝙄𝘿 : {chat_id}\n\n𝙍𝙀𝙈𝙊𝙑𝙀𝘿 𝘽𝙔 : {remove_by}\n\nʙᴏᴛ: @{app.username}"
         await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=left)
 
 #welcome
