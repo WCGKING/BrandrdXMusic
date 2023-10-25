@@ -36,7 +36,7 @@ async def join_watcher(_, message):
                 
                 f"😍𝗚𝗥𝗢𝗨𝗣 𝗠𝗘𝗠𝗕𝗘𝗥𝗦: {count}\n"
                 
-                f"🔥 𝗔𝗗𝗗𝗘𝗗 𝗕𝗬: {message.from_user.mention}"
+                f"❤️‍🔥 𝗔𝗗𝗗𝗘𝗗 𝗕𝗬: {message.from_user.mention}"
             )
             await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(f"𝙎𝙀𝙀 𝙂𝙍𝙊𝙐𝙋🙊", url=f"{link}")]
