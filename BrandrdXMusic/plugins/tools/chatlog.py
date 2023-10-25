@@ -24,22 +24,34 @@ async def join_watcher(_, message):
             count = await app.get_chat_members_count(chat.id)
 
             msg = (
-                f"📝 ᴍᴜsɪᴄ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
-                f"__________________________________\n\n"
-                f"🥀 ᴄʜᴀᴛ ɴᴀᴍᴇ: {message.chat.title}\n"
+                f"📝 𝗠𝗨𝗦𝗜𝗖 𝗕𝗢𝗧 𝗔𝗗𝗗𝗘𝗗 𝗜𝗡 𝗔 𝗡𝗘𝗪 𝗚𝗥𝗢𝗨𝗣\n\n"
                 
-                f"🦋 ᴄʜᴀᴛ ɪᴅ: {message.chat.id}\n"
+                f"★────────────★─────────★──────★\n\n"
                 
-                f"💋 ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ: @{message.chat.username}\n"
+                f"🥀 𝗖𝗛𝗔𝗧 𝗡𝗔𝗠𝗘: {message.chat.title}\n"
                 
-                f"🙈 ᴄʜᴀᴛ ʟɪɴᴋ: [ᴄʟɪᴄᴋ]({link})\n"
+                ★────────────★─────────★─────────★
                 
-                f"😍ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs: {count}\n"
+                f"🦋 𝗖𝗛𝗔𝗧 𝗜'𝗗: {message.chat.id}\n"
+
+                ★────────────★─────────★─────────★
                 
-                f"🔥 ᴀᴅᴅᴇᴅ ʙʏ: {message.from_user.mention}"
+                f"💋 𝗖𝗛𝗔𝗧 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘: @{message.chat.username}\n"
+
+                ★────────────★─────────★─────────★
+                
+                f"🙈 𝗖𝗛𝗔𝗧 𝗟𝗜𝗡𝗞: [𝗖𝗟𝗜𝗖𝗞]({link})\n"
+
+                ★────────────★─────────★─────────★
+                
+                f"😍𝗚𝗥𝗢𝗨𝗣 𝗠𝗘𝗠𝗕𝗘𝗥𝗦: {count}\n"
+
+                ★────────────★─────────★─────────★
+                
+                f"🔥 𝗔𝗗𝗗𝗘𝗗 𝗕𝗬: {message.from_user.mention}"
             )
             await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"sᴇᴇ ɢʀᴏᴜᴘ🙊", url=f"{link}")]
+            [InlineKeyboardButton(f"𝙎𝙀𝙀 𝙂𝙍𝙊𝙐𝙋🙊", url=f"{link}")]
          ]))
 
 
@@ -47,11 +59,11 @@ async def join_watcher(_, message):
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(_, message: Message):
     if (await app.get_me()).id == message.left_chat_member.id:
-        remove_by = message.from_user.mention if message.from_user else "ᴜɴᴋɴᴏᴡɴ ᴜꜱᴇʀ"
+        remove_by = message.from_user.mention if message.from_user else "𝙐𝙉𝙆𝙉𝙊𝙒𝙉 𝙐𝙎𝙀𝙍"
         title = message.chat.title
-        username = f"@{message.chat.username}" if message.chat.username else "ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+        username = f"@{message.chat.username}" if message.chat.username else "𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘾𝙃𝘼𝙏"
         chat_id = message.chat.id
-        left = f"✫ <b><u>#ʟᴇꜰᴛ_ɢʀᴏᴜᴘ</u></b> ✫\n\nᴄʜᴀᴛ ᴛɪᴛʟᴇ : {title}\n\nᴄʜᴀᴛ ɪᴅ : {chat_id}\n\nʀᴇᴍᴏᴠᴇᴅ ʙʏ : {remove_by}\n\nʙᴏᴛ: @{app.username}"
+        left = f"✫ <b><u>#𝙇𝙀𝙁𝙏_𝙂𝙍𝙊𝙐𝙋</u></b> ✫\n\𝙉𝘾𝙃𝘼𝙏 𝙏𝙄𝙏𝙇𝙀 : {title}\n\𝙉𝘾𝙃𝘼𝙏 𝙄𝘿 : {chat_id}\n\n𝙍𝙀𝙈𝙊𝙑𝙀𝘿 𝘽𝙔 : {remove_by}\n\nʙᴏᴛ: @{app.username}"
         await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=left)
 
 #welcome
@@ -65,20 +77,30 @@ async def _greet(_, message):
             count = await app.get_chat_members_count(chat.id)
 
             msg = (
-                f"🌷{member.id}ᴡᴇʟᴄᴏᴍᴇ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ🥳\n\n"
+                f"🌷{member.id}𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐈𝐍 𝐀 𝐍𝐄𝐖 𝐆𝐑𝐎𝐔𝐏🥳\n\n"
+
+                ★────────────★─────────★─────────★
                 
-                f"🦋𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ: {message.chat.title}\n"
+                f"🦋𝐂𝐇𝐀𝐓 𝐍𝐀𝐌𝐄: {message.chat.title}\n"
+
+                ★────────────★─────────★─────────★
                 
-                f"🔐𝐂ʜᴀᴛ 𝐔.𝐍: @{message.chat.username}\n"
+                f"🔐𝐂𝐇𝐀𝐓 𝐔.𝐍: @{message.chat.username}\n"
+
+                ★────────────★─────────★─────────★
                 
-                f"💖𝐔ʀ 𝐈d: {member.id}\n"
+                f"💖𝐔𝐑 𝐈'𝐃: {member.id}\n"
+
+                ★────────────★─────────★─────────★
                 
-                f"✍️𝐔ʀ 𝐔.𝐍aмe: @{member.username}\n"
+                f"✍️𝐔𝐑 𝐔.𝐍𝐀𝐍𝐄: @{member.username}\n"
+
+                ★────────────★─────────★─────────★
                 
-                f"👥𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} ᴍᴇᴍʙᴇʀꜱ🎉"
+                f"👥𝐂𝐎𝐌𝐏𝐋𝐄𝐓𝐄𝐃 {count} 𝐌𝐄𝐌𝐁𝐄𝐑𝐒🎉"
             )
             await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"https://t.me/{app.username}?startgroup=true")]
+            [InlineKeyboardButton(f"𝘼𝘿𝘿 𝙈𝙀 𝙄𝙉 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋", url=f"https://t.me/{app.username}?startgroup=true")]
          ]))
 
 #tagall
