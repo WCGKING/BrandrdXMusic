@@ -19,7 +19,7 @@ def track_markup(_, videoid, user_id, channel, fplay):
         ],
         [
             InlineKeyboardButton(
-                text=_["☆ CLOSE_BUTTON ☆"],
+                text=_["CLOSE_BUTTON"],
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
@@ -74,7 +74,7 @@ def stream_markup_timer(_, chat_id, played, dur):
                 text="⛦ ꜱᴜᴘᴘᴏʀᴛ 🥀", url=f"https://t.me/BRANDED_WORLD"
             ),
         ],
-        [InlineKeyboardButton(text=_["☆ CLOSE_BUTTON ☆"], callback_data="close")],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -96,7 +96,7 @@ def stream_markup(_, chat_id):
                 text="⛦ ꜱᴜᴘᴘᴏʀᴛ 🥀", url=f"https://t.me/BRANDED_WORLD"
             ),
         ],
-        [InlineKeyboardButton(text=_["☆ CLOSE_BUTTON ☆"], callback_data="close")],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -115,7 +115,7 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         ],
         [
             InlineKeyboardButton(
-                text=_["☆ CLOSE_BUTTON ☆"],
+                text=_["CLOSE_BUTTON"],
                 callback_data=f"forceclose {videoid}|{user_id}",
             ),
         ],
@@ -133,7 +133,7 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
         ],
         [
             InlineKeyboardButton(
-                text=_["☆ CLOSE_BUTTON ☆"],
+                text=_["CLOSE_BUTTON☆"],
                 callback_data=f"forceclose {videoid}|{user_id}",
             ),
         ],
