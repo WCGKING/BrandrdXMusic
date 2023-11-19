@@ -39,18 +39,18 @@ async def join_watcher(_, message):
                 f"❤️‍🔥 𝗔𝗗𝗗𝗘𝗗 𝗕𝗬: {message.from_user.mention}"
             )
             await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"𝙎𝙀𝙀 𝙂𝙍𝙊𝙐𝙋🙊", url=f"{link}")]
+            [InlineKeyboardButton(f"★ 𝗦𝗘𝗘 𝗚𝗥𝗢𝗨𝗣 ★", url=f"{link}")]
          ]))
 
 
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(_, message: Message):
     if (await app.get_me()).id == message.left_chat_member.id:
-        remove_by = message.from_user.mention if message.from_user else "𝙐𝙉𝙆𝙉𝙊𝙒𝙉 𝙐𝙎𝙀𝙍"
+        remove_by = message.from_user.mention if message.from_user else "𝗨𝗡𝗞𝗠𝗢𝗪𝗡 𝗨𝗦𝗘𝗥 "
         title = message.chat.title
-        username = f"@{message.chat.username}" if message.chat.username else "𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘾𝙃𝘼𝙏"
+        username = f"@{message.chat.username}" if message.chat.username else "𝗣𝗥𝗜𝗩𝗔𝗧𝗘 𝗖𝗛𝗔𝗧"
         chat_id = message.chat.id
-        left = f"✫ <b><u>#𝙇𝙀𝙁𝙏_𝙂𝙍𝙊𝙐𝙋</u></b> ✫\n\𝘾𝙃𝘼𝙏 𝙏𝙄𝙏𝙇𝙀 : {title}\n\𝘾𝙃𝘼𝙏 𝙄𝘿 : {chat_id}\n\n𝙍𝙀𝙈𝙊𝙑𝙀𝘿 𝘽𝙔 : {remove_by}\n\nʙᴏᴛ: @{app.username}"
+        left = f"✫ <b><u>#𝗟𝗘𝗙𝗧 𝗚𝗥𝗢𝗨𝗣</u></b> ✫\n\𝗖𝗛𝗔𝗧 𝗧𝗜𝗧𝗟𝗘 : {title}\n\𝗖𝗛𝗔𝗧 𝗜𝗗  : {chat_id}\n\n𝗥𝗘𝗠𝗢𝗩𝗘𝗗 𝗕𝗬 : {remove_by}\n\nʙᴏᴛ: @{app.username}"
         await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=left)
 
 #welcome
@@ -77,7 +77,7 @@ async def _greet(_, message):
                 f"👥𝐂𝐎𝐌𝐏𝐋𝐄𝐓𝐄𝐃 {count} 𝐌𝐄𝐌𝐁𝐄𝐑𝐒🎉"
             )
             await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"𝘼𝘿𝘿 𝙈𝙀 𝙄𝙉 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋", url=f"https://t.me/{app.username}?startgroup=true")]
+            [InlineKeyboardButton(f"★ 𝐀𝐃𝐃 𝐌𝐄 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 𝐁𝐀𝐁𝐘 ★", url=f"https://t.me/{app.username}?startgroup=true")]
          ]))
 
 #tagall
