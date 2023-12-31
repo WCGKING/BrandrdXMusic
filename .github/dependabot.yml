@@ -9,3 +9,4 @@ updates:
   labels:
     - "dependencies"
   open-pull-requests-limit: 50
+
