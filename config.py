@@ -58,7 +58,7 @@ SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "50"))
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "25"))
 
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
-SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
+SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "2000"))
 
 # Telegram audio and video file size limit (in bytes)
 TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", 104857600))
@@ -83,21 +83,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://te.legra.ph/file/5ed99a324f22d636d6305.jpg"
+    "START_IMG_URL", "https://te.legra.ph/file/62c76ac2095332a0ede75.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://te.legra.ph/file/68896b9d5b97252c68f64.jpg"
+    "PING_IMG_URL", "https://te.legra.ph/file/4f59fb748e1990acfa297.jpg"
 )
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/568b292063504617f5adf.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/a2939756cee46fcb86e91.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/e703dbcf744bda6e6c673.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/c28d089437c4be9a2db89.jpg"
-STREAM_IMG_URL = "https://te.legra.ph/file/68896b9d5b97252c68f64.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/879bddbe943cfc1d20cb5.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/ba98bbedea3a7419b0612.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/bce96f5e5d732859675f8.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/ba39a10ba20736f42f202.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/568b292063504617f5adf.jpg"
+PLAYLIST_IMG_URL = "https://te.legra.ph/file/14eb59ea7d31229d8d751.jpg"
+STATS_IMG_URL = "https://te.legra.ph/file/4310ea5f523520b2b765b.jpg"
+TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/923c1faac33d8c70335dc.jpg"
+TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6c66f8b192532fe758e82.jpg"
+STREAM_IMG_URL = "https://te.legra.ph/file/ebc4dc6357be06e08a3ed.jpg"
+SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/d339f390ec168c19879c6.jpg"
+YOUTUBE_IMG_URL = "https://te.legra.ph/file/ee0cd53ab73f08f4a3627.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/5f9fb5bba66021c782d96.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/affe0afec5c7ad63676a4.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/3c446e8dee78ed0ca62ff.jpg"
 
 
 def time_to_seconds(time):
