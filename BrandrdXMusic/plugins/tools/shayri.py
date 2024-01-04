@@ -114,7 +114,7 @@ async def mentionall(client, message):
         return await message.reply("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴꜱ ᴄᴀɴ. ")
 
     if message.reply_to_message and message.text:
-        return await message.reply("/shayaril  ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪꜱ / ᴇᴘʟʏ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ  ")
+        return await message.reply("/shayaril  ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪꜱ / ʀᴘʟʏ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ  ")
     elif message.text:
         mode = "text_on_cmd"
         msg = message.text
@@ -122,9 +122,9 @@ async def mentionall(client, message):
         mode = "text_on_reply"
         msg = message.reply_to_message
         if not msg:
-            return await message.reply("/shayari  ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪꜱ / ᴇᴘʟʏ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ  ...")
+            return await message.reply("/shayari  ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪꜱ / ʀᴘʟʏ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ  ...")
     else:
-        return await message.reply("/shayari  ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪꜱ / ᴇᴘʟʏ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ  ..")
+        return await message.reply("/shayari  ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪꜱ / ʀᴘʟʏ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ  ..")
     if chat_id in spam_chats:
         return await message.reply("ᴘʟᴇᴀꜱᴇ ᴀᴛ ꜰɪʀꜱᴛ ꜱᴛᴏᴘ ʀᴜɴɴɪɴɢ ᴘʀᴏᴄᴇꜱꜱ ...")
     spam_chats.append(chat_id)
