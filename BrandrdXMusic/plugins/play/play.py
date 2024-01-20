@@ -581,7 +581,7 @@ async def play_music(client, CallbackQuery, _):
 
 
 @app.on_callback_query(
-    filters.regex("HottyymousAdmin") & ~BANNED_USERS
+    filters.regex("AnonymousAdmin") & ~BANNED_USERS
 )
 async def Hottyymous_check(client, CallbackQuery):
     try:
