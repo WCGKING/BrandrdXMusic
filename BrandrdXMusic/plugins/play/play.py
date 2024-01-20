@@ -26,17 +26,22 @@ from BrandrdXMusic.utils.inline.playlist import botplaylist_markup
 from BrandrdXMusic.utils.logger import play_logs
 from BrandrdXMusic.utils.stream.stream import stream
 
-# Command
-PLAY_COMMAND = get_command("PLAY_COMMAND")
-
-
 @app.on_message(
-    filters.command(PLAY_COMMAND)
+    filters.command(
+        [
+            "play",
+            "vplay",
+            "cplay",
+            "cvplay",
+            "playforce",
+            "vplayforce",
+            "cplayforce",
+            "cvplayforce",
+        ]
+    )
     & filters.group
-    & ~filters.edited
     & ~BANNED_USERS
 )
-@PlayWrapper
 async def play_commnd(
     client,
     message: Message,
