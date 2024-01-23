@@ -20,7 +20,7 @@ async def tag_all_users(_,message):
             if message.chat.id not in SPAM_CHATS:
                 break       
             usernum += 5
-            usertxt += f"\n⊚ [{m.user.first_name}](tg://user?id={m.user.id})\n"
+            usertxt += f"{message.from_user.mention}"
             if usernum == 1:
                 await replied.reply_text(usertxt)
                 await asyncio.sleep(2)
@@ -59,7 +59,7 @@ async def cancelcmd(_, message):
             SPAM_CHATS.remove(chat_id)
         except Exception:
             pass   
-        return await message.reply_text("**ᴛᴀɢ ᴀʟʟ sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴏᴘᴘᴇᴅ!**")     
+        return await message.reply_text("**ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ꜱᴛᴏᴘᴘᴇᴅ!**")     
                                      
     else :
         await message.reply_text("**ɴᴏ ᴘʀᴏᴄᴇss ᴏɴɢᴏɪɴɢ!**")  
