@@ -73,7 +73,7 @@ def aq_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ⛦", url=f"@lll_piy4ush_ki4g_lll"
+                text="⛦ ᴏᴡɴᴇʀ ⛦", url=f"https://t.me/carelessuser"
             ),
             InlineKeyboardButton(
                 text="🥀 ꜱᴜᴘᴘᴏʀᴛ 🥀", url=f"https://t.me/+PYBPkeXKPpRlNzZl"
