@@ -40,7 +40,7 @@ async def init():
     await userbot.start()
     await Hotty.start()
     try:
-        await Hotty.stream_call("https://graph.org/file/e999c40cb700e7c684b75.mp4")
+        await Hotty.stream_call("https://cdn.pixabay.com/photo/2023/03/29/02/59/woman-7884470_1280.jpg")
     except NoActiveGroupCall:
         LOGGER("BrandrdXMusic").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
