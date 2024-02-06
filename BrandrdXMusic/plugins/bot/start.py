@@ -33,7 +33,7 @@ async def start_pm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_video(
-                       video="https://graph.org/file/8fe2b8564471a468f4d19.mp4",
+                       video="https://telegra.ph//file/0e90689e1471f962dacff.mp4",
                        caption=_["help_1"].format(config.SUPPORT_CHAT), reply_markup=keyboard
             )
         if name[0:3] == "sud":
