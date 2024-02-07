@@ -5,10 +5,6 @@ from pyrogram.types import *
 from logging import getLogger
 from BrandrdXMusic import app
 
-
-
-
-
 LOGGER = getLogger(__name__)
 
 class WelDatabase:
@@ -37,9 +33,6 @@ class temp:
     B_NAME = None
 
 
-
-
-
 def circle(pfp, size=(500, 500)):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
@@ -52,7 +45,7 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname):
-    background = Image.open("BrandrdXMusic/assets/wel2.png")
+    background = Image.open("BrandrdXMusic/assets/Brandedwel2.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((825, 824))
@@ -64,8 +57,6 @@ def welcomepic(pic, user, chatname, id, uname):
     background.paste(pfp, pfp_position, pfp)
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
-
-
 
 
 @app.on_message(filters.command("wel") & ~filters.private)
@@ -98,7 +89,6 @@ async def auto_state(_, message):
     else:
         await message.reply("Only Admins Can Use This Command")
 
-# ... (copy paster teri maa ki chut  )
 
 @app.on_chat_member_updated(filters.group, group=-3)
 async def greet_group(_, member: ChatMemberUpdated):
@@ -118,7 +108,7 @@ async def greet_group(_, member: ChatMemberUpdated):
             user.photo.big_file_id, file_name=f"pp{user.id}.png"
         )
     except AttributeError:
-        pic = "DAXXMUSIC/assets/upic.png"
+        pic = "BrandrdXMusic/assets/upic.png"
     if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
         try:
             await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
@@ -148,7 +138,6 @@ async def greet_group(_, member: ChatMemberUpdated):
         os.remove(f"downloads/pp{user.id}.png")
     except Exception as e:
         pass
-
 
 
 @app.on_message(filters.new_chat_members & filters.group, group=-1)
