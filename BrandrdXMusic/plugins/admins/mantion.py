@@ -20,7 +20,7 @@ async def tag_all_users(_,message):
             if message.chat.id not in SPAM_CHATS:
                 break       
             usernum += 5
-            usrtxt += "<a href='tg://user?id={}'>{}</a>".format(usr.user.id, usr.user.first_name)
+            usertxt += f"\n⊚ [{m.user.first_name}](tg://user?id={m.user.id})\n"
             if usernum == 1:
                 await replied.reply_text(usertxt)
                 await asyncio.sleep(2)
@@ -40,7 +40,7 @@ async def tag_all_users(_,message):
             if message.chat.id not in SPAM_CHATS:
                 break 
             usernum += 1
-            usrtxt += "<a href='tg://user?id={}'>{}</a>".format(usr.user.id, usr.user.first_name)
+            usertxt += f"\n⊚ [{m.user.first_name}](tg://user?id={m.user.id})\n"
             if usernum == 5:
                 await app.send_message(message.chat.id,f'{text}\n{usertxt}')
                 await asyncio.sleep(2)
@@ -59,8 +59,8 @@ async def cancelcmd(_, message):
             SPAM_CHATS.remove(chat_id)
         except Exception:
             pass   
-        return await message.reply_text("**𝐁𝐑𝐀𝐍𝐃𝐄𝐃 𝐌𝐀𝐍𝐓𝐈𝐎𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘 𝐒𝐓𝐎𝐏𝐏𝐄𝐃!**")     
+        return await message.reply_text("**ᴛᴀɢ ᴀʟʟ sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴏᴘᴘᴇᴅ!**")     
                                      
     else :
-        await message.reply_text("**𝐍𝐎 𝐏𝐑𝐎𝐂𝐄𝐒𝐒 𝐎𝐍𝐆𝐎𝐈𝐍𝐆!**")  
+        await message.reply_text("**ɴᴏ ᴘʀᴏᴄᴇss ᴏɴɢᴏɪɴɢ!**")  
         return       
