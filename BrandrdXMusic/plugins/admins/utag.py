@@ -10,7 +10,7 @@ from BrandrdXMusic import app
 
 SPAM_CHATS = {}
 
-@app.on_message(filters.command(["utag", "uall"], prefixes=["/", "@", ".", "#"]) & admin_filter)
+@app.on_message(filters.command(["utag", "uall"], prefixes=["/", "@", ".", "#"]) 
 async def tag_all_users(_, message):
     global SPAM_CHATS
     chat_id = message.chat.id
