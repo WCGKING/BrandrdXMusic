@@ -86,11 +86,11 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption=f"""
-Wᴇʟᴄᴏᴍᴇ Tᴏ {member.chat.title}
+𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {member.chat.title}
 ➖➖➖➖➖➖➖➖➖➖➖
-Nᴀᴍᴇ ✧ {user.mention}
-Iᴅ ✧ {user.id}
-Usᴇʀɴᴀᴍᴇ ✧ @{user.username}
+𝗡𝗔𝗠𝗘 ✧ {user.mention}
+𝗜𝗗 ✧ {user.id}
+𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 ✧ @{user.username}
 ➖➖➖➖➖➖➖➖➖➖➖
 """,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/BRANDED_KUDI_BOT?startgroup=true")]])
@@ -110,8 +110,8 @@ async def bot_wel(_, message):
             await app.send_message(LOG_CHANNEL_ID, f"""
 NEW GROUP
 ➖➖➖➖➖➖➖➖➖➖➖
-NAME: {message.chat.title}
-ID: {message.chat.id}
-USERNAME: @{message.chat.username}
+𝗡𝗔𝗠𝗘: {message.chat.title}
+𝗜𝗗: {message.chat.id}
+𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄: @{message.chat.username}
 ➖➖➖➖➖➖➖➖➖➖➖
 """)
