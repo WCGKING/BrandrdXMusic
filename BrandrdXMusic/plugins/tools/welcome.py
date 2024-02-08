@@ -1,4 +1,4 @@
-#<<<<<<<<<<<<<<DiL>>>>>>>>>>>>>>#
+#<<<<<<<<<<<<<<BRANDED KING>>>>>>>>>>>>>>#
 #<<<<<<<<<<<<<<Give<Credit<Else>You>Chutiya>>>>>>>>>>>>>>#
 import os
 from PIL import ImageDraw, Image, ImageFont, ImageChops
