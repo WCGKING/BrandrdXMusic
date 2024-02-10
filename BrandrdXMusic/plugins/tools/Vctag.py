@@ -21,7 +21,7 @@ async def brah3(app :app, message:Message):
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
-               text += f"[{tg://user?id={}'>{}}](tg://user?id={user.id})"
+               text += "<a href='tg://user?id={}'>{}</a>".format(usr.user.id, usr.user.first_name)
                x += 1
              except Exception:
                pass
