@@ -34,9 +34,9 @@ async def tag_all_users(_, message):
             async for m in app.get_chat_members(message.chat.id):
                 if m.user.is_bot:
                     continue
-                usernum+= 1
+                usernum+= 5
                 usertxt += f"\n⊚ [{m.user.first_name}](tg://user?id={m.user.id})\n"
-                if usernum == 5:
+                if usernum == 1:
                     await app.send_message(message.chat.id, f'{text}\n{usertxt}\n\n|| ➥ ᴏғғ ᴛᴀɢɢɪɴɢ ʙʏ » /stoputag ||')
                     usernum = 0
                     usertxt = ""
