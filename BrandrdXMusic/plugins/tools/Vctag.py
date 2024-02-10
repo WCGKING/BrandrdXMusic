@@ -21,7 +21,7 @@ async def brah3(app :app, message:Message):
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
-               text += f"\n⊚ [{m.user.first_name}](tg://user?id={m.user.id})\n"
+               text += f"[{user.first_name}](tg://user?id={user.id}) "
                x += 1
              except Exception:
                pass
