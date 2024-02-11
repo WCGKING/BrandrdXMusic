@@ -2,19 +2,16 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from BrandrdXMusic import app
 from config import OWNER_ID
-
-
-
+# vc on
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
        await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
-
-
+# vc off
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
        await msg.reply("**ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
 
-
+# invite members on vc
 @app.on_message(filters.video_chat_members_invited)
 async def brah3(app :app, message:Message):
            text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
@@ -31,6 +28,8 @@ async def brah3(app :app, message:Message):
              pass
 
 
+####
+
 @app.on_message(filters.command("math", prefixes="/"))
 def calculate_math(client, message):   
     expression = message.text.split("/math ", 1)[1]
@@ -40,6 +39,17 @@ def calculate_math(client, message):
     except:
         response = "ɪɴᴠᴀʟɪᴅ ᴇxᴘʀᴇssɪᴏɴ"
     message.reply(response)
+
+###
+@app.on_message(filters.command("leavegroup")& filters.user(OWNER_ID))
+async def bot_leave(_, message):
+    chat_id = message.chat.id
+    text = f"sᴜᴄᴄᴇssғᴜʟʟʏ   ʟᴇғᴛ  !!."
+    await message.reply_text(text)
+    await app.leave_chat(chat_id=chat_id, delete=True)
+
+
+####
 
 
 @app.on_message(filters.command(["spg"], ["/", "!", "."]))
