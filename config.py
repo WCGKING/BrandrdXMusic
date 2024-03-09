@@ -83,10 +83,10 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://wallpapers.com/images/high/neon-anime-musical-artist-hatsune-miku-7y1x3vtfjuin2wr1.webp"
+    "START_IMG_URL", "https://img.freepik.com/free-photo/anime-band-singing-concert_23-2151103490.jpg?t=st=1709983495~exp=1709987095~hmac=4be92e17fb7ff446e5e995675afcafca48979bcc9cf0697d333889ce8f4103fe&w=996"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://wallpapers.com/images/high/music-anime-red-hair-61ybliqiyj5nw12e.webp"
+    "PING_IMG_URL", "https://img.freepik.com/free-photo/anime-style-character-space_23-2151134005.jpg?t=st=1709983787~exp=1709987387~hmac=721bcdbc38fcb2ea4f082ac61afbf7a8a4b04bb49feea5756ee4aed5db3a6e2f&w=740"
 )
 PLAYLIST_IMG_URL = "https://img.freepik.com/free-photo/girl-with-guitar-shirt-that-says-i-am-girl_1340-32640.jpg?t=st=1706883265~exp=1706886865~hmac=e5cde86421afcfc0bec2b8f79aa79fe6466760dc0031021285b37b369aec34f0&w=1380"
 STATS_IMG_URL = "https://img.freepik.com/free-photo/front-view-anime-couple-playing-guitar_23-2150970747.jpg?t=st=1706883360~exp=1706886960~hmac=6d920a865401fd1b7ba3020ebb926d689067634ce91bf2a305f553b661f0474b&w=1800"
