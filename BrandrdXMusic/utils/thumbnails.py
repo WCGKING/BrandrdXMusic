@@ -133,4 +133,4 @@ async def get_thumb(videoid):
         return f"cache/{videoid}.png"
     except Exception as e:
         print(e)
-        return YOUTUBE_IMG_URL ="https://img.freepik.com/free-vector/abstract-splashed-watercolor-textured-background_53876-155.jpg?t=st=1709985346~exp=1709988946~hmac=a2e691a96668dd685dd4d1633ec32983532c03366eb761a4e76a099ca908dd23&w=1480"
+        return YOUTUBE_IMG_URL 
