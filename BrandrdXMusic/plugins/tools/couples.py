@@ -35,11 +35,11 @@ today = str(dt()[0])
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply_text("This command only works in groups.")
+        return await message.reply_text("INTHA COMMAND GROUP LA MATTUM THAAN WORK AGUM.")
     try:
      #  is_selected = await get_couple(cid, today)
      #  if not is_selected:
-         msg = await message.reply_text("ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇꜱ ɪᴍᴀɢᴇ...")
+         msg = await message.reply_text("UNGA DOLI YAARUNU PAPOMA WAIT...")
          #GET LIST OF USERS
          list_of_users = []
 
@@ -96,11 +96,11 @@ async def ctest(_, message):
          img.save(f'test_{cid}.png')
     
          TXT = f"""
-**𝐓𝐎𝐃𝐀𝐘'𝐒 𝐒𝐄𝐋𝐄𝐂𝐓𝐄𝐃 𝐂𝐎𝐔𝐏𝐋𝐄𝐒 🎉 :
+**INDRAIYA KADHAL JODIGAL 🎉 :
 ➖➖➖➖➖➖➖➖➖➖➖➖
 {N1} + {N2} = ❣️
 ➖➖➖➖➖➖➖➖➖➖➖➖
-𝐍𝐄𝐗𝐓 𝐂𝐎𝐔𝐏𝐋𝐄𝐒 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐒𝐄𝐋𝐄𝐂𝐓𝐄𝐃 𝐎𝐍 {tomorrow} !!**
+ADUTHA KADHAL JODIGAL NALAIKU CHOOSE PANNUVOM {tomorrow} !!**
 """
     
          await message.reply_photo(f"test_{cid}.png", caption=TXT)
@@ -113,7 +113,7 @@ async def ctest(_, message):
     
          
       # elif is_selected:
-      #   msg = await message.reply_text("𝗚𝗘𝗧𝗧𝗜𝗡𝗚 𝐓𝐎𝐃𝐀𝐘'𝐒 𝐂𝐎𝐔𝐏𝐋𝐄𝐒 𝐈𝐌𝐀𝐆𝐄...")
+      #   msg = await message.reply_text("UNGA DOLI YAARUNU PAPOMA WAIT...")
       #   b = await _get_image(cid)
        #  c1_id = int(is_selected["c1_id"])
        #  c2_id = int(is_selected["c2_id"])
@@ -121,11 +121,11 @@ async def ctest(_, message):
         # c2_name = (await app.get_users(c2_id)).first_name
          
       #   TXT = f"""
-#**𝐓𝐎𝐃𝐀𝐘'𝐒 𝐒𝐄𝐋𝐄𝐂𝐓𝐄𝐃 𝐂𝐎𝐔𝐏𝐋𝐄𝐒 🎉 :
+#**INDRAIYA KADHAL JODIGAL 🎉 :
 #➖➖➖➖➖➖➖➖➖➖➖➖
 #[{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = ❣️
 #➖➖➖➖➖➖➖➖➖➖➖➖
-#𝐍𝐄𝐗𝐓 𝐂𝐎𝐔𝐏𝐋𝐄𝐒 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐒𝐄𝐋𝐄𝐂𝐓𝐄𝐃 𝐎𝐍 {tomorrow} !!**
+#ADUTHA KADHAL JODIGAL NALAIKU CHOOSE PANNUVOM {tomorrow} !!**
 #"""
 
  #        await message.reply_photo(b, caption=TXT)
