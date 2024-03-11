@@ -24,7 +24,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 900))
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # Get this value from @BRANDRD_ROBOT on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 6258877205))
+OWNER_ID = int(getenv("OWNER_ID", 6846608545))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -34,15 +34,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/WCGKING/BrandrdXMusic",
+    "https://github.com/Suryan008/Devilxmusicx",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/BRANDRD_BOT")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/BRANDED_WORLD")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/devilxbots")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Devilxsupports")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -83,21 +83,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://te.legra.ph/file/62c76ac2095332a0ede75.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/7d6b65b76bafc1bbcad98.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://te.legra.ph/file/4f59fb748e1990acfa297.jpg"
+    "PING_IMG_URL", "https://telegra.ph/file/1b41bcc5149fda3cc98b0.jpg"
 )
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/14eb59ea7d31229d8d751.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/4310ea5f523520b2b765b.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/923c1faac33d8c70335dc.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6c66f8b192532fe758e82.jpg"
-STREAM_IMG_URL = "https://te.legra.ph/file/ebc4dc6357be06e08a3ed.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/d339f390ec168c19879c6.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/ee0cd53ab73f08f4a3627.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/5f9fb5bba66021c782d96.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/affe0afec5c7ad63676a4.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/3c446e8dee78ed0ca62ff.jpg"
+PLAYLIST_IMG_URL = "https://telegra.ph/file/bc92bcb7e71480e6b9b9d.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/ebf30ca7ae57a569da8a2.jpg"
+TELEGRAM_AUDIO_URL = "https://telegra.ph/file/32722969352ef2e06973a.jpg"
+TELEGRAM_VIDEO_URL = "https://telegra.ph/file/de72794979d6101f04307.jpg"
+STREAM_IMG_URL = "https://telegra.ph/file/37f88b7aabd742ce2ca37.jpg"
+SOUNCLOUD_IMG_URL = "https://telegra.ph/file/aff97a59b81ff536f12ab.jpg"
+YOUTUBE_IMG_URL = "https://telegra.ph/file/73651560dad0039f10642.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/197f5a48ce894b9742ec7.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/7d6b65b76bafc1bbcad98.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/62e73ca8bb9a152b3d93e.jpg"
 
 
 def time_to_seconds(time):
@@ -111,11 +111,11 @@ DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
 if SUPPORT_CHANNEL:
     if not re.match("(?:http|https)://", SUPPORT_CHANNEL):
         raise SystemExit(
-            "[ERROR] - Your SUPPORT_CHANNEL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - unga support channel link thavaranathu. Please ensure that it starts with https://"
         )
 
 if SUPPORT_CHAT:
     if not re.match("(?:http|https)://", SUPPORT_CHAT):
         raise SystemExit(
-            "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - unga support chat link thavaranthu. Please ensure that it starts with https://"
         )
