@@ -9,7 +9,7 @@ import requests
 import time
 import os
 from pyrogram import filters
-from REPO import app
+from BrandrdXMusic import app
 
 # Command handler for /generate
 @app.on_message(filters.command('generate'))
