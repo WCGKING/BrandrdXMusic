@@ -22,6 +22,8 @@ tgcrypto
 telegraph
 unidecode
 yt-dlp
+#git+https://github.com/joetats/youtube_search@master
+#git+https://github.com/alexmercerind/youtube-search-python@main
 youtube-search
 youtube-search-python
 gtts
