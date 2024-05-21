@@ -2,7 +2,7 @@ import random
 from typing import Dict, List, Union
 
 from BrandrdXMusic import userbot
-from BrandrdXMusic.core.mongo import mongodb
+from BrandrdXMusic.core.mongo import mongodb, pymongodb
 
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser
@@ -11,8 +11,6 @@ assdb = mongodb.assistants
 blacklist_chatdb = mongodb.blacklistChat
 blockeddb = mongodb.blockedusers
 chatsdb = mongodb.chats
-usertopdb = mongodb.userstats
-chattopdb = mongodb.chatstats
 channeldb = mongodb.cplaymode
 countdb = mongodb.upcount
 gbansdb = mongodb.gban
@@ -23,8 +21,14 @@ playtypedb = mongodb.playtypedb
 skipdb = mongodb.skipmode
 sudoersdb = mongodb.sudoers
 usersdb = mongodb.tgusersdb
-playlistdb = mongodb.playlist
+privatedb = mongodb.privatechats
+suggdb = mongodb.suggestion
+cleandb = mongodb.cleanmode
 queriesdb = mongodb.queries
+userdb = mongodb.userstats
+videodb = mongodb.vipvideocalls
+chatsdbc = mongodb.chatsc  # for clone
+usersdbc = mongodb.tgusersdbc  # for clone
 
 # Shifting to memory [mongo sucks often]
 active = []
@@ -41,55 +45,33 @@ pause = {}
 playmode = {}
 playtype = {}
 skipmode = {}
+privatechats = {}
+cleanmode = []
+suggestion = {}
+mute = {}
+audio = {}
+video = {}
+
+# Total Queries on bot
 
 
-# Playlist
+async def get_queries() -> int:
+    chat_id = 98324
+    mode = await queriesdb.find_one({"chat_id": chat_id})
+    if not mode:
+        return 0
+    return mode["mode"]
 
 
-async def _get_playlists(chat_id: int) -> Dict[str, int]:
-    _notes = await playlistdb.find_one({"chat_id": chat_id})
-    if not _notes:
-        return {}
-    return _notes["notes"]
-
-
-async def get_playlist_names(chat_id: int) -> List[str]:
-    _notes = []
-    for note in await _get_playlists(chat_id):
-        _notes.append(note)
-    return _notes
-
-
-async def get_playlist(chat_id: int, name: str) -> Union[bool, dict]:
-    name = name
-    _notes = await _get_playlists(chat_id)
-    if name in _notes:
-        return _notes[name]
-    else:
-        return False
-
-
-async def save_playlist(chat_id: int, name: str, note: dict):
-    name = name
-    _notes = await _get_playlists(chat_id)
-    _notes[name] = note
-    await playlistdb.update_one(
-        {"chat_id": chat_id}, {"$set": {"notes": _notes}}, upsert=True
+async def set_queries(mode: int):
+    chat_id = 98324
+    queries = await queriesdb.find_one({"chat_id": chat_id})
+    if queries:
+        mode = queries["mode"] + mode
+    return await queriesdb.update_one(
+        {"chat_id": chat_id}, {"$set": {"mode": mode}}, upsert=True
     )
 
-
-async def delete_playlist(chat_id: int, name: str) -> bool:
-    notesd = await _get_playlists(chat_id)
-    name = name
-    if name in notesd:
-        del notesd[name]
-        await playlistdb.update_one(
-            {"chat_id": chat_id},
-            {"$set": {"notes": notesd}},
-            upsert=True,
-        )
-        return True
-    return False
 
 # Top Chats DB
 
@@ -132,9 +114,7 @@ async def get_particulars(chat_id: int) -> Dict[str, int]:
     return ids["vidid"]
 
 
-async def get_particular_top(
-    chat_id: int, name: str
-) -> Union[bool, dict]:
+async def get_particular_top(chat_id: int, name: str) -> Union[bool, dict]:
     ids = await get_particulars(chat_id)
     if name in ids:
         return ids[name]
@@ -167,9 +147,7 @@ async def get_user_top(chat_id: int, name: str) -> Union[bool, dict]:
 async def update_user_top(chat_id: int, name: str, vidid: dict):
     ids = await get_userss(chat_id)
     ids[name] = vidid
-    await userdb.update_one(
-        {"chat_id": chat_id}, {"$set": {"vidid": ids}}, upsert=True
-    )
+    await userdb.update_one({"chat_id": chat_id}, {"$set": {"vidid": ids}}, upsert=True)
 
 
 async def get_topp_users() -> dict:
@@ -183,7 +161,7 @@ async def get_topp_users() -> dict:
                 total += counts_
         results[user_id] = total
     return results
-    
+
 
 async def get_assistant_number(chat_id: int) -> str:
     assistant = assistantdict.get(chat_id)
@@ -388,26 +366,6 @@ async def set_cmode(chat_id: int, mode: int):
         {"chat_id": chat_id}, {"$set": {"mode": mode}}, upsert=True
     )
 
-# Total Queries on bot
-
-
-async def get_queries() -> int:
-    chat_id = 98324
-    mode = await queriesdb.find_one({"chat_id": chat_id})
-    if not mode:
-        return 0
-    return mode["mode"]
-
-
-async def set_queries(mode: int):
-    chat_id = 98324
-    queries = await queriesdb.find_one({"chat_id": chat_id})
-    if queries:
-        mode = queries["mode"] + mode
-    return await queriesdb.update_one(
-        {"chat_id": chat_id}, {"$set": {"mode": mode}}, upsert=True
-    )
-
 
 async def get_playtype(chat_id: int) -> str:
     mode = playtype.get(chat_id)
@@ -477,6 +435,22 @@ async def music_on(chat_id: int):
 
 async def music_off(chat_id: int):
     pause[chat_id] = False
+
+
+# Muted
+async def is_muted(chat_id: int) -> bool:
+    mode = mute.get(chat_id)
+    if not mode:
+        return False
+    return mode
+
+
+async def mute_on(chat_id: int):
+    mute[chat_id] = True
+
+
+async def mute_off(chat_id: int):
+    mute[chat_id] = False
 
 
 async def get_active_chats() -> list:
@@ -655,6 +629,10 @@ async def add_served_chat(chat_id: int):
     return await chatsdb.insert_one({"chat_id": chat_id})
 
 
+async def delete_served_chat(chat_id: int):
+    await chatsdb.delete_one({"chat_id": chat_id})
+
+
 async def blacklisted_chats() -> list:
     chats_list = []
     async for chat in blacklist_chatdb.find({"chat_id": {"$lt": 0}}):
@@ -810,3 +788,195 @@ async def remove_banned_user(user_id: int):
     if not is_gbanned:
         return
     return await blockeddb.delete_one({"user_id": user_id})
+
+
+# Private Served Chats
+
+
+async def get_private_served_chats() -> list:
+    chats_list = []
+    async for chat in privatedb.find({"chat_id": {"$lt": 0}}):
+        chats_list.append(chat)
+    return chats_list
+
+
+async def is_served_private_chat(chat_id: int) -> bool:
+    chat = await privatedb.find_one({"chat_id": chat_id})
+    if not chat:
+        return False
+    return True
+
+
+async def add_private_chat(chat_id: int):
+    is_served = await is_served_private_chat(chat_id)
+    if is_served:
+        return
+    return await privatedb.insert_one({"chat_id": chat_id})
+
+
+async def remove_private_chat(chat_id: int):
+    is_served = await is_served_private_chat(chat_id)
+    if not is_served:
+        return
+    return await privatedb.delete_one({"chat_id": chat_id})
+
+
+# SUGGESTION
+
+
+async def is_suggestion(chat_id: int) -> bool:
+    mode = suggestion.get(chat_id)
+    if not mode:
+        user = await suggdb.find_one({"chat_id": chat_id})
+        if not user:
+            suggestion[chat_id] = True
+            return True
+        suggestion[chat_id] = False
+        return False
+    return mode
+
+
+async def suggestion_on(chat_id: int):
+    suggestion[chat_id] = True
+    user = await suggdb.find_one({"chat_id": chat_id})
+    if user:
+        return await suggdb.delete_one({"chat_id": chat_id})
+
+
+async def suggestion_off(chat_id: int):
+    suggestion[chat_id] = False
+    user = await suggdb.find_one({"chat_id": chat_id})
+    if not user:
+        return await suggdb.insert_one({"chat_id": chat_id})
+
+
+# Clean Mode
+async def is_cleanmode_on(chat_id: int) -> bool:
+    if chat_id not in cleanmode:
+        return True
+    else:
+        return False
+
+
+async def cleanmode_off(chat_id: int):
+    if chat_id not in cleanmode:
+        cleanmode.append(chat_id)
+
+
+async def cleanmode_on(chat_id: int):
+    try:
+        cleanmode.remove(chat_id)
+    except:
+        pass
+
+
+# Audio Video Limit
+
+"""
+from pytgcalls.types import AudioQuality, VideoQuality
+
+
+async def save_audio_bitrate(chat_id: int, bitrate: str):
+    audio[chat_id] = bitrate
+
+
+async def save_video_bitrate(chat_id: int, bitrate: str):
+    video[chat_id] = bitrate
+
+
+async def get_aud_bit_name(chat_id: int) -> str:
+    mode = audio.get(chat_id)
+    if not mode:
+        return "HIGH"
+    return mode
+
+
+async def get_vid_bit_name(chat_id: int) -> str:
+    mode = video.get(chat_id)
+    if not mode:
+        if PRIVATE_BOT_MODE == str(True):
+            return "HD_720p"
+        else:
+            return "HD_720p"
+    return mode
+
+
+async def get_audio_bitrate(chat_id: int) -> str:
+    mode = audio.get(chat_id)
+    if not mode:
+        return AudioQuality.STUDIO
+    if str(mode) == "STUDIO":
+        return AudioQuality.STUDIO
+    elif str(mode) == "HIGH":
+        return AudioQuality.HIGH
+    elif str(mode) == "MEDIUM":
+        return AudioQuality.MEDIUM
+    elif str(mode) == "LOW":
+        return AudioQuality.LOW
+
+
+async def get_video_bitrate(chat_id: int) -> str:
+    mode = video.get(chat_id)
+    if not mode:
+        if PRIVATE_BOT_MODE == str(True):
+            return VideoQuality.FHD_1080p
+        else:
+            return VideoQuality.HD_720p
+    if str(mode) == "UHD_4K":
+        return VideoQuality.UHD_4K
+    elif str(mode) == "QHD_2K":
+        return VideoQuality.QHD_2K
+    elif str(mode) == "FHD_1080p":
+        return VideoQuality.FHD_1080p
+    elif str(mode) == "HD_720p":
+        return VideoQuality.HD_720p
+    elif str(mode) == "SD_480p":
+        return VideoQuality.SD_480p
+    elif str(mode) == "SD_360p":
+        return VideoQuality.SD_360p"""
+
+
+async def is_served_user_clone(user_id: int) -> bool:
+    user = await usersdbc.find_one({"user_id": user_id})
+    if not user:
+        return False
+    return True
+
+
+async def get_served_users_clone() -> list:
+    users_list = []
+    async for user in usersdbc.find({"user_id": {"$gt": 0}}):
+        users_list.append(user)
+    return users_list
+
+
+async def add_served_user_clone(user_id: int):
+    is_served = await is_served_user(user_id)
+    if is_served:
+        return
+    return await usersdbc.insert_one({"user_id": user_id})
+
+
+async def get_served_chats_clone() -> list:
+    chats_list = []
+    async for chat in chatsdbc.find({"chat_id": {"$lt": 0}}):
+        chats_list.append(chat)
+    return chats_list
+
+
+async def is_served_chat_clone(chat_id: int) -> bool:
+    chat = await chatsdbc.find_one({"chat_id": chat_id})
+    if not chat:
+        return False
+    return True
+
+
+async def add_served_chat_clone(chat_id: int):
+    is_served = await is_served_chat(chat_id)
+    if is_served:
+        return
+    return await chatsdbc.insert_one({"chat_id": chat_id})
+
+
+async def delete_served_chat_clone(chat_id: int):
+    await chatsdbc.delete_one({"chat_id": chat_id})
