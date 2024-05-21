@@ -1,14 +1,14 @@
 aiofiles
-aiohttp==3.9.3
+aiohttp==3.9.4
 asyncio==3.4.3
 beautifulsoup4
-dnspython==2.3.0
+dnspython==2.6.1
 ffmpeg-python
 gitpython
 hachoir
 heroku3
 motor==3.3.2
-pillow==9.5.0
+pillow==10.3.0
 psutil
 py-tgcalls==1.2.9
 pykeyboard
