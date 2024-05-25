@@ -16,6 +16,7 @@ pyrogram==2.0.106
 python-dotenv
 pyyaml==6.0.1
 requests
+wget
 speedtest-cli
 spotipy
 tgcrypto
