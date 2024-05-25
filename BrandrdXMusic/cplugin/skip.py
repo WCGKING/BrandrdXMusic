@@ -123,7 +123,7 @@ async def skip(cli, message: Message, _, chat_id):
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
-                f"https://t.me/TG_VC_BOT?start=info_{videoid}",
+                f"https://t.me/BRANDED_KUDI_BOT?start=info_{videoid}",
                 title[:23],
                 check[0]["dur"],
                 user,
