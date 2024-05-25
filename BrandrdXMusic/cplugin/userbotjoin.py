@@ -13,7 +13,7 @@ from pyrogram.errors import (
     UserAlreadyParticipant,
     UserNotParticipant,
 )
-from BrandrdXMusic.utils.Hotty_ban import admin_filter
+from BrandrdXMusic.utils.branded_ban import admin_filter
 from BrandrdXMusic.utils.decorators.userbotjoin import UserbotWrapper
 from BrandrdXMusic.utils.database import get_assistant, is_active_chat
 
