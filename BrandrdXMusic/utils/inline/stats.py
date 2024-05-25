@@ -48,4 +48,3 @@ def back_stats_buttons(_):
         ]
     )
     return upl
-
