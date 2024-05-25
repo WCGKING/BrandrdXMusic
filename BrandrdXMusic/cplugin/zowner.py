@@ -27,7 +27,7 @@ from pyrogram.errors import (
     UserNotParticipant,
 )
 from BrandrdXMusic import app
-from BrandrdXMusic.utils.Hotty_ban import admin_filter
+from BrandrdXMusic.utils.branded_ban import admin_filter
 from BrandrdXMusic.utils.decorators.userbotjoin import UserbotWrapper
 from BrandrdXMusic.utils.database import get_assistant, is_active_chat
 
@@ -35,13 +35,13 @@ from BrandrdXMusic.utils.database import get_assistant, is_active_chat
 @Client.on_message(filters.command("repo") & filters.group)
 async def repo(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/4b52da6d880cbb199298a.jpg",
+        photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌱𝐒 𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://github.com/WCGKING/BrandrdXMusic"
                     )
                 ]
             ]
@@ -53,7 +53,7 @@ async def repo(client: Client, message: Message):
 async def help(client: Client, message: Message):
 
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/4b52da6d880cbb199298a.jpg",
+        photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -70,7 +70,7 @@ async def help(client: Client, message: Message):
 @Client.on_message(filters.command("repo") & filters.private)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/4b52da6d880cbb199298a.jpg",
+        photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -125,7 +125,7 @@ async def add_all(client, message):
         lol = await message.reply("🔄 **ᴀᴅᴅɪɴɢ ɢɪᴠᴇɴ ʙᴏᴛ ɪɴ ᴀʟʟ ᴄʜᴀᴛs!**")
 
         async for dialog in userbot.get_dialogs():
-            if dialog.chat.id == -1002198719573:
+            if dialog.chat.id == -1001991616368:
                 continue
             try:
                 await userbot.add_chat_members(dialog.chat.id, app_id)
