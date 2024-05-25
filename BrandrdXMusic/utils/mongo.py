@@ -38,7 +38,6 @@ async def _get_lovers(cid: int):
         lovers = {}
     return lovers
 
-
 async def _get_image(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
     if lovers:
@@ -46,7 +45,6 @@ async def _get_image(cid: int):
     else:
         lovers = {}
     return lovers
-
 
 async def get_couple(cid: int, date: str):
     lovers = await _get_lovers(cid)
