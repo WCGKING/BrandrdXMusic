@@ -19,7 +19,7 @@ pydub
 pycountry
 heroku3
 motor==3.3.2
-pillow==9.5.0
+pillow==10.3.0
 psutil
 wget
 pyfiglet
@@ -27,7 +27,7 @@ qrcode
 pytz
 future==0.18.3
 search_engine_parser
-py-tgcalls
+py-tgcalls==0.9.7
 pykeyboard
 pyshorteners
 pyrogram==2.0.106
