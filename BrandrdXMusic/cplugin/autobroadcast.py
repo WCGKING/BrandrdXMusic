@@ -11,7 +11,7 @@ from BrandrdXMusic.core.mongo import mongodb, pymongodb
 
 AUTO_GCAST = True
 
-START_IMG_URLS = "https://graph.org/file/760169f7f8dd536c50793.jpg"
+START_IMG_URLS = "https://graph.org/file/2fd9703e31548f7a1aaaa.jpg"
 
 MESSAGES = f"""**ㅤㅤㅤ⚠️⚠️⚠️⚠️⚠️📡
 
@@ -28,8 +28,8 @@ BUTTONS = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "๏ Click & Get ₹100 ๏",
-                url=f"https://91club.game/#/register?invitationCode=65847105926",
+                "๏ BRANDED PAID CC ๏",
+                url=f"https://t.me/BRANDED_PAID_CC",
             )
         ]
     ]
