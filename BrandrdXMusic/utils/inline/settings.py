@@ -112,7 +112,7 @@ def playmode_users_markup(
     return buttons
 
 
-  def audio_quality_markup(
+def audio_quality_markup(
     _,
     low: Union[bool, str] = None,
     medium: Union[bool, str] = None,
@@ -203,4 +203,4 @@ def video_quality_markup(
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close"),
         ],
     ]
-    return buttons          
+    return buttons
