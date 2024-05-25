@@ -61,7 +61,7 @@ from BrandrdXMusic.utils.inline import (
     stream_markup2,
     panel_markup_4,
 )
-from BrandrdXMusic.utils.pastebin import brandedBin
+from BrandrdXMusic.utils.pastebin import HottyBin
 from BrandrdXMusic.utils.stream.queue import put_queue, put_queue_index
 from youtubesearchpython.__future__ import VideosSearch
 
