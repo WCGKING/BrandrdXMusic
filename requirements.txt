@@ -22,6 +22,7 @@ motor==3.3.2
 pillow==9.5.0
 psutil
 wget
+NTgCalls==1.2.1
 pyfiglet
 qrcode
 pytz
