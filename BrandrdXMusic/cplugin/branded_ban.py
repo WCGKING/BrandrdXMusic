@@ -4,10 +4,10 @@ from BrandrdXMusic import app, userbot
 from BrandrdXMusic.misc import SUDOERS
 from pyrogram import filters, Client
 from pyrogram.types import *
-from BrandrdXMusic.utils.Hotty_ban import admin_filter
+from BrandrdXMusic.utils.branded_ban import admin_filter
 
 
-Hotty_text = [
+branded_text = [
     "hey please don't disturb me.",
     "who are you",
     "aap kon ho",
@@ -53,7 +53,7 @@ async def restriction_app(client: Client, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
     if len(message.text) < 2:
-        return await message.reply(random.choice(Hotty_text))
+        return await message.reply(random.choice(branded_text))
     bruh = message.text.split(maxsplit=1)[1]
     data = bruh.split(" ")
 
