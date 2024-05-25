@@ -4,13 +4,13 @@ aiofiles
 apscheduler
 bard
 pornhub-api==0.2.0
-aiohttp==3.9.3
+aiohttp==3.9.4
 asyncio==3.4.3
 beautifulsoup4
 blackpink
 deepai
 pytube
-dnspython==2.3.0
+dnspython==2.6.1
 ffmpeg-python
 gitpython
 hachoir
@@ -19,7 +19,7 @@ pydub
 pycountry
 heroku3
 motor==3.3.2
-pillow==9.5.0
+pillow==10.3.0
 psutil
 wget
 pyfiglet
