@@ -18,7 +18,7 @@ from BrandrdXMusic import userbot
 from BrandrdXMusic.misc import SUDOERS
 from pyrogram import *
 from pyrogram.types import *
-from BrandrdXMusic.utils.Hotty_ban import admin_filter
+from BrandrdXMusic.utils.branded_ban import admin_filter
 import random
 from pyrogram import Client, filters
 from pyrogram.types import ChatJoinRequest, InlineKeyboardButton, InlineKeyboardMarkup
@@ -32,7 +32,7 @@ from pyrogram.enums import ParseMode
 from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
-from BrandrdXMusic.utils.Hotty_ban import admin_filter
+from BrandrdXMusic.utils.branded_ban import admin_filter
 import os
 from BrandrdXMusic.misc import SUDOERS
 from PIL import ImageDraw, Image, ImageFont, ImageChops
@@ -246,7 +246,7 @@ async def greet_new_member(
             button_text = "๏ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ๏"
             add_button_text = "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏"
             deep_link = f"{user.id}"
-            add_link = f"https://t.me/?startgroup=true"
+            add_link = f"https://t.me/BRANDED_KUDI_BOT?startgroup=true"
             temp.MELCOW[f"welcome-{member.chat.id}"] = await client.send_photo(
                 member.chat.id,
                 photo=welcomeimg,
