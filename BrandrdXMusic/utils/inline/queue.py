@@ -82,3 +82,64 @@ def aq_markup(_, chat_id):
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
+
+
+def aq_markup(_, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(text="⛦ ᴘᴀᴜsᴇ ❥", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="⛦ sᴛᴏᴘ ❥", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="⛦ sᴋɪᴘ ❥", callback_data=f"ADMIN Skip|{chat_id}"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⛦ ʀᴇsᴜᴍᴇ ❥", callback_data=f"ADMIN Resume|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="⛦ ʀᴇᴘʟᴀʏ ❥", callback_data=f"ADMIN Replay|{chat_id}"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⛦ ᴍᴏʀᴇ ❥",
+                url="https://t.me/BRANDRD-BOT",
+            ),
+        ],
+    ]
+    return buttons
+
+
+def queuemarkup(_, vidid, chat_id):
+
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text=_["S_B_5"],
+                url=f"https://t.me/{app.username}?startgroup=true",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⛦ ᴘᴀᴜsᴇ ❥",
+                callback_data=f"ADMIN Pause|{chat_id}",
+            ),
+            InlineKeyboardButton(text="⛦ sᴛᴏᴘ ❥", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="⛦ sᴋɪᴘ ❥", callback_data=f"ADMIN Skip|{chat_id}"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⛦ ʀᴇsᴜᴍ ❥", callback_data=f"ADMIN Resume|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="⛦ ʀᴇᴘʟᴀ ❥", callback_data=f"ADMIN Replay|{chat_id}"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⛦ ᴍᴏʀᴇ ❥",
+                url="https://t.me/BRANDED_WORLD",
+            ),
+        ],
+    ]
+
+    return buttons
