@@ -4,7 +4,7 @@ aiofiles
 apscheduler
 bard
 pornhub-api==0.2.0
-aiohttp==3.9.3
+aiohttp==3.9.5
 asyncio==3.4.3
 beautifulsoup4
 blackpink
