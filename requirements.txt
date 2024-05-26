@@ -10,7 +10,7 @@ beautifulsoup4
 blackpink
 deepai
 pytube
-dnspython==2.3.0
+dnspython==2.6.1
 ffmpeg-python
 gitpython
 hachoir
