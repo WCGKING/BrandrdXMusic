@@ -50,7 +50,7 @@ youtube_search
 youtube-search-python
 git+https://github.com/AsmSafone/SafoneAPI
 lexica-api==1.4.7
-httpx==0.25.2
+httpx==0.27.0
 gpytranslate
 openai==0.28.0
 mpv
