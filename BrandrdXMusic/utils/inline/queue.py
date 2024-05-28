@@ -84,30 +84,6 @@ def aq_markup(_, chat_id):
     return buttons
 
 
-def aq_markup(_, chat_id):
-    buttons = [
-        [
-            InlineKeyboardButton(text="⛦ ᴘᴀᴜsᴇ ❥", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="⛦ sᴛᴏᴘ ❥", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="⛦ sᴋɪᴘ ❥", callback_data=f"ADMIN Skip|{chat_id}"),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⛦ ʀᴇsᴜᴍᴇ ❥", callback_data=f"ADMIN Resume|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="⛦ ʀᴇᴘʟᴀʏ ❥", callback_data=f"ADMIN Replay|{chat_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⛦ ᴍᴏʀᴇ ❥",
-                url="https://t.me/BRANDRD-BOT",
-            ),
-        ],
-    ]
-    return buttons
-
 
 def queuemarkup(_, vidid, chat_id):
 
@@ -120,23 +96,23 @@ def queuemarkup(_, vidid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴘᴀᴜsᴇ ❥",
+                text="ᴘᴀᴜsᴇ",
                 callback_data=f"ADMIN Pause|{chat_id}",
             ),
-            InlineKeyboardButton(text="⛦ sᴛᴏᴘ ❥", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="⛦ sᴋɪᴘ ❥", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="sᴋɪᴘ", callback_data=f"ADMIN Skip|{chat_id}"),
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ʀᴇsᴜᴍ ❥", callback_data=f"ADMIN Resume|{chat_id}"
+                text="ʀᴇsᴜᴍ", callback_data=f"ADMIN Resume|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="⛦ ʀᴇᴘʟᴀ ❥", callback_data=f"ADMIN Replay|{chat_id}"
+                text="ʀᴇᴘʟᴀ", callback_data=f"ADMIN Replay|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴍᴏʀᴇ ❥",
+                text="๏ ᴍᴏʀᴇ ๏",
                 url="https://t.me/BRANDED_WORLD",
             ),
         ],
