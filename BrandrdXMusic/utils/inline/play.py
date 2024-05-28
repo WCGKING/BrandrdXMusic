@@ -310,21 +310,21 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="◁ 10 sᴇᴄ ❥",
+                text="◁ 10 sᴇᴄ",
                 callback_data=f"ADMIN 1|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⛦ 10 sᴇᴄ ▷",
+                text="10 sᴇᴄ ▷",
                 callback_data=f"ADMIN 2|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ʜᴏᴍᴇ ❥",
+                text="❥ ʜᴏᴍᴇ ❥",
                 callback_data=f"Pages Back|2|{videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⛦ ɴᴇxᴛ ❥",
+                text="❥ ɴᴇxᴛ ❥",
                 callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
             ),
         ],
@@ -342,31 +342,31 @@ def panel_markup_2(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="🕒 0.5x  ❥",
+                text="🕒 0.5x",
                 callback_data=f"SpeedUP {chat_id}|0.5",
             ),
             InlineKeyboardButton(
-                text="🕓 0.75x  ❥",
+                text="🕓 0.75x",
                 callback_data=f"SpeedUP {chat_id}|0.75",
             ),
             InlineKeyboardButton(
-                text="🕤 1.0x  ❥",
+                text="🕤 1.0x",
                 callback_data=f"SpeedUP {chat_id}|1.0",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🕤 1.5x  ❥",
+                text="🕤 1.5x",
                 callback_data=f"SpeedUP {chat_id}|1.5",
             ),
             InlineKeyboardButton(
-                text="🕛 2.0x  ❥",
+                text="🕛 2.0x",
                 callback_data=f"SpeedUP {chat_id}|2.0",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ʙᴀᴄᴋ  ❥",
+                text="❥ ʙᴀᴄᴋ ❥",
                 callback_data=f"Pages Back|1|{videoid}|{chat_id}",
             ),
         ],
@@ -397,11 +397,11 @@ def panel_markup_5(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ʜᴏᴍᴇ ❥",
+                text="❥ ʜᴏᴍᴇ ❥",
                 callback_data=f"MainMarkup {videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⛦ ɴᴇxᴛ ❥",
+                text="❥ ɴᴇxᴛ ❥",
                 callback_data=f"Pages Forw|1|{videoid}|{chat_id}",
             ),
         ],
@@ -413,31 +413,31 @@ def panel_markup_3(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🕒 0.5x ❥",
+                text="🕒 0.5x",
                 callback_data=f"SpeedUP {chat_id}|0.5",
             ),
             InlineKeyboardButton(
-                text="🕓 0.75x ❥",
+                text="🕓 0.75x",
                 callback_data=f"SpeedUP {chat_id}|0.75",
             ),
             InlineKeyboardButton(
-                text="🕤 1.0x ❥",
+                text="🕤 1.0x",
                 callback_data=f"SpeedUP {chat_id}|1.0",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🕤 1.5x ❥",
+                text="🕤 1.5x",
                 callback_data=f"SpeedUP {chat_id}|1.5",
             ),
             InlineKeyboardButton(
-                text="🕛 2.0x ❥",
+                text="🕛 2.0x",
                 callback_data=f"SpeedUP {chat_id}|2.0",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ʙᴀᴄᴋ ❥",
+                text="❥ ʙᴀᴄᴋ ❥",
                 callback_data=f"Pages Back|2|{videoid}|{chat_id}",
             ),
         ],
@@ -496,7 +496,7 @@ def panel_markup_4(_, vidid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ʜᴏᴍᴇ ❥",
+                text="❥ ʜᴏᴍᴇ ❥",
                 callback_data=f"MainMarkup {vidid}|{chat_id}",
             ),
         ],
@@ -522,15 +522,15 @@ def panel_markup_clone(_, vidid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴠɪᴅᴇᴏ ❥", callback_data=f"downloadvideo {vidid}"
+                text="📥 ᴠɪᴅᴇᴏ", callback_data=f"downloadvideo {vidid}"
             ),
             InlineKeyboardButton(
-                text="⛦ ᴀᴜᴅɪᴏ ❥", callback_data=f"downloadaudio {vidid}"
+                text="📥 ᴀᴜᴅɪᴏ", callback_data=f"downloadaudio {vidid}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴘʟᴀʏʟɪsᴛ ❥", callback_data=f"vip_playlist {vidid}"
+                text="✚ ᴘʟᴀʏʟɪsᴛ ✚", callback_data=f"branded_playlist {vidid}"
             ),
         ],
     ]
