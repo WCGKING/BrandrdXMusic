@@ -25,7 +25,7 @@ wget
 pyfiglet
 qrcode
 pytz
-future==0.18.3
+future==1.0.0
 search_engine_parser
 py-tgcalls==1.2.9
 ntgcalls==1.1.2
