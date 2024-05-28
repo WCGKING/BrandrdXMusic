@@ -22,13 +22,13 @@ motor==3.3.2
 pillow==9.5.0
 psutil
 wget
-NTgCalls==1.2.1
 pyfiglet
 qrcode
 pytz
 future==0.18.3
 search_engine_parser
-py-tgcalls
+py-tgcalls==1.2.9
+ntgcalls==1.1.2
 pykeyboard
 pyshorteners
 pyrogram==2.0.106
