@@ -35,11 +35,11 @@ today = str(dt()[0])
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply_text("This command only works in groups.")
+        return await message.reply_text("ᴇᴅᴀ ᴍᴏɴᴇ This command only works in groups.")
     try:
      #  is_selected = await get_couple(cid, today)
      #  if not is_selected:
-         msg = await message.reply_text("ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇꜱ ɪᴍᴀɢᴇ...")
+         msg = await message.reply_text(" ᴇᴅᴀ ᴍᴏɴᴇ ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇꜱ ɪᴍᴀɢᴇ...")
          #GET LIST OF USERS
          list_of_users = []
 
