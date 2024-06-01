@@ -5,20 +5,20 @@ from config import OWNER_ID
 # vc on
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
-       await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
+       await msg.reply(" ᴇᴅᴀ ᴍᴏɴᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
 # vc off
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
-       await msg.reply("**ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
+       await msg.reply("** ᴇᴅᴀ ᴍᴏɴᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
 
 # invite members on vc
 @app.on_message(filters.video_chat_members_invited)
 async def brah3(app :app, message:Message):
-           text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
+           text = f"{message.from_user.mention} ᴇᴅᴀ ᴍᴏɴᴇ ᴠᴀᴀ ɪɴᴠɪᴛᴇᴅ "
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
-               text += f"[{user.first_name}](tg://user?id={user.id}) "
+               text += f"[{user.first_name}] "
                x += 1
              except Exception:
                pass
