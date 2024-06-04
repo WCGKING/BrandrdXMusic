@@ -30,12 +30,14 @@ class Userbot(Client):
             session_string=str(config.STRING1),
             no_updates=True,
         )
+            
         self.two = Client(
             name="BrandrdXMusic2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING2),
         )
+            no_updates=True,
         self.three = Client(
             name="BrandrdXMusic3",
             api_id=config.API_ID,
