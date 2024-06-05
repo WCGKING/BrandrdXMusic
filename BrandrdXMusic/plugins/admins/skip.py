@@ -147,7 +147,7 @@ async def skip(cli, message: Message, _, chat_id):
             await Hotty.skip_stream(chat_id, file_path, video=status, image=image)
         except:
             return await mystic.edit_text(_["call_6"])
-        button = stream_markup(_, videoid chat_id)
+        button = stream_markup(_, videoid, chat_id)
         img = await get_thumb(videoid)
         run = await message.reply_photo(
             photo=img,
