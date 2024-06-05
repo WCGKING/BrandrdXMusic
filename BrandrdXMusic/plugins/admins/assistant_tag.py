@@ -4,9 +4,9 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
-from  import app
-from .utils.database import get_assistant
-from .utils.filter import admin_filter
+from BrandrdXMusic.utils.database import get_assistant
+from BrandrdXMusic import app
+from BrandrdXMusic.utils.branded_ban import admin_filter
 
 SPAM_CHATS = []
 
