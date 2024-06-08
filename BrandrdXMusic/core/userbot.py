@@ -51,9 +51,9 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("BRANDED_WORLD")
-                await self.one.join_chat("BRANDED_PAID_CC")
-                await self.one.join_chat("BRANDRD_BOT")
+                await self.one.join_chat("HEROKU_CREDIT_CARD_KING")
+                await self.one.join_chat("Ak_support1")
+                await self.one.join_chat("")
             except:
                 pass
             assistants.append(1)
@@ -75,7 +75,7 @@ class Userbot(Client):
             try:
                 await self.two.join_chat("HEROKU_CREDIT_CARD_KING")
                 await self.one.join_chat("Ak_support1")
-                await self.one.join_chat("BRANDRD_BOT")
+                await self.one.join_chat("")
             except:
                 pass
             assistants.append(2)
@@ -97,7 +97,7 @@ class Userbot(Client):
             try:
                 await self.three.join_chat("HEROKU_CREDIT_CARD_KING")
                 await self.one.join_chat("Ak_support1")
-                await self.one.join_chat("BRANDRD_BOT")
+                await self.one.join_chat("")
             except:
                 pass
             assistants.append(3)
