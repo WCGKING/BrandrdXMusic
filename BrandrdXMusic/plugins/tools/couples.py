@@ -14,8 +14,8 @@ from BrandrdXMusic.mongo.couples_db import _get_image, get_couple
 POLICE = [
     [
         InlineKeyboardButton(
-            text="ᴍʏ ᴄᴜᴛᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ 🌋",
-            url=f"https://t.me/BRANDED_PAID_CC",
+            text="𓊈❥[𝗕𝗥𝗔𝗡𝗗𝗘𝗗 𓆩🇽𓆪 𝗞𝗜𝗡𝗚 ]❥𓊉",
+            url=f"https://t.me/BRANDEDKING82",
         ),
     ],
 ]
