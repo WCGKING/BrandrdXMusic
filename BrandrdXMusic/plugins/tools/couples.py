@@ -56,7 +56,7 @@ async def couples(app, message):
         img1 = Image.open(f"{p1}")
         img2 = Image.open(f"{p2}")
 
-        img = Image.open("BrandrdXMusic/assets/Couple.png")
+        img = Image.open("BrandrdXMusic/assets/cppicbranded.jpg")
 
         img1 = img1.resize((390, 390))
         img2 = img2.resize((390, 390))
