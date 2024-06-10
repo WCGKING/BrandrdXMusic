@@ -29,14 +29,16 @@ class Userbot(Client):
             api_hash=config.API_HASH,
             session_string=str(config.STRING1),
             no_updates=True,
+            ipv6=False,
         )
             
         self.two = Client(
             name="BrandrdXMusic2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            no_updates=True,
             session_string=str(config.STRING2),
+            no_updates=True,
+            ipv6=False,
         )
         self.three = Client(
             name="BrandrdXMusic3",
@@ -44,6 +46,7 @@ class Userbot(Client):
             api_hash=config.API_HASH,
             session_string=str(config.STRING3),
             no_updates=True,
+            ipv6=False,
         )
         self.four = Client(
             name="BrandrdXMusic4",
@@ -51,6 +54,7 @@ class Userbot(Client):
             api_hash=config.API_HASH,
             session_string=str(config.STRING4),
             no_updates=True,
+            ipv6=False,
         )
         self.five = Client(
             name="BrandrdXMusic5",
@@ -58,6 +62,7 @@ class Userbot(Client):
             api_hash=config.API_HASH,
             session_string=str(config.STRING5),
             no_updates=True,
+            ipv6=False,
         )
 
     async def start(self):
