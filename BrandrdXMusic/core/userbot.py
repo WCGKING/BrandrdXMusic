@@ -34,7 +34,7 @@ class Userbot(Client):
         self.two = Client(
             name="BrandrdXMusic2",
             api_id=config.API_ID,
-            api_hash=config.API_HASH
+            api_hash=config.API_HASH,
             no_updates=True,
             session_string=str(config.STRING2),
         )
