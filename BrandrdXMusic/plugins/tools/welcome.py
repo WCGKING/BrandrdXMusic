@@ -73,9 +73,9 @@ async def greet_group(_, member: ChatMemberUpdated):
         )
     except AttributeError:
         pic = "BrandrdXMusic/assets/Brandedwel2.png"
-    if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
+    if (temp.MELCOW).get(f"welcome-{user.tmention}") is not None:
         try:
-            await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
+            await temp.MELCOW[f"welcome-{member.tmention}"].delete()
         except Exception as e:
             LOGGER.error(e)
     try:
@@ -88,10 +88,10 @@ async def greet_group(_, member: ChatMemberUpdated):
             caption=f"""
 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {member.chat.title}
 ➖➖➖➖➖➖➖➖➖➖➖
-๏ 𝗡𝗔𝗠𝗘 ➠ {user.mention}
+๏ 𝗡𝗔𝗠𝗘 ➠ {user.tmention}
 ๏ 𝗜𝗗 ➠ {user.id}
 ๏ 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 ➠ @{user.username}
-๏ 𝐌𝐀𝐃𝐄 𝐁𝐘 ➠ @BRANDEDKING82
+๏ 𝐌𝐀𝐃𝐄 𝐁𝐘 ➠ @bugadam
 ➖➖➖➖➖➖➖➖➖➖➖
 """,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/BRANDED_KUDI_BOT?startgroup=true")]])
