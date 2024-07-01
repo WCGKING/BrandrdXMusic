@@ -87,12 +87,17 @@ async def greet_group(_, member: ChatMemberUpdated):
             photo=welcomeimg,
             caption=f"""
 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {member.chat.title}
+ 
  ᴇᴅᴀ ᴍᴏɴᴇ ɴɪɴɴᴇ ɴᴊɴ  ᴘᴏᴋɪʏᴅᴀ
+
 ๏ 🅑🅐🅑🅨 ➠ {user.mention}
+
 ๏ 🅜 🅞 🅑 ➠ {user.id}
+
 ๏ 🅛🅘🅝🅚 ➠ @{user.username}
+
 ๏ 🅜🅐🅓🅔 ➠ @Bugadam
-         𓆏
+         
 """,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴇᴅᴀ ᴍᴏɴᴇ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/MalluMusic_vcbot?startgroup=true")]])
         )
