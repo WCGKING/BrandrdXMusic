@@ -19,7 +19,7 @@ pydub
 pycountry
 heroku3
 motor==3.3.2
-pillow==9.5.0
+pillow==10.4.0
 psutil
 wget
 pyfiglet
