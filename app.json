@@ -24,7 +24,7 @@
       },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
-        "value": "",
+        "value": "6996352579:AAEuxkBxsB7e8QpCXX7Ok8Uhks_mqAGbImo",
         "required": true
       },
       "MONGO_DB_URI": {
