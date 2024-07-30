@@ -1,5 +1,5 @@
 aiofiles
-aiohttp
+aiohttp==3.8.2
 asyncio
 beautifulsoup4
 dnspython
@@ -27,3 +27,5 @@ youtube-search-python
 gtts
 git+https://github.com/AsmSafone/SafoneAPI
 lyricsgenius
+Flask==2.2.2
+gunicorn==20.1.0
