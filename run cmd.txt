@@ -1,1 +1,1 @@
-gunicorn app:app & worker: bash start
+gunicorn app:app & bash start
