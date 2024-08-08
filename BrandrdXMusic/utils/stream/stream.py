@@ -199,7 +199,7 @@ async def stream(
             )
         except:
             try:
-                file_path, direct = await YouTube.download(
+                file_path, direct = await YTB.download(
                     vidid, mystic, videoid=True, video=status
                 )
             except:
