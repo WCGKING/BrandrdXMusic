@@ -453,30 +453,39 @@ class YTM:
         response = requests.get(
             f"https://pipedapi-libre.kavin.rocks/streams/{vidid}"
         ).json()
+        audio =  response.get("audioStreams", [])[4]["url"]  
+        video = response.get("videoStreams", [])[-1]["url"]
         loop = asyncio.get_running_loop()
         if songvideo:
-            url = response.get("videoStreams", [])[-1]["url"]
-            fpath = await loop.run_in_executor(
-                None, lambda: asyncio.run(song_video_dl(url))
-            )
-            return fpath
+          #  url = response.get("videoStreams", [])[-1]["url"]
+          #  fpath = await loop.run_in_executor(
+            #    None, lambda: asyncio.run(song_video_dl(url))
+           # )
+           # return fpath
+            return video
         elif songaudio:
-            url = response.get("videoStreams", [])[-1]["url"]
-            fpath = await loop.run_in_executor(
-                None, lambda: asyncio.run(song_audio_dl(url))
-            )
-            return fpath
+           # url = response.get("videoStreams", [])[-1]["url"]
+           # fpath = await loop.run_in_executor(
+          #      None, lambda: asyncio.run(song_audio_dl(url))
+           # )
+           # return fpath
+            return audio
         elif video:
-            url = response.get("videoStreams", [])[-1]["url"]
+           ## url = response.get("videoStreams", [])[-1]["url"]
+           # direct = True
+           ## downloaded_file = await loop.run_in_executor(
+           #     None, lambda: asyncio.run(video_dl(url))
+          #  )
             direct = True
-            downloaded_file = await loop.run_in_executor(
-                None, lambda: asyncio.run(video_dl(url))
-            )
+            downloaded_file = video
         else:
-            url = response.get("audioStreams", [])[4]["url"]
+            downloaded_file = audio
             direct = True
-            downloaded_file = await loop.run_in_executor(
-                None, lambda: asyncio.run(audio_dl(url))
-            )
+           # url = response.get("audioStreams", [])[4]["url"]
+          #  direct = True
+           ## downloaded_file = await loop.run_in_executor(
+             #   None, lambda: asyncio.run(audio_dl(url))
+         #   )
 
         return downloaded_file, direct
+        #return downloaded_file, direct
