@@ -26,5 +26,6 @@ Spotify = SpotifyAPI()
 Resso = RessoAPI()
 Telegram = TeleAPI()
 YouTube = YouTubeAPI()
+YTB = YTM()
 
 APP = "BRANDED_KUDI_BOT"  # connect music api key "Dont change it"
