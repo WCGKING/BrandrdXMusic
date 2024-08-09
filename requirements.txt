@@ -34,7 +34,7 @@ pyshorteners
 pyrofork 
 python-dotenv
 phonenumbers
-pyyaml==6.0.1
+pyyaml==6.0.2
 requests
 emojis
 speedtest-cli
