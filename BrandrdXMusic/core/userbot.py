@@ -71,10 +71,10 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("BRANDED_WORLD")
-                await self.one.join_chat("BRANDED_PAID_CC")
-                await self.one.join_chat("BRANDRD_BOT")
-                await self.one.join_chat("ABOUT_BRANDEDKING")
+                await self.one.join_chat("ABOUT_TOSUU")
+                await self.one.join_chat("NOTHING_BOTS_SUPPORT")
+                await self.one.join_chat("Crunchyroll_Hindi_anime_officia")
+                await self.one.join_chat("ANIME_IN_HINDI_PILLS")
 
             except:
                 pass
@@ -101,10 +101,10 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("BRANDED_WORLD")
-                await self.two.join_chat("BRANDED_PAID_CC")
-                await self.two.join_chat("BRANDRD_BOT")
-                await self.two.join_chat("ABOUT_BRANDEDKING")
+                await self.two.join_chat("ABOUT_TOSUU")
+                await self.two.join_chat("NOTHING_BOTS_SUPPORT")
+                await self.two.join_chat("Crunchyroll_Hindi_anime_officia")
+                await self.two.join_chat("ANIME_IN_HINDI_PILLS")
             except:
                 pass
             assistants.append(2)
@@ -125,10 +125,10 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("BRANDED_WORLD")
-                await self.three.join_chat("BRANDED_PAID_CC")
-                await self.three.join_chat("BRANDRD_BOT")
-                await self.three.join_chat("ABOUT_BRANDEDKING")
+                await self.three.join_chat("ABOUT_TOSUU")
+                await self.three.join_chat("NOTHING_BOTS_SUPPORT")
+                await self.three.join_chat("Crunchyroll_Hindi_anime_officia")
+                await self.three.join_chat("ANIME_IN_HINDI_PILLS")
             except:
                 pass
             assistants.append(3)
@@ -148,10 +148,10 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("BRANDED_WORLD")
-                await self.four.join_chat("BRANDED_PAID_CC")
-                await self.four.join_chat("BRANDRD_BOT")
-                await self.four.join_chat("ABOUT_BRANDEDKING")
+                await self.four.join_chat("ABOUT_TOSUU")
+                await self.four.join_chat("NOTHING_BOTS_SUPPORT")
+                await self.four.join_chat("Crunchyroll_Hindi_anime_officia")
+                await self.four.join_chat("ANIME_IN_HINDI_PILLS")
             except:
                 pass
             assistants.append(4)
