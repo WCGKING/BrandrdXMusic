@@ -15,7 +15,7 @@ API_HASH = "5c8a12b9dd70d182e11d9ead5d357dab"
 BOT_TOKEN = "7290157519:AAEpxiPRdd_e662Hi63tsHjfbofkJQRVlvs"
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = "mongodb+srv://luceenavictor:luceenavictor@cluster0.h7o0q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGO_DB_URI = "mongodb+srv://luceenavictor:Hidraumak@12@cluster0.h7o0q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 MUSIC_BOT_NAME = "COMBINADO MUSIC"
 PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
 
