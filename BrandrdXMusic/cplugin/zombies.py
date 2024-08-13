@@ -40,17 +40,17 @@ async def remove(client, message):
             bot = await client.get_chat_member(message.chat.id, "self")
             if client.status == ChatMemberStatus.MEMBER:
                 await message.reply(
-                    "➠ | ɪ ɴᴇᴇᴅ ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs."
+                    "Eu preciso de permissões de admin para remover contas excluídas."
                 )
             else:
                 if len(chatQueue) > 30:
                     await message.reply(
-                        "➠ | ɪ'ᴍ ᴀʟʀᴇᴀᴅʏ ᴡᴏʀᴋɪɴɢ ᴏɴ ᴍʏ ᴍᴀxɪᴍᴜᴍ ɴᴜᴍʙᴇʀ ᴏғ 30 ᴄʜᴀᴛs ᴀᴛ ᴛʜᴇ ᴍᴏᴍᴇɴᴛ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ sʜᴏʀᴛʟʏ."
+                        "Dá um tempo! Estou trabalhando no meu número máximo de 30 chats no momento. Tente novamente mais tarde."
                     )
                 else:
                     if message.chat.id in chatQueue:
                         await message.reply(
-                            "➠ | ᴛʜᴇʀᴇ's ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴏɴɢɪɪɴɢ ᴘʀᴏᴄᴇss ɪɴ ᴛʜɪs ᴄʜᴀᴛ. ᴘʟᴇᴀsᴇ [ /stop ] ᴛᴏ sᴛᴀʀᴛ ᴀ ɴᴇᴡ ᴏɴᴇ."
+                            "PORRA! ESPERA! Já tem um processo em andamento aqui caraio. Pelo menos usa /stop para iniciar um novo."
                         )
                     else:
                         chatQueue.append(message.chat.id)
@@ -62,14 +62,14 @@ async def remove(client, message):
                                 pass
                         lenDeletedList = len(deletedList)
                         if lenDeletedList == 0:
-                            await message.reply("⟳ | ɴᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ɪɴ ᴛʜɪs ᴄʜᴀᴛ.")
+                            await message.reply("Nenhuma conta excluída neste grupo.")
                             chatQueue.remove(message.chat.id)
                         else:
                             k = 0
                             processTime = lenDeletedList * 1
                             temp = await client.send_message(
                                 message.chat.id,
-                                f"🧭 | ᴛᴏᴛᴀʟ ᴏғ {lenDeletedList} ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ʜᴀs ʙᴇᴇɴ ᴅᴇᴛᴇᴄᴛᴇᴅ.\n🥀 | ᴇsᴛɪᴍᴀᴛᴇᴅ ᴛɪᴍᴇ: {processTime} sᴇᴄᴏɴᴅs ғʀᴏᴍ ɴᴏᴡ.",
+                                f"Total de {lenDeletedList} contas excluídas foram detectadas..\nTempo estimado: {processTime} segundos a partir de agora.",
                             )
                             if stopProcess:
                                 stopProcess = False
@@ -85,18 +85,18 @@ async def remove(client, message):
                                 await asyncio.sleep(10)
                             if k == lenDeletedList:
                                 await message.reply(
-                                    f"✅ | sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇᴍᴏᴠᴇᴅ ᴀʟʟ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄɪᴜɴᴛs ғʀᴏᴍ ᴛʜɪs ᴄʜᴀᴛ."
+                                    f"✅ Removido com sucesso todas as contas excluídas nesse grupo.."
                                 )
                                 await temp.delete()
                             else:
                                 await message.reply(
-                                    f"✅ | sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇᴍᴏᴠᴇᴅ {k} ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ғʀᴏᴍ ᴛʜɪs ᴄʜᴀᴛ."
+                                    f"✅ Removido com sucesso {k} contas excluídas nesse grupo."
                                 )
                                 await temp.delete()
                             chatQueue.remove(message.chat.id)
         else:
             await message.reply(
-                "👮🏻 | sᴏʀʀʏ, **ᴏɴʟʏ ᴀᴅᴍɪɴ** ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ."
+                "Foi mal, mas só os **admin buceta** daqui conseguem usar esse comando."
             )
     except FloodWait as e:
         await asyncio.sleep(e.value)
@@ -128,13 +128,13 @@ async def admins(client, message):
         try:
             owner = ownerList[0]
             if owner.username == None:
-                text2 += f"👑 ᴏᴡɴᴇʀ\n└ {owner.mention}\n\n👮🏻 ᴀᴅᴍɪɴs\n"
+                text2 += f"👑 Dono:\n└ {owner.mention}\n\n👮🏻 Admins\n"
             else:
-                text2 += f"👑 ᴏᴡɴᴇʀ\n└ @{owner.username}\n\n👮🏻 ᴀᴅᴍɪɴs\n"
+                text2 += f"👑 Dono\n└ @{owner.username}\n\n👮🏻 Admins\n"
         except:
-            text2 += f"👑 ᴏᴡɴᴇʀ\n└ <i>Hidden</i>\n\n👮🏻 ᴀᴅᴍɪɴs\n"
+            text2 += f"👑 Dono\n└ <i>Hidden</i>\n\n👮🏻 Admins\n"
         if len(adminList) == 0:
-            text2 += "└ <i>ᴀᴅᴍɪɴs ᴀʀᴇ ʜɪᴅᴅᴇɴ</i>"
+            text2 += "└ <i>Admins estão ocultos.</i>"
             await client.send_message(message.chat.id, text2)
         else:
             while len(adminList) > 1:
@@ -149,7 +149,7 @@ async def admins(client, message):
                     text2 += f"└ {admin.mention}\n\n"
                 else:
                     text2 += f"└ @{admin.username}\n\n"
-            text2 += f"✅ | **ᴛᴏᴛᴀʟ ɴᴜᴍʙᴇʀ ᴏғ ᴀᴅᴍɪɴs**: {lenAdminList}"
+            text2 += f"✅ **Número total de admins**: {lenAdminList}"
             await client.send_message(message.chat.id, text2)
     except FloodWait as e:
         await asyncio.sleep(e.value)
@@ -168,14 +168,14 @@ async def bots(client, message):
         ):
             botList.append(bot.user)
         lenBotList = len(botList)
-        text3 = f"**ʙᴏᴛ ʟɪsᴛ - {message.chat.title}**\n\n🤖 ʙᴏᴛs\n"
+        text3 = f"**Lista de BOT - {message.chat.title}**\n\n🤖 BOTs\n"
         while len(botList) > 1:
             bot = botList.pop(0)
             text3 += f"├ @{bot.username}\n"
         else:
             bot = botList.pop(0)
             text3 += f"└ @{bot.username}\n\n"
-            text3 += f"✅ | **ᴛᴏᴛᴀʟ ɴᴜᴍʙᴇʀ ᴏғ ʙᴏᴛs**: {lenBotList}**"
+            text3 += f"✅ **Número total de BOTs**: {lenBotList}**"
             await client.send_message(message.chat.id, text3)
     except FloodWait as e:
         await asyncio.sleep(e.value)
