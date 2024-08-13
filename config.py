@@ -8,8 +8,8 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = 21782992
-API_HASH = "5c8a12b9dd70d182e11d9ead5d357dab"
+API_ID = 28394860
+API_HASH = "07b4fad3981e64c0554add6f249f7c07"
 
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = "7290157519:AAEpxiPRdd_e662Hi63tsHjfbofkJQRVlvs"
@@ -43,8 +43,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/BRANDRD_BOT")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/BRANDED_WORLD")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/combinadomusic")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/combinadomusic")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -74,7 +74,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @BRANDEDSTRINGSESSION_BOT on Telegram
-STRING1 = "AQFMYdAAlhdmdT54AAteIiqpPpf1sEm9WGj_95conNnzQswFl8exaDC2YRcwectMiKBTXNVIQT18blP7BvFwY9oDjr_4KiDFjYeZP1whpkbpqChZ6F_k42B_5RTzDgBSgbXRCKJGhHo5jM_v4Dg6w5iCvKmZVYVHQzqNh07V1wf1sNpyDyCcF857SVFxK5tNolji6E0Phk3HGAP1nb3b7YFbma4MjCsqaUZ1HCicEW2LmafJD1LXDFbvPvcM-D_HglHBHfc_qNDlIL4mVayiic-JXfR6qVfXAGc3fTGGifufx_MRQIh3mOf-0Z5dTocPh36rCga4q93FeGH0xEP-5lEe-zYTRQAAAAAoFQfdAA"
+STRING1 = "AQGxRWwAhX2eOenUllxevL7LCrgywCiL5P8Ih6LWdj4ZDuG8-S2mw-jkpudq8GYUvt16g-0-tZU3dqbJeiq0TnhGYZEsdes00V0wfuLJLc0gfCwD7KHkdvhisk8bmtPc8Uf_lwftW2cLwtULr1VMFQK6uSvSkPQq5fWbZ2YwM5Mv3HaGVDNTSvaNIJUYbyhY4-AGqsa3t84yBWsTSoIWAIUn4Pqe1M8BXvtx2nzMCUDAJP8LmXS9GLUEea9jhqgSzYE-j33WZqmthEAU7gy9xHUNDFzZE7F5ihgv6_7ptZBPXyBJ8LCDUf-yR1hQKkY-Y2DQCoiJ44IxZeB1DqR3Tg_Mhy2BJAAAAAG-1TfmAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
