@@ -44,7 +44,7 @@ async def download_song(_, message):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} segura a onda aí caraio, envia daqui uns 5 segundos... deixa eu respirar também...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -56,7 +56,7 @@ async def download_song(_, message):
 
     query = " ".join(message.command[1:])
     print(query)
-    m = await message.reply("**🔄 sᴇᴀʀᴄʜɪɴɢ... **")
+    m = await message.reply("**🔄 Procurando...**")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -74,11 +74,11 @@ async def download_song(_, message):
 
     except Exception as e:
         await m.edit(
-            "**⚠️ ɴᴏ ʀᴇsᴜʟᴛs ᴡᴇʀᴇ ғᴏᴜɴᴅ. ᴍᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ ᴛʏᴘᴇᴅ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ sᴏɴɢ ɴᴀᴍᴇ**"
+            "**⚠️ Não encontrei nada. Vê se tu digitou o nome da música certo pelo menos...**"
         )
         print(str(e))
         return
-    await m.edit("**📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...**")
+    await m.edit("**📥 Baixando...**")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -88,13 +88,13 @@ async def download_song(_, message):
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        await m.edit("**📤 ᴜᴘʟᴏᴀᴅɪɴɢ...**")
+        await m.edit("**📤 Carregando...**")
 
         await message.reply_audio(
             audio_file,
             thumb=thumb_name,
             title=title,
-            caption=f"{title}\nRᴇǫᴜᴇsᴛᴇᴅ ʙʏ ➪{message.from_user.mention}\nVɪᴇᴡs➪ {views}\nCʜᴀɴɴᴇʟ➪ {channel_name}",
+            caption=f"{title}\nSolicitado por: {message.from_user.mention}\nVisualizações: {views}\nCanal: {channel_name}",
             duration=dur,
         )
         await m.delete()
@@ -128,7 +128,7 @@ async def download_instareels(c: Client, m: Message):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} peraí também, digita devagar caraio... Agora espera uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -141,11 +141,11 @@ async def download_instareels(c: Client, m: Message):
     try:
         reel_ = m.command[1]
     except IndexError:
-        await m.reply_text("Give me an link to download it...")
+        await m.reply_text("Me dê um link para baixá-lo...")
         return
     if not reel_.startswith("https://www.instagram.com/reel/"):
         await m.reply_text(
-            "In order to obtain the requested reel, a valid link is necessary. Kindly provide me with the required link."
+            "Para obter o reel solicitado, é necessário um link válido. Por favor, forneça o link necessário."
         )
         return
     OwO = reel_.split(".", 1)
@@ -162,7 +162,7 @@ async def download_instareels(c: Client, m: Message):
                 await m.reply_document(Reel_)
                 return
             except Exception:
-                await m.reply_text("I am unable to reach to this reel.")
+                await m.reply_text("Não consigo acessar este reel.")
 
 
 ######
@@ -182,7 +182,7 @@ async def instagram_reel(client: Client, message):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} peraí também, digita devagar caraio... Agora espera uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -206,11 +206,11 @@ async def instagram_reel(client: Client, message):
                 await message.reply_video(f"{video_url}")
             else:
                 await message.reply(
-                    "No video found in the response. may be accountbis private."
+                    "Nenhum vídeo encontrado na resposta. Pode ser que a conta seja privada."
                 )
         else:
-            await message.reply("Request was not successful.")
+            await message.reply("A solicitação não foi bem-sucedida.")
     else:
         await message.reply(
-            "Please provide a valid Instagram URL using the /reels command."
+            "Por favor, forneça uma URL válida do Instagram usando o comando /reels."
         )
