@@ -122,7 +122,7 @@ async def check_playlist_clone(client, message: Message, _):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} segura o dedo aí caraio, deixa eu respirar... Tenta daqui uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -197,7 +197,7 @@ async def del_plist_msg_clone(client, message: Message, _):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} segura o dedo aí caraio, deixa eu respirar... Tenta daqui uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -279,7 +279,7 @@ async def play_playlist_command_clone(client, message, _):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} segura o dedo aí caraio, deixa eu respirar... Tenta daqui uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -344,7 +344,7 @@ import json
 async def add_playlist_clone(client: Client, message: Message, _):
     if len(message.command) < 2:
         return await message.reply_text(
-            "**➻ ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴍᴇ ᴀ sᴏɴɢ ɴᴀᴍᴇ ᴏʀ sᴏɴɢ ʟɪɴᴋ ᴏʀ ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ʟɪɴᴋ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ..**\n\n**➥ ᴇxᴀᴍᴘʟᴇs:**\n\n▷ `/addplaylist Blue Eyes` (ᴘᴜᴛ ᴀ sᴘᴇᴄɪғɪᴄ sᴏɴɢ ɴᴀᴍᴇ)\n\n▷ /addplaylist [ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ʟɪɴᴋ] (ᴛᴏ ᴀᴅᴅ ᴀʟʟ sᴏɴɢs ғʀᴏᴍ ᴀ ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ɪɴ ʙᴏᴛ ᴘʟᴀʏʟɪsᴛ.)"
+            "**Tem como colocar o nome de uma música, link de uma música ou link de uma playlist do YouTube após o comando? Agradeço...**\n\n**➥ Aqui como faz:**\n\n▷ `/addplaylist Meu namorado é mó otário` (Coloque o nome de uma música específica)\n\n▷ /addplaylist [Link de playlist do YouTube] (Para adicionar todas as músicas de uma playlist do YouTube na playlist.)"
         )
 
     query = message.command[1]
@@ -352,7 +352,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
     # Check if the provided input is a YouTube playlist link
     if "youtube.com/playlist" in query:
         adding = await message.reply_text(
-            "**🎧 ᴀᴅᴅɪɴɢ sᴏɴɢs ɪɴ ᴘʟᴀʏʟɪsᴛ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..**"
+            "**🎧 Adicionando músicas na playlist, por favor, aguarde...**"
         )
         try:
             from pytube import Playlist
@@ -367,7 +367,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
 
         if not video_urls:
             return await message.reply_text(
-                "**➻ ɴᴏ sᴏɴɢs ғᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴘʟᴀʏʟɪsᴛ ʟɪɴᴋs.\n\n**➥ ᴛʀʏ ᴏᴛʜᴇʀ ᴘʟᴀʏʟɪsᴛ ʟɪɴᴋ**"
+                "**Nenhuma música encontrada nesse link fuleiro aí...\n\n**➥ Tenta outro link de playlist aí...**"
             )
 
         user_id = message.from_user.id
@@ -379,7 +379,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
                 title = yt.title
                 duration = yt.length
             except Exception as e:
-                return await message.reply_text(f"ᴇʀʀᴏʀ ғᴇᴛᴄʜɪɴɢ ᴠɪᴅᴇᴏ ɪɴғᴏ: {e}")
+                return await message.reply_text(f"Não consegui buscar informações do vídeo: {e}")
 
             plist = {
                 "videoid": video_id,
@@ -400,14 +400,14 @@ async def add_playlist_clone(client: Client, message: Message, _):
             )
         await adding.delete()
         return await message.reply_text(
-            text="**➻ ᴀʟʟ sᴏɴɢs ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ғʀᴏᴍ ʏᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ʟɪɴᴋ✅**\n\n**➥ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴀɴʏ sᴏɴɢ ᴛʜᴇɴ ᴄʟɪᴄᴋ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.\n\n**▷ ᴄʜᴇᴄᴋ ʙʏ » /playlist**\n\n▷ **ᴘʟᴀʏ ʙʏ » /play**",
+            text="**Todas as músicas foram adicionadas com sucesso a partir do seu link de playlist do YouTube.**\n\n**➥ Se você quiser remover alguma música, clique no botão abaixo.\n\n**▷ Checa usando /playlist**\n\n▷ **Dá play usando /play**",
             reply_markup=keyboardes,
         )
         pass
 
     if "youtube.com/@" in query:
         addin = await message.reply_text(
-            "**🎧 ᴀᴅᴅɪɴɢ sᴏɴɢs ɪɴ ᴘʟᴀʏʟɪsᴛ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..**"
+            "**🎧 Adicionando músicas na playlist, guenta aí...**"
         )
         try:
             from pytube import YouTube
@@ -422,7 +422,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
 
         if not video_urls:
             return await message.reply_text(
-                "**➻ ɴᴏ sᴏɴɢs ғᴏᴜɴᴅ ɪɴ ᴛʜᴇ YouTube channel.\n\n**➥ ᴛʀʏ ᴏᴛʜᴇʀ YouTube channel ʟɪɴᴋ**"
+                "**Nenhuma música encontrada nesse link fuleiro aí...\n\n**➥ Tenta com outro link de canal do YouTube.**"
             )
 
         user_id = message.from_user.id
@@ -434,7 +434,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
                 title = yt.title
                 duration = yt.length
             except Exception as e:
-                return await message.reply_text(f"ᴇʀʀᴏʀ ғᴇᴛᴄʜɪɴɢ ᴠɪᴅᴇᴏ ɪɴғᴏ: {e}")
+                return await message.reply_text(f"Não consegui buscar informações do vídeo: {e}")
 
             plist = {
                 "videoid": video_id,
@@ -455,7 +455,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
             )
         await addin.delete()
         return await message.reply_text(
-            text="**➻ ᴀʟʟ sᴏɴɢs ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ғʀᴏᴍ ʏᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ channel ʟɪɴᴋ✅**\n\n**➥ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴀɴʏ sᴏɴɢ ᴛʜᴇɴ ᴄʟɪᴄᴋ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.\n\n**▷ ᴄʜᴇᴄᴋ ʙʏ » /playlist**\n\n▷ **ᴘʟᴀʏ ʙʏ » /play**",
+            text="**Todas as músicas foram adicionadas com sucesso a partir do seu link de canal do YouTube.**\n\n**➥ Se você quiser remover alguma música, clique no botão abaixo.\n\n**▷ Checa usando /playlist**\n\n▷ **Dá play usando /play**",
             reply_markup=keyboardes,
         )
         pass
@@ -464,7 +464,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
     if "https://youtu.be" in query:
         try:
             add = await message.reply_text(
-                "**🎧 ᴀᴅᴅɪɴɢ sᴏɴɢs ɪɴ ᴘʟᴀʏʟɪsᴛ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..**"
+                "**🎧 Adicionando músicas na playlist, guenta aí...**"
             )
             from pytube import Playlist
             from pytube import YouTube
@@ -517,7 +517,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
                 await add.delete()
                 await message.reply_photo(
                     thumbnail,
-                    caption="**➻ ᴀᴅᴅᴇᴅ sᴏɴɢ ɪɴ ʏᴏᴜʀ ʙᴏᴛ ᴘʟᴀʏʟɪsᴛ✅**\n\n**➥ ᴄʜᴇᴄᴋ ʙʏ » /playlist**\n\n**➥ ᴅᴇʟᴇᴛᴇ ʙʏ » /delplaylist**\n\n**➥ ᴀɴᴅ ᴘʟᴀʏ ʙʏ » /play (ɢʀᴏᴜᴘs ᴏɴʟʏ)**",
+                    caption="**Músicas adicionadas à minha playlist.**\n\n**➥ Checa usando /playlist**\n\n**➥ Para excluir, usa /delplaylist**\n\n**➥ E dá play usando /play (somente em grupos)**",
                     reply_markup=keyboard,
                 )
             except Exception as e:
@@ -565,7 +565,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
                 except KeyError:
                     pass
 
-            m = await message.reply("**🔄 ᴀᴅᴅɪɴɢ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ... **")
+            m = await message.reply("**🔄 Adicionando... guenta aí... **")
             title, duration_min, _, _, _ = await YouTube.details(videoid, True)
             title = (title[:50]).title()
             plist = {
@@ -581,7 +581,7 @@ async def add_playlist_clone(client: Client, message: Message, _):
                 [
                     [
                         InlineKeyboardButton(
-                            "๏ Remove from Playlist ๏",
+                            "Remover da playlist",
                             callback_data=f"remove_playlist {videoid}",
                         )
                     ]
@@ -590,12 +590,12 @@ async def add_playlist_clone(client: Client, message: Message, _):
             await m.delete()
             await message.reply_photo(
                 thumbnail,
-                caption="**➻ ᴀᴅᴅᴇᴅ sᴏɴɢ ɪɴ ʏᴏᴜʀ ʙᴏᴛ ᴘʟᴀʏʟɪsᴛ✅**\n\n**➥ ᴄʜᴇᴄᴋ ʙʏ » /playlist**\n\n**➥ ᴅᴇʟᴇᴛᴇ ʙʏ » /delplaylist**\n\n**➥ ᴀɴᴅ ᴘʟᴀʏ ʙʏ » /play (ɢʀᴏᴜᴘs ᴏɴʟʏ)**",
+                caption="**Músicas adicionadas à minha playlist.**\n\n**➥ Checa usando /playlist**\n\n**➥ Para excluir, usa /delplaylist**\n\n**➥ E dá play usando /play (somente em grupos)**",
                 reply_markup=keyboard,
             )
 
         except KeyError:
-            return await message.reply_text("ɪɴᴠᴀʟɪᴅ ᴅᴀᴛᴀ ғᴏʀᴍᴀᴛ ʀᴇᴄᴇɪᴠᴇᴅ.")
+            return await message.reply_text("Formato de dados inválido recebido.")
         except Exception as e:
             pass
 
@@ -639,7 +639,7 @@ async def del_plist(client, CallbackQuery, _):
         ]
     )
     return await CallbackQuery.edit_message_text(
-        text="**➻ ʏᴏᴜʀ sᴏɴɢ ʜᴀs ʙᴇᴇɴ ᴅᴇʟᴇᴛᴇᴅ ғʀᴏᴍ ʏᴏᴜʀ ʙᴏᴛ ᴘʟᴀʏʟɪsᴛ**\n\n**➥ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴄᴏᴠᴇʀ ʏᴏᴜʀ sᴏɴɢ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ ᴛʜᴇɴ ᴄʟɪᴄᴋ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ**",
+        text="**Ainda bem que não vou precisar tocar isso...**\n\n**➥ Mas se tu quiser recuperar essa bosta, clique no botão abaixo.**",
         reply_markup=keyboards,
     )
 
@@ -688,13 +688,13 @@ async def add_playlist_clone(client, CallbackQuery, _):
             [
                 [
                     InlineKeyboardButton(
-                        "๏ ʀᴇᴍᴏᴠᴇ ᴀɢᴀɪɴ ๏", callback_data=f"remove_playlist {videoid}"
+                        "REMOVER", callback_data=f"remove_playlist {videoid}"
                     )
                 ]
             ]
         )
         return await CallbackQuery.edit_message_text(
-            text="**➻ ʀᴇᴄᴏᴠᴇʀᴇᴅ sᴏɴɢ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ**\n\n**➥ Cʜᴇᴄᴋ Pʟᴀʏʟɪsᴛ ʙʏ /playlist**\n\n**➥ ᴅᴇʟᴇᴛᴇ ᴘʟᴀʏʟɪsᴛ ʙʏ » /delplaylist**\n\n**➥ ᴀɴᴅ ᴘʟᴀʏ ᴘʟᴀʏʟɪsᴛ ʙʏ » /play**",
+            text="**Música recuperada na playlist.**\n\n**➥ Checa usando /playlist**\n\n**➥ Para excluir, usa /delplaylist**\n\n**➥ E dá play usando /play (somente em grupos)**",
             reply_markup=keyboardss,
         )
     except:
@@ -705,7 +705,7 @@ async def add_playlist_clone(client, CallbackQuery, _):
 @languageCB
 async def add_playlist_clone(client, CallbackQuery, _):
     await CallbackQuery.answer(
-        "➻ ᴛᴏ ᴀᴅᴅ ᴀ sᴏɴɢ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ ᴊᴜsᴛ ᴛʏᴘᴇ /addplaylist (Here your song name)\n\n➥ ᴇxᴀᴍᴘʟᴇ » /addplaylist Blue Eyes Blue tyes.",
+        "➻ Para adicionar uma música na playlist, basta digitar /addplaylist (Nome da música)\n\n➥ Exemplo: /addplaylist Meu namorado é mó otário.",
         show_alert=True,
     )
 
@@ -778,7 +778,7 @@ async def delete_all_playlists_clone(client, message, _):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} segura o dedo cacete, me deixa respitar... Tenta daqui uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -831,7 +831,7 @@ async def del_whole_playlist_clone(client, CallbackQuery, _):
     _playlist = await get_playlist_names_clone(CallbackQuery.from_user.id)
     for x in _playlist:
         await CallbackQuery.answer(
-            "➻ ᴏᴋ sɪʀ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ.\n\n➥ ᴅᴇʟᴇᴛɪɴɢ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ...", show_alert=True
+            "Aleluia!\n\nExcluindo essa bosta de playlist...", show_alert=True
         )
         await delete_playlist_clone(CallbackQuery.from_user.id, x)
     return await CallbackQuery.edit_message_text(_["playlist_13"])
