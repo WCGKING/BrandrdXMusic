@@ -36,12 +36,12 @@ from BrandrdXMusic.utils.database import get_assistant, is_active_chat
 async def repo(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
-        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
+        caption=f"""COMBINADO MUSIC""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "GRUPO", url=f"https://t.me/combinadomusic"
                     )
                 ]
             ]
@@ -54,12 +54,12 @@ async def help(client: Client, message: Message):
 
     await message.reply_photo(
         photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
-        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
+        caption=f"""COMBINADO MUSIC""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "GRUPO", url=f"https://t.me/combinadomusic"
                     )
                 ]
             ]
@@ -71,12 +71,12 @@ async def help(client: Client, message: Message):
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
-        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
+        caption=f"""COMBINADO MUSIC""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "GRUPO", url=f"https://t.me/combinadomusic"
                     )
                 ]
             ]
@@ -111,7 +111,7 @@ async def add_all(client, message):
     command_parts = message.text.split(" ")
     if len(command_parts) != 2:
         await message.reply(
-            "**⚠️ ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀᴍᴀᴛ. ᴘʟᴇᴀsᴇ ᴜsᴇ ʟɪᴋᴇ » `/gadd `**"
+            "**⚠️ Formato de comando inválido. Por favor, use algo como: `/gadd `**"
         )
         return
 
@@ -122,7 +122,7 @@ async def add_all(client, message):
         app_id = bot.id
         done = 0
         failed = 0
-        lol = await message.reply("🔄 **ᴀᴅᴅɪɴɢ ɢɪᴠᴇɴ ʙᴏᴛ ɪɴ ᴀʟʟ ᴄʜᴀᴛs!**")
+        lol = await message.reply("🔄 **Adicionando o bot em todos os grupos!**")
 
         async for dialog in userbot.get_dialogs():
             if dialog.chat.id == -1002198719573:
@@ -131,17 +131,17 @@ async def add_all(client, message):
                 await userbot.add_chat_members(dialog.chat.id, app_id)
                 done += 1
                 await lol.edit(
-                    f"**🔂 ᴀᴅᴅɪɴɢ {bot_username}**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅᴇᴅ ʙʏ»** @{userbot.username}"
+                    f"**🔂 Adicionando {bot_username}**\n\n**➥ Adicionado em {done} grupos ✅**\n**➥ Falhou em {failed} grupos ❌**\n\n**➲ Adicionado por:** @{userbot.username}"
                 )
             except Exception as e:
                 failed += 1
                 await lol.edit(
-                    f"**🔂 ᴀᴅᴅɪɴɢ {bot_username}**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅɪɴɢ ʙʏ»** @{userbot.username}"
+                    f"**🔂 Adicionando {bot_username}**\n\n**➥ Adicionado em {done} grupos ✅**\n**➥ Falhou em {failed} grupos ❌**\n\n**➲ Adicionado por:** @{userbot.username}"
                 )
             await asyncio.sleep(3)  # Adjust sleep time based on rate limits
 
         await lol.edit(
-            f"**➻ {bot_username} ʙᴏᴛ ᴀᴅᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ🎉**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅᴇᴅ ʙʏ»** @{userbot.username}"
+            f"**{bot_username} adicionado com sucesso.**\n\n**➥ Adicionado em {done} grupos ✅**\n**➥ Falhou em {failed} grupos ❌**\n\n**➲ Adicionado por:** @{userbot.username}"
         )
     except Exception as e:
         await message.reply(f"Error: {str(e)}")
