@@ -86,7 +86,7 @@ async def play_commnd(
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} segura o dedo aí caraio, manda daqui uns 5 segundos pelo menos... Me deixa respirar...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -252,7 +252,7 @@ async def play_commnd(
                         )
 
                     await mystic.edit_text(
-                        "All videos from the channel have been added to the queue."
+                        "Todos os vídeos do grupo foram adicionados à fila."
                     )
                 except Exception as e:
                     print(e)  # Handle or log the error appropriately
@@ -276,7 +276,7 @@ async def play_commnd(
             spotify = True
             if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
                 return await mystic.edit_text(
-                    "» sᴘᴏᴛɪғʏ ɪs ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ ʏᴇᴛ.\n\nᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ."
+                    "Ainda não pagaram o meu Spotify.\n\nTenta depois."
                 )
             if "track" in url:
                 try:
@@ -622,7 +622,7 @@ async def play_music(client: Client, CallbackQuery, _):
 async def Brandedmous_check(client: Client, CallbackQuery):
     try:
         await CallbackQuery.answer(
-            "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
+            "Tu tá no modo anônimo mula!\n\nAbre as configurações do grupo\n-> Vai em Administradores\n-> Clica no teu nome\n-> Desmarca a opção de anônimo.",
             show_alert=True,
         )
     except:
@@ -1155,7 +1155,7 @@ async def stream(
             db[chat_id][0]["markup"] = "tg"
     elif streamtype == "index":
         link = result
-        title = "ɪɴᴅᴇx ᴏʀ ᴍ3ᴜ8 ʟɪɴᴋ"
+        title = "Link da index ou M3U8"
         duration_min = "00:00"
         if await is_active_chat(chat_id):
             await put_queue_index(
@@ -1170,7 +1170,7 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             button = aq_markup(_, chat_id)
-            await mystic.edit_text("**❀≽ 𝐀ɗɗɘɗ 𝐓σ 𝐐ʋɘʋɘ ✭ Ʌʈ**")
+            await mystic.edit_text("**Adicionado à fila**")
 
         else:
             if not forceplay:
