@@ -20,7 +20,7 @@ async def tag_all_users(client, _, message):
     replied = message.reply_to_message
     if len(message.command) < 2 and not replied:
         await message.reply_text(
-            "** ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ, ʟɪᴋᴇ »** `@all Hi Friends`"
+            "**Coloca algum texto para marcar todos porra, tipo assim:** `@all Fala cuzões!`"
         )
         return
     if replied:
@@ -55,7 +55,7 @@ async def tag_all_users(client, _, message):
             if usernum == 5:
                 await client.send_message(
                     message.chat.id,
-                    f"{text}\n{usertxt}\n\n|| ➥ ᴏғғ ᴛᴀɢɢɪɴɢ ʙʏ » /cancel ||",
+                    f"{text}\n{usertxt}\n\n|| ➥ Para parar de marcar a galera é só usar: /cancel ||",
                 )
                 await asyncio.sleep(2)
                 usernum = 0
@@ -92,8 +92,8 @@ async def cancelcmd(_, message):
             SPAM_CHATS.remove(chat_id)
         except Exception:
             pass
-        return await message.reply_text("**ᴛᴀɢɢɪɴɢ ᴘʀᴏᴄᴇss sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴏᴘᴘᴇᴅ!**")
+        return await message.reply_text("**Não precisava de ignorância, mas beleza, parei de marcar a turma.**")
 
     else:
-        await message.reply_text("**ɴᴏ ᴘʀᴏᴄᴇss ᴏɴɢᴏɪɴɢ!**")
+        await message.reply_text("**Nenhum processo em andamento!**")
         return
