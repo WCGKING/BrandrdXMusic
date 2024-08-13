@@ -32,7 +32,7 @@ async def download_shorts(client: Client, message: Message):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} dá uma segurada aí caraio, deixa eu respirar também... Tenta daqui uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -44,7 +44,7 @@ async def download_shorts(client: Client, message: Message):
 
     url = get_text(message)
     if not url:
-        await message.reply("Please provide a valid URL.")
+        await message.reply("Por favor, forneça uma URL válida.")
         return
 
     await message.delete()
@@ -52,7 +52,7 @@ async def download_shorts(client: Client, message: Message):
     user_name = message.from_user.first_name
     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
 
-    pablo = await client.send_message(message.chat.id, "Downloading, please wait...")
+    pablo = await client.send_message(message.chat.id, "Baixando, guenta aí...")
 
     try:
         opts = {
@@ -73,12 +73,12 @@ async def download_shorts(client: Client, message: Message):
             ytdl_data = ytdl.extract_info(url, download=True)
 
     except Exception as e:
-        await pablo.edit(f"Failed to download.\nError: `{str(e)}`")
+        await pablo.edit(f"Falha no download.\nErro: `{str(e)}`")
         return
 
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = (
-        f"**Title:** {ytdl_data['title']}\n**URL:** {url}\n**Requested by:** {chutiya}"
+        f"**Título:** {ytdl_data['title']}\n**URL:** {url}\n**Solicitado por:** {chutiya}"
     )
     await client.send_video(
         message.chat.id,
@@ -128,7 +128,7 @@ async def ytmusic(client: Client, message: Message):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} dá uma segurada aí caraio, deixa eu respirar também... Tenta daqui uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -144,10 +144,10 @@ async def ytmusic(client: Client, message: Message):
     user_name = message.from_user.first_name
     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
 
-    pablo = await client.send_message(message.chat.id, f"sᴇᴀʀᴄʜɪɴɢ, ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...")
+    pablo = await client.send_message(message.chat.id, f"Buscando, aguenta aí...")
     if not urlissed:
         await pablo.edit(
-            "😴 sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴ ʏᴏᴜᴛᴜʙᴇ.\n\n» ᴍᴀʏʙᴇ ᴛᴜɴᴇ ɢᴀʟᴛɪ ʟɪᴋʜᴀ ʜᴏ, ᴩᴀᴅʜᴀɪ - ʟɪᴋʜᴀɪ ᴛᴏʜ ᴋᴀʀᴛᴀ ɴᴀʜɪ ᴛᴜ !"
+            "Não encontrei essa música no YouTube.\n\nTalvez você foi bem leigo e tenha digitado errado ou a música não está disponível mesmo. Verifique a ortografia e tente novamente. Sim, tô chamando você de analfabeto..."
         )
         return
 
@@ -181,11 +181,11 @@ async def ytmusic(client: Client, message: Message):
             ytdl_data = ytdl.extract_info(url, download=True)
 
     except Exception as e:
-        await pablo.edit(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ.** \n**ᴇʀʀᴏʀ :** `{str(e)}`")
+        await pablo.edit(f"**Não deu bom no download.** \n**Erro:** `{str(e)}`")
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"❄ **ᴛɪᴛʟᴇ :** [{thum}]({mo})\n💫 **ᴄʜᴀɴɴᴇʟ :** {thums}\n✨ **sᴇᴀʀᴄʜᴇᴅ :** {urlissed}\n🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {chutiya}"
+    capy = f"**Título:** [{thum}]({mo})\n**Canal:** {thums}\n**Pesquisado:** {urlissed}\n**Solicitado por:** {chutiya}"
     await client.send_video(
         message.chat.id,
         video=open(file_stark, "rb"),
@@ -197,7 +197,7 @@ async def ytmusic(client: Client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"» ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...\n\nᴜᴩʟᴏᴀᴅɪɴɢ `{urlissed}` ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ sᴇʀᴠᴇʀs...💫",
+            f"Peraí...\n\nCarregando `{urlissed}` dos servidores do YouTube...",
             file_stark,
         ),
     )
