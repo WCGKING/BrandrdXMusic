@@ -38,19 +38,19 @@ async def check_bots_command(client, message):
                 async for bot_message in userbot.get_chat_history(bot_id, limit=1):
                     if bot_message.from_user.id == bot_id:
                         response += (
-                            f"╭⎋ {bot.mention}\n l\n╰⊚ **sᴛᴀᴛᴜs: ᴏɴʟɪɴᴇ ✨**\n\n"
+                            f"╭⎋ {bot.mention}\n l\n╰⊚ **Status: TRABALHANDO 🟢**\n\n"
                         )
                     else:
-                        response += f"╭⎋ [{bot.mention}](tg://user?id={bot.id})\n l\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**\n\n"
+                        response += f"╭⎋ [{bot.mention}](tg://user?id={bot.id})\n l\n╰⊚ **Status: DE FOLGA 🔴**\n\n"
             except Exception:
-                response += f"╭⎋ {bot_username}\n l\n╰⊚ **ᴇɪᴛʜᴇʀ ʏᴏᴜ ʜᴀᴠᴇ ɢɪᴠᴇɴ ᴡʀᴏɴɢ ᴜsᴇʀɴᴀᴍᴇ ᴏᴛʜᴇʀᴡɪsᴇ ɪ ᴀᴍ ᴜɴᴀʙʟᴇ ᴛᴏ ᴄʜᴇᴄᴋ ᴅᴜᴇ ᴛᴏ ʟɪᴍɪᴛᴀᴛɪᴏɴ. **\n\n"
+                response += f"╭⎋ {bot_username}\n l\n╰⊚ **Ou você forneceu o nome de usuário errado, caso contrário não posso verificar devido à limitação. **\n\n"
             # Update last checked time
             last_checked_time = start_time.strftime("%Y-%m-%d")
-            await message.reply_text(f"{response}⏲️ ʟᴀsᴛ ᴄʜᴇᴄᴋ: {last_checked_time}")
+            await message.reply_text(f"{response}⏲️ Última verificação: {last_checked_time}")
         else:
             await message.reply_text(
-                "ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀᴍᴀᴛ.\n\nᴘʟᴇᴀsᴇ ᴜsᴇ /botschk Bot_Username\n\nʟɪᴋᴇ :- `/botschk @BRANDED_KUDI_BOT`"
+                "Formato de comando inválido.\n\n Por favor use /botschk Nome_Bot\n\nTente :- `/botschk @COMBINADOMUSIC_bot`"
             )
     except Exception as e:
-        await message.reply_text(f"An error occurred: {e}")
-        print(f"Error occurred during /botschk command: {e}")
+        await message.reply_text(f"Alguma coisa deu errado aí: {e}")
+        print(f"Deu b.o durante o comando /botschk : {e}")
