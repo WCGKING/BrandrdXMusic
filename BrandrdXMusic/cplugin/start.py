@@ -63,7 +63,7 @@ async def start_pm(client: Client, message: Message, _):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} dá uma segurada aí caraio, deixa eu respirar também... Tenta daqui uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -108,14 +108,14 @@ async def start_pm(client: Client, message: Message, _):
                 [
                     [
                         InlineKeyboardButton(
-                            text="📥 ᴠɪᴅᴇᴏ", callback_data=f"downloadvideo {query}"
+                            text="📥 Vídeo", callback_data=f"downloadvideo {query}"
                         ),
                         InlineKeyboardButton(
-                            text="📥 ᴀᴜᴅɪᴏ", callback_data=f"downloadaudio {query}"
+                            text="📥 Áudio", callback_data=f"downloadaudio {query}"
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="🎧 sᴇᴇ ᴏɴ ʏᴏᴜᴛᴜʙᴇ 🎧", url=link),
+                        InlineKeyboardButton(text="🎧 Veja no YouTube 🎧", url=link),
                     ],
                 ]
             )
@@ -153,7 +153,7 @@ async def start_gp(client, message: Message, _):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} dá uma segurada aí caraio, deixa eu respirar também... Tenta daqui uns 5 segundos...**"
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -176,28 +176,28 @@ async def start_gp(client, message: Message, _):
     try:
         userbot = await get_assistant(message.chat.id)
         message = await message.reply_text(
-            f"**ᴄʜᴇᴄᴋɪɴɢ [ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ᴀᴠᴀɪʟᴀʙɪʟɪᴛʏ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ...**"
+            f"**Verificando de meu [assistente](tg://openmessage?user_id={userbot.id}) está disponível neste grupo...**"
         )
         is_userbot = await client.get_chat_member(message.chat.id, userbot.id)
         if is_userbot:
             await message.edit_text(
-                f"**[ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ᴀʟsᴏ ᴀᴄᴛɪᴠᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ, ʏᴏᴜ ᴄᴀɴ ᴘʟᴀʏ sᴏɴɢs.**"
+                f"**Meu [assistente](tg://openmessage?user_id={userbot.id}) está ativo neste grupo, você pode pedir músicas.**"
             )
     except Exception as e:
         # Userbot is not in the group, invite it
         try:
             await message.edit_text(
-                f"**[ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ɪs ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ, ɪɴᴠɪᴛɪɴɢ...**"
+                f"**Meu [assistente](tg://openmessage?user_id={userbot.id}) não está ativo neste grupo, adicionando...**"
             )
             invitelink = await client.export_chat_invite_link(message.chat.id)
             await asyncio.sleep(1)
             await userbot.join_chat(invitelink)
             await message.edit_text(
-                f"**[ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ɪs ɴᴏᴡ ᴀᴄᴛɪᴠᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ, ʏᴏᴜ ᴄᴀɴ ᴘʟᴀʏ sᴏɴɢs.**"
+                f"**Meu [assistente](tg://openmessage?user_id={userbot.id}) agora está ativo neste grupo, você pode pedir músicas.**"
             )
         except Exception as e:
             await message.edit_text(
-                f"**ᴜɴᴀʙʟᴇ ᴛᴏ ɪɴᴠɪᴛᴇ ᴍʏ [ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}). ᴘʟᴇᴀsᴇ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴡɪᴛʜ ɪɴᴠɪᴛᴇ ᴜsᴇʀ ᴀᴅᴍɪɴ ᴘᴏᴡᴇʀ ᴛᴏ ɪɴᴠɪᴛᴇ ᴍʏ [ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.**"
+                f"**Ô galera, posso saber porque não consigo adicionar o meu [assistente](tg://openmessage?user_id={userbot.id}) aqui no grupo?!. Me dá admin para adicionar o meu [assistente](tg://openmessage?user_id={userbot.id}) nessa bosta de grupo enquanto estou com boa vontade...**"
             )
 
 
@@ -241,22 +241,22 @@ async def welcome(client, message: Message):
                     if message.chat.username:
                         await userbot.join_chat(f"{message.chat.username}")
                         await message.reply_text(
-                            f"**My [Assistant](tg://openmessage?user_id={userbot.id}) also entered the chat using the group's username.**"
+                            f"**Meu [assistente](tg://openmessage?user_id={userbot.id}) também entrou no grupo usando o nome de usuário do grupo.**"
                         )
                     else:
                         invitelink = await client.export_chat_invite_link(chid)
                         await asyncio.sleep(1)
                         messages = await message.reply_text(
-                            f"**Joining my [Assistant](tg://openmessage?user_id={userbot.id}) using the invite link...**"
+                            f"**Meu [assistente](tg://openmessage?user_id={userbot.id}) não está ativo neste grupo, adicionando...**"
                         )
                         await userbot.join_chat(invitelink)
                         await messages.delete()
                         await message.reply_text(
-                            f"**My [Assistant](tg://openmessage?user_id={userbot.id}) also entered the chat using the invite link.**"
+                            f"**Meu [assistente](tg://openmessage?user_id={userbot.id}) agora está ativo neste grupo, você pode pedir músicas.**"
                         )
                 except Exception as e:
                     await message.edit_text(
-                        f"**Please make me admin to invite my [Assistant](tg://openmessage?user_id={userbot.id}) in this chat.**"
+                        f"**Ô galera, posso saber porque não consigo adicionar o meu [assistente](tg://openmessage?user_id={userbot.id}) aqui no grupo?!. Me dá admin para adicionar o meu [assistente](tg://openmessage?user_id={userbot.id}) nessa bosta de grupo enquanto estou com boa vontade...**"
                     )
 
                 await message.reply_photo(
