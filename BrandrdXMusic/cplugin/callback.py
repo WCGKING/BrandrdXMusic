@@ -176,12 +176,12 @@ async def unban_assistant(_, callback: CallbackQuery):
     try:
         await client.unban_chat_member(chat_id, userbot.id)
         await callback.answer(
-            "𝗠𝘆 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝗜𝗱 𝗨𝗻𝗯𝗮𝗻𝗻𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆🥳\n\n➻ 𝗡𝗼𝘄 𝗬𝗼𝘂 𝗖𝗮𝗻 𝗣𝗹𝗮𝘆 𝗦𝗼𝗻𝗴𝘀🔉\n\n𝗧𝗵𝗮𝗻𝗸 𝗬𝗼𝘂💝",
+            "Agora sim caraio\n\n➻ Bora colocar som nessa bagaça 🔉\n\nValeu aí!",
             show_alert=True,
         )
     except Exception as e:
         await callback.answer(
-            f"𝙁𝙖𝙞𝙡𝙚𝙙 𝙏𝙤 𝙐𝙣𝙗𝙖𝙣 𝙈𝙮 𝘼𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝘽𝙚𝙘𝙖𝙪𝙨𝙚 𝙄 𝘿𝙤𝙣'𝙩 𝙃𝙖𝙫𝙚 𝘽𝙖𝙣 𝙋𝙤𝙬𝙚𝙧\n\n➻ 𝙋𝙡𝙚𝙖𝙨𝙚 𝙋𝙧𝙤𝙫𝙞𝙙𝙚 𝙈𝙚 𝘽𝙖𝙣 𝙋𝙤𝙬𝙚𝙧 𝙎𝙤 𝙏𝙝𝙖𝙩 𝙄 𝙘𝙖𝙣 𝙐𝙣𝙗𝙖𝙣 𝙈𝙮 𝘼𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝙄𝙙",
+            f"Valeu por tentar, mas só os admins biceta podem desbanir meu assistente (@zerinhogod)...\n\n➻ Os admins podem até me dar permissão de banimento para que eu possa tirar o banimento dele.",
             show_alert=True,
         )
 
@@ -250,7 +250,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 pass
             command = counter
-            mention = "ᴜᴘᴠᴏᴛᴇs"
+            mention = "Votos positivos"
         else:
             if (
                 CallbackQuery.from_user.id
@@ -292,10 +292,10 @@ async def del_back_playlist(client, CallbackQuery, _):
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="ʀᴇsᴜᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"
+                    text="Retornar", callback_data=f"ADMIN Resume|{chat_id}"
                 ),
                 InlineKeyboardButton(
-                    text="ʀᴇᴘʟᴀʏ", callback_data=f"ADMIN Replay|{chat_id}"
+                    text="Repetir", callback_data=f"ADMIN Replay|{chat_id}"
                 ),
             ],
         ]
@@ -311,15 +311,15 @@ async def del_back_playlist(client, CallbackQuery, _):
         buttons_resume = [
             [
                 InlineKeyboardButton(
-                    text="sᴋɪᴘ", callback_data=f"ADMIN Skip|{chat_id}"
+                    text="Pular", callback_data=f"ADMIN Skip|{chat_id}"
                 ),
                 InlineKeyboardButton(
-                    text="sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"
+                    text="Parar", callback_data=f"ADMIN Stop|{chat_id}"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="ᴘᴀᴜsᴇ",
+                    text="Pausar",
                     callback_data=f"ADMIN Pause|{chat_id}",
                 ),
             ],
@@ -374,7 +374,7 @@ async def del_back_playlist(client, CallbackQuery, _):
     elif command == "Skip" or command == "Replay":
         check = db.get(chat_id)
         if command == "Skip":
-            txt = f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+            txt = f"➻ Música pulada por: {mention} 🦝"
             popped = None
             try:
                 popped = check.pop(0)
@@ -382,7 +382,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     await auto_clean(popped)
                 if not check:
                     await CallbackQuery.edit_message_text(
-                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+                        f"➻ Música pulada por: {mention} 🦝"
                     )
                     await CallbackQuery.message.reply_text(
                         text=_["admin_6"].format(
@@ -397,7 +397,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 try:
                     await CallbackQuery.edit_message_text(
-                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+                        f"➻ Música pulada por: {mention} 🦝"
                     )
                     await CallbackQuery.message.reply_text(
                         text=_["admin_6"].format(
@@ -409,7 +409,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 except:
                     return
         else:
-            txt = f"➻ sᴛʀᴇᴀᴍ ʀᴇ-ᴘʟᴀʏᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+            txt = f"➻ Repetindo a música porque {mention} tá com gracinha..."
         await CallbackQuery.answer()
         queued = check[0]["file"]
         title = (check[0]["title"]).title()
@@ -587,7 +587,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if (duration_played - duration_to_skip) <= 10:
                 bet = seconds_to_min(duration_played)
                 return await CallbackQuery.answer(
-                    f"» ʙᴏᴛ ɪs ᴜɴᴀʙʟᴇ ᴛᴏ sᴇᴇᴋ ʙᴇᴄᴀᴜsᴇ ᴛʜᴇ ᴅᴜʀᴀᴛɪᴏɴ ᴇxᴄᴇᴇᴅs.\n\nᴄᴜʀʀᴇɴᴛʟʏ ᴩʟᴀʏᴇᴅ :** {bet}** ᴍɪɴᴜᴛᴇs ᴏᴜᴛ ᴏғ **{duration}** ᴍɪɴᴜᴛᴇs.",
+                    f"» Tá de sacanagem?! Não consigo buscar porque a duração excedeu.\n\nReproduzindo agora:** {bet}** minutos de **{duration}** minutos.",
                     show_alert=True,
                 )
             to_seek = duration_played - duration_to_skip + 1
@@ -595,7 +595,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if (duration_seconds - (duration_played + duration_to_skip)) <= 10:
                 bet = seconds_to_min(duration_played)
                 return await CallbackQuery.answer(
-                    f"» ʙᴏᴛ ɪs ᴜɴᴀʙʟᴇ ᴛᴏ sᴇᴇᴋ ʙᴇᴄᴀᴜsᴇ ᴛʜᴇ ᴅᴜʀᴀᴛɪᴏɴ ᴇxᴄᴇᴇᴅs.\n\nᴄᴜʀʀᴇɴᴛʟʏ ᴩʟᴀʏᴇᴅ :** {bet}** ᴍɪɴᴜᴛᴇs ᴏᴜᴛ ᴏғ **{duration}** ᴍɪɴᴜᴛᴇs.",
+                    f"» Tá de sacanagem?! Não consigo buscar porque a duração excedeu.\n\nReproduzindo agora:** {bet}** minutos de **{duration}** minutos.",
                     show_alert=True,
                 )
             to_seek = duration_played + duration_to_skip + 1
@@ -620,7 +620,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         else:
             db[chat_id][0]["played"] += duration_to_skip
         string = _["admin_25"].format(seconds_to_min(to_seek))
-        await mystic.edit_text(f"{string}\n\nᴄʜᴀɴɢᴇs ᴅᴏɴᴇ ʙʏ : {mention} !")
+        await mystic.edit_text(f"{string}\n\nAlterações feitas por: {mention}.")
 
 
 async def markup_timer():
