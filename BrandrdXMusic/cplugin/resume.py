@@ -84,12 +84,12 @@ async def resume_com(cli, message: Message, _, chat_id):
     await Hotty.resume_stream(chat_id)
     buttons_resume = [
         [
-            InlineKeyboardButton(text="sᴋɪᴘ", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="Pular", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="Parar", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
             InlineKeyboardButton(
-                text="ᴘᴀᴜsᴇ",
+                text="Pausar",
                 callback_data=f"ADMIN Pause|{chat_id}",
             ),
         ],
