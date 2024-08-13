@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from BrandrdXMusic import YouTube, app, YTB
+from BrandrdXMusic import YouTube, app
 from BrandrdXMusic.core.call import Hotty
 from BrandrdXMusic.misc import db
 from BrandrdXMusic.utils.database import get_loop
