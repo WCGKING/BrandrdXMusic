@@ -20,7 +20,7 @@ from pytgcalls.types import (
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from BrandrdXMusic import LOGGER, YouTube, app, YTB
+from BrandrdXMusic import LOGGER, YouTube, app
 from BrandrdXMusic.misc import db
 from BrandrdXMusic.utils.database import (
     add_active_chat,
@@ -442,15 +442,7 @@ class Call(PyTgCalls):
                         video=str(streamtype) == "video",
                     )
                 except:
-                    try:
-                        file_path, direct = await YTB.download(
-                            videoid,
-                            mystic,
-                            videoid=True,
-                            video=str(streamtype) == "video",
-                        )
-                    except:
-                        return await mystic.edit_text(
+                    return await mystic.edit_text(
                         _["call_6"], disable_web_page_preview=True
                     )
                 if video:
