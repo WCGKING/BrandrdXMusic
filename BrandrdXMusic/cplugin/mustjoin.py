@@ -26,11 +26,11 @@ async def must_join_channel(client: Client, msg: Message):
             try:
                 await msg.reply_photo(
                     photo="https://graph.org/file/3fb3f4c8a1250c6a50af1.jpg",
-                    caption=f"๏ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ʏᴏᴜ'ᴠᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ [๏sᴜᴘᴘᴏʀᴛ๏]({link}) ʏᴇᴛ, ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴍᴇ ᴛʜᴇɴ ᴊᴏɪɴ [๏sᴜᴘᴘᴏʀᴛ๏]({link}) ᴀɴᴅ sᴛᴀʀᴛ ᴍᴇ ᴀɢᴀɪɴ ! ",
+                    caption=f"Tô vendo aqui que tu não entrou no [grupo suporte]({link}) Mas se tu quiser me usar (lá ele) entra no [grupo suporte]({link}) e tenta de novo. ",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("๏Jᴏɪɴ๏", url=link),
+                                InlineKeyboardButton("ENTRAR", url=link),
                             ]
                         ]
                     ),
@@ -39,4 +39,4 @@ async def must_join_channel(client: Client, msg: Message):
             except ChatWriteForbidden:
                 pass
     except ChatAdminRequired:
-        print(f"๏ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴍᴜsᴛ_Jᴏɪɴ ᴄʜᴀᴛ ๏: {MUST_JOIN} !")
+        print(f"Me deixa como administrador no chat: {MUST_JOIN} (MUST_JOIN)!")
