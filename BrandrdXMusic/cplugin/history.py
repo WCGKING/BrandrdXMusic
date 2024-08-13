@@ -20,15 +20,15 @@ async def sg(client: Client, message: Message):
         args = message.text.split()[1:]
         if not args:
             return await message.reply(
-                "Please provide a username, ID, or reply to a message."
+                "Diz um nome de usuário, ID ou responda a uma mensagem."
             )
         args = args[0]
-    lol = await message.reply("<code>Processing...</code>")
+    lol = await message.reply("<code>Carregando...</code>")
     if args:
         try:
             user = await client.get_users(f"{args}")
         except Exception:
-            return await lol.edit("<code>Please specify a valid user!</code>")
+            return await lol.edit("<code>Especifique um usuário válido cacete!</code>")
     sgbot = ["sangmata_bot", "sangmata_beta_bot"]
     sg = random.choice(sgbot)
     Hotty = random.choice(assistants)
