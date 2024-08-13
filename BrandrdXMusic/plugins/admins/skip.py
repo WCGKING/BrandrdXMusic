@@ -138,15 +138,7 @@ async def skip(cli, message: Message, _, chat_id):
                 video=status,
             )
         except:
-            try:
-                file_path, direct = await YTB.download(
-                    videoid,
-                    mystic,
-                    videoid=True,
-                    video=status,
-                )
-            except:
-                return await mystic.edit_text(_["call_6"])
+            return await mystic.edit_text(_["call_6"])
         try:
             image = await YouTube.thumbnail(videoid, True)
         except:
