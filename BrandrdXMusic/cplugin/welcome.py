@@ -193,24 +193,24 @@ async def auto_state(client: Client, message):  # Added 'message' as a parameter
         state = message.text.split(None, 1)[1].strip().lower()
         if state == "off":
             if A:
-                await message.reply_text("**ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ !**")
+                await message.reply_text("**Não vou mandar mais mensagens de boas-vindas.**")
             else:
                 await wlcm.add_wlcm(chat_id)
                 await message.reply_text(
-                    f"**ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ** {message.chat.title}"
+                    f"**Desativado a mensagem de boas-vindas em** {message.chat.title}"
                 )
         elif state == "on":
             if not A:
-                await message.reply_text("**ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ.**")
+                await message.reply_text("**Vou ser bem falso e desejar boas-vindas a todos que entrarem no grupo.**")
             else:
                 await wlcm.rm_wlcm(chat_id)
                 await message.reply_text(
-                    f"**ᴇɴᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ ** {message.chat.title}"
+                    f"**Mensagem de boas-vindas habilitada em** {message.chat.title}"
                 )
         else:
             await message.reply_text(usage)
     else:
-        await message.reply("**sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!**")
+        await message.reply("**Somente admins conseguem habilitar mensagem de boas-vindas.**")
 
 
 @Client.on_chat_member_updated(filters.group, group=-13)
@@ -243,24 +243,23 @@ async def greet_new_member(
             welcomeimg = welcomepic(
                 pic, user.first_name, member.chat.title, user.id, user.username
             )
-            button_text = "๏ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ๏"
-            add_button_text = "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏"
+            button_text = "VER NOVO MEMBRO"
+            add_button_text = "ME ADICIONE NO SEU GRUPO"
             deep_link = f"{user.id}"
-            add_link = f"https://t.me/BRANDED_KUDI_BOT?startgroup=true"
+            add_link = f"https://t.me/COMBINADOMUSIC_bot?startgroup=true"
             temp.MELCOW[f"welcome-{member.chat.id}"] = await client.send_photo(
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-**❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅**
+**Boas-vindas!**
 
 ▰▰▰▰▰▰▰▰▰▰▰▰▰
-**➻ ɴᴀᴍᴇ »** {user.mention}
-**➻ ɪᴅ »** `{user.id}`
-**➻ ᴜ_ɴᴀᴍᴇ »** @{user.username}
-**➻ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs »** {count}
+**Usuário:** {user.mention}
+**ID:** `{user.id}`
+**Username:** @{user.username}
+**Membros totais:** {count}
 ▰▰▰▰▰▰▰▰▰▰▰▰▰
 
-**❅─────✧❅✦❅✧─────❅**
 """,
                 reply_markup=InlineKeyboardMarkup(
                     [
