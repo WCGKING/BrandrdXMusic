@@ -14,7 +14,7 @@ from BrandrdXMusic.utils import get_readable_time
 async def ping_clone(client: Client, message: Message):
     i = await client.get_me()
     hmm = await message.reply_photo(
-        photo=PING_IMG_URL, caption=f"{i.mention} ɪs ᴘɪɴɢɪɴɢ..."
+        photo=PING_IMG_URL, caption=f"{i.mention} está rebatendo..."
     )
     upt = int(time.time() - StartTime)
     cpu = psutil.cpu_percent(interval=0.5)
@@ -25,20 +25,20 @@ async def ping_clone(client: Client, message: Message):
     uptime = get_readable_time((upt))
 
     await hmm.edit_text(
-        f"""➻ ᴩᴏɴɢ : `{resp}ᴍs`
+        f"""➻ Pong: `{resp}ms`
 
-<b><u>{i.mention} sʏsᴛᴇᴍ sᴛᴀᴛs :</u></b>
+<b><u>{i.mention} Status do sistema:</u></b>
 
-๏ **ᴜᴩᴛɪᴍᴇ :** {uptime}
-๏ **ʀᴀᴍ :** {mem}
-๏ **ᴄᴩᴜ :** {cpu}
-๏ **ᴅɪsᴋ :** {disk}""",
+๏ **Tempo de atividade:** {uptime}
+๏ **Ram:** {mem}
+๏ **Processador:** {cpu}
+๏ **Disco:** {disk}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("❄ sᴜᴘᴘᴏʀᴛ ❄", url=SUPPORT_CHAT),
+                    InlineKeyboardButton("SUPORTE", url=SUPPORT_CHAT),
                     InlineKeyboardButton(
-                        "✨ 𝙰𝙳𝙳 𝙼𝙴✨",
+                        "ME ADICIONE NO SEU GRUPO",
                         url=f"https://t.me/{i.username}?startgroup=true",
                     ),
                 ],
