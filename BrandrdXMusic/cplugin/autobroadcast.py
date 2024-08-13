@@ -11,15 +11,11 @@ from BrandrdXMusic.core.mongo import mongodb, pymongodb
 
 AUTO_GCAST = True
 
-START_IMG_URLS = "https://graph.org/file/2fd9703e31548f7a1aaaa.jpg"
+START_IMG_URLS = "https://te.legra.ph/file/fe4373a26d55df8ed04e5.png"
 
 MESSAGES = f"""**ㅤㅤㅤ⚠️⚠️⚠️⚠️⚠️📡
 
-❤️सबसे ज्यादा पैसा देने वाला Platform पूरी दुनिया को हिला के रख दिया MISS मत करना⭐️
-
-✅Game  को INVITE करो और 10,000₹ से 50,000₹ रोज कमाओ
-
-🫂Link:- https://t.me/BRANDED_PAID_CC ✅
+O combinado nunca sai caro...
 
 **"""
 
@@ -28,29 +24,29 @@ BUTTONS = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "๏ BRANDED PAID CC ๏",
-                url=f"https://t.me/BRANDED_PAID_CC",
+                "JUNTE-SE A NÓS",
+                url=f"https://t.me/combinadomusic",
             )
         ]
     ]
 )
 
-MESSAGE = f"""**๏ ᴛʜɪs ɪs ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs + ᴄʜᴀɴɴᴇʟs ᴠᴄ. 💌
+MESSAGE = f"""**Sou muito melhor que muita JBL por aí...
 
-🎧 ᴘʟᴀʏ + ᴠᴘʟᴀʏ + ᴄᴘʟᴀʏ 🎧
+🎧 PLAY + VPLAY + CPLAY 🎧
 
-➥ sᴜᴘᴘᴏʀᴛᴇᴅ ᴡᴇʟᴄᴏᴍᴇ - ʟᴇғᴛ ɴᴏᴛɪᴄᴇ, ᴛᴀɢᴀʟʟ, ᴠᴄᴛᴀɢ, ʙᴀɴ - ᴍᴜᴛᴇ, sʜᴀʏʀɪ, ʟᴜʀɪᴄs, sᴏɴɢ - ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ᴇᴛᴄ... ❤️
+➥ Mensagem de boas vindas - aviso de saída do grupo, tagall, vctag, ban - mute, poesias, letras, músicas - download de vídeo, etc
 
-🔐ᴜꜱᴇ » [/start](https://t.me/BRANDED_KUDI_BOT?start=help) ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
+🔐Use [/start](https://t.me/https://t.me/COMBINADOMUSIC_bot?start=help) para me conhecer.
 
-➲ ʙᴏᴛ :** @BRANDED_KUDI_BOT"""
+➲ BOT :** @COMBINADOMUSIC_bot"""
 
 BUTTON = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏",
-                url=f"https://t.me/BRANDED_KUDI_BOT?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
+                "ME ADICIONE NO SEU GRUPO",
+                url=f"https://t.me/COMBINADOMUSIC_bot?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
             )
         ]
     ]
@@ -58,7 +54,7 @@ BUTTON = InlineKeyboardMarkup(
 
 caption = MESSAGES
 
-TEXT = """**ᴀᴜᴛᴏ ɢᴄᴀsᴛ ɪs ᴇɴᴀʙʟᴇᴅ sᴏ ᴀᴜᴛᴏ ɢᴄᴀsᴛ/ʙʀᴏᴀᴅᴄᴀsᴛ ɪs ᴅᴏɪɴ ɪɴ ᴀʟʟ ᴄʜᴀᴛs ᴄᴏɴᴛɪɴᴜᴏᴜsʟʏ. **\n**ɪᴛ ᴄᴀɴ ʙᴇ sᴛᴏᴘᴘᴇᴅ ʙʏ ᴘᴜᴛ ᴠᴀʀɪᴀʙʟᴇ [ᴀᴜᴛᴏ_ɢᴄᴀsᴛ = (ᴋᴇᴇᴘ ʙʟᴀɴᴋ & ᴅᴏɴᴛ ᴡʀɪᴛᴇ ᴀɴʏᴛʜɪɴɢ)]**"""
+TEXT = """**O gcast automático está ativado para que o gcast/transmissão automática seja feito em todos os grupos continuamente. **\n**Pode ser interrompido colocando a variável [auto_gcast = (deixe em branco e não escreva nada)]**"""
 
 
 async def send_message_to_chats(client: Client):
