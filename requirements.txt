@@ -45,6 +45,7 @@ unidecode
 yt-dlp
 #git+https://github.com/joetats/youtube_search@master
 #git+https://github.com/alexmercerind/youtube-search-python@main
+https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.23.zip
 gtts
 youtube_search
 youtube-search-python

@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from BrandrdXMusic import YouTube, app, YTB
+from BrandrdXMusic import YouTube, app
 from BrandrdXMusic.core.call import Hotty
 from BrandrdXMusic.misc import db
 from BrandrdXMusic.utils.database import get_loop
@@ -138,15 +138,7 @@ async def skip(cli, message: Message, _, chat_id):
                 video=status,
             )
         except:
-            try:
-                file_path, direct = await YTB.download(
-                    videoid,
-                    mystic,
-                    videoid=True,
-                    video=status,
-                )
-            except:
-                return await mystic.edit_text(_["call_6"])
+            return await mystic.edit_text(_["call_6"])
         try:
             image = await YouTube.thumbnail(videoid, True)
         except:
