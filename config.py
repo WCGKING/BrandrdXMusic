@@ -1,4 +1,5 @@
 import re
+import os
 from os import getenv
 
 from dotenv import load_dotenv
@@ -6,16 +7,14 @@ from pyrogram import filters
 
 load_dotenv()
 
-# Get this value from my.telegram.org/apps
-API_ID = 21306346
-API_HASH = "506b68cd27bef3595cf02a605094c11b"
-BOT_TOKEN = "7188036509:AAHn9MIo6fkIHfqx1swhS6-BfSQmJRPdMEQ"
-MONGO_DB_URI = "mongodb+srv://Bhumi:Bhumi99@cluster0.ue8p4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
-
-LOG_GROUP_ID = -1002244957657
-OWNER_ID = 1321591503
+API_ID = 26268653
+API_HASH = "fe49634b55eea98671533859d04ea81d"
+BOT_TOKEN = "5759235328:AAFYSpHzvjCSvReZ5Q92cefapPOpqv2hZxU"
+MONGO_DB_URI = "mongodb+srv://Yash1:Yash1@cluster0.jvuxh49.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 120))
+MUSIC_BOT_NAME = "˹ʟʙ ✘ ᴍᴜꜱɪᴄ˼"
+LOGGER_ID= -1001861619812
+OWNER_ID = 5016109398
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -25,37 +24,45 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/rishabhops/alice",
+    "https://github.com/Visionx-x/U_pdated_M",
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/TIGERBHUMISINGH")
-SUPPORT_CHAT = getenv("SUPPORT_GROUP", "https://t.me/+DzLMBmzrr0g5M2Vl")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/learningbots79")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/learning_bots")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 
+# Auto Gcast/Broadcast Handler (True = broadcast on , False = broadcast off During Hosting, Dont Do anything here.)
+AUTO_GCAST = os.getenv("AUTO_GCAST")
+
+# Auto Broadcast Message That You Want Use In Auto Broadcast In All Groups.
+AUTO_GCAST_MSG = getenv("AUTO_GCAST_MSG", "")
 
 # Get this credentials from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "bcfe26b0ebc3428882a0b5fb3e872473")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "907c6a054c214005aeae1fd752273cc4")
 
 
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 25))
+SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "50"))
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "25"))
 
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
+SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "2000"))
 
 # Telegram audio and video file size limit (in bytes)
 TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", 104857600))
-TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 2145386496))
+TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 # Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
 
 
-# Get your pyrogram v2 session from Replit
-STRING1 = "24556677-LWyyyopFA6lOJPew1BQ-hu-dzqY2NkTYFubl3lp3Dpa0_cxyRFZy61K0S38iPBpjSObm3qNYnE25Ja94SrSkecVMKz8DHwyK6Km34WT-3dS1P17eEX2C13cbLsbWLwBUn-J1-lllVUEOxdL0v8hlLRbOwkde1qphWn5_WwM1nlU3Qp7N2YyysxR5aMI55cizsGHMX3O5b8ny76M5fjJBqd_a6tWhLFKKD1v5GVTj_r389vhPh4EDp21GJpHMgHLjkXEgAAAAF-tP5GAA"
+# Get your pyrogram v2 session from @BRANDEDSTRINGSESSION_BOT on 
+STRING1 = "BQFFG-oACFo7_N0QZzgssjjlGVzjr01ROi7nJHYTaghU9D84Dv-LWyyyopFA6lOJPew1BQ-YP3Lv_MpcxR775UKbMKkWSaoT0uHp7awbTsO5Z3Mz-dzqY2NkTYFubl3lp3Dpa0_cxyRFZy61K0S38iPBpjSObm3qNYnE25Ja94SrSkecVMKz8DHwyK6Km34WT-3dS1P17eEX2C13cbLsbWLwBUn-J1-lllVUEOxdL0v8hlLRbOwkde1qphWn5_WwM1nlU3Qp7N2YyysxR5aMI55cizsGHMX3O5b8ny76M5fjJBqd_a6tWhLFKKD1v5GVTj_r389vhPh4EDp21GJpHMgHLjkXEgAAAAF-tP5GAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -71,22 +78,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
+    "START_IMG_URL", "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
+    "PING_IMG_URL", "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
 )
-PLAYLIST_IMG_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-STATS_IMG_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-TELEGRAM_AUDIO_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-TELEGRAM_VIDEO_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-STREAM_IMG_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-SOUNCLOUD_IMG_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-YOUTUBE_IMG_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/f2a2bfb6c39b29a8e4ecc.jpg"
-
+PLAYLIST_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+STATS_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+TELEGRAM_AUDIO_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+TELEGRAM_VIDEO_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+STREAM_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+SOUNCLOUD_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+YOUTUBE_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
 
 def time_to_seconds(time):
     stringt = str(time)
@@ -102,8 +108,8 @@ if SUPPORT_CHANNEL:
             "[ERROR] - Your SUPPORT_CHANNEL url is wrong. Please ensure that it starts with https://"
         )
 
-if SUPPORT_GROUP:
-    if not re.match("(?:http|https)://", SUPPORT_GROUP):
+if SUPPORT_CHAT:
+    if not re.match("(?:http|https)://", SUPPORT_CHAT):
         raise SystemExit(
-            "[ERROR] - Your SUPPORT_GROUP url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
         )
