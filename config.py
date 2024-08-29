@@ -13,7 +13,8 @@ BOT_TOKEN = "5759235328:AAFYSpHzvjCSvReZ5Q92cefapPOpqv2hZxU"
 MONGO_DB_URI = "mongodb+srv://Yash1:Yash1@cluster0.jvuxh49.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 120))
 MUSIC_BOT_NAME = "˹ʟʙ ✘ ᴍᴜꜱɪᴄ˼"
-LOGGER_ID= -1001861619812
+LOGGER_ID = -1001861619812
+LOG_GROUP_ID = -1001861619812
 OWNER_ID = 5016109398
 
 ## Fill these variables if you're deploying on heroku.
