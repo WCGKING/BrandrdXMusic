@@ -9,7 +9,7 @@ load_dotenv()
 
 API_ID = 26268653
 API_HASH = "fe49634b55eea98671533859d04ea81d"
-BOT_TOKEN = "5759235328:AAFYSpHzvjCSvReZ5Q92cefapPOpqv2hZxU"
+BOT_TOKEN = "5759235328:AAEoLcxz0eQLZ7bXMoIwLIYiW3dUMhRbo3c"
 MONGO_DB_URI = "mongodb+srv://Yash1:Yash1@cluster0.jvuxh49.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 120))
 MUSIC_BOT_NAME = "˹ʟʙ ✘ ᴍᴜꜱɪᴄ˼"
