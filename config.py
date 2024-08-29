@@ -61,8 +61,8 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 # Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
 
 
-# Get your pyrogram v2 session from @BRANDEDSTRINGSESSION_BOT on 
-STRING1 = "BQFFG-oACFo7_N-YP3Lv_MpcxR775UKbMKkW-3dS1P17eEX2C13cbLsbWLwBUn-J1-lllVUEOxdL0v8hlLRbOwkde1qphWn5_WwM1nlU3Qp7N2YyysxR5aMI55cizsGHMX3O5b8ny76M5fjJBqd_a6tWhLFKKD1v5GVTj_r389vhPh4EDp21GJpHMgHLjkXEgAAAAF-tP5GAA"
+# Get your pyrogram v2 session
+STRING1 = "BQFFG-oAmoOyYFzqZStPa0q7dtgCC6sb-bX4ul8cymQst2_ENpIf9nF-HlEyilQwkEi5hZylZlIMI9wEARv_l-rUa-b0WkQuVowOvCBhlDr3Q4HQd62KxFvcfqnEeuwXvbC4U1ViTwhBEEOqeXlhBqZaynUj1bJM6E0Yqp-Ep3fMik3tn2aEupxH7si7IgmnYPVSIPFM1z8PTuH9lf77D0unxEuDrX8IwBm5MCsDYMYoxcddyxjdCW_2mfZcg4QPcP3-4jMBNkxv7w0tGaMPDR_aBSSriNexR6cmqY6ydmtGlM1grRpzm0HzuT2FDEAhu9hngyG8OCll3gx1IXiSCS7DfRUAywAAAAF-tP5GAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
