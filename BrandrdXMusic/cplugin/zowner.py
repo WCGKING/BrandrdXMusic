@@ -32,16 +32,16 @@ from BrandrdXMusic.utils.decorators.userbotjoin import UserbotWrapper
 from BrandrdXMusic.utils.database import get_assistant, is_active_chat
 
 
-@Client.on_message(filters.command("repo") & filters.group)
+@Client.on_message(filters.command("King") & filters.group)
 async def repo(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
-        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
+        photo=f"https://graph.org/file/462ea653de0a313f8302a.jpg",
+        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://t.me/learningbots79"
                     )
                 ]
             ]
@@ -49,17 +49,17 @@ async def repo(client: Client, message: Message):
     )
 
 
-@Client.on_message(filters.command("repo") & filters.group)
+@Client.on_message(filters.command("king") & filters.group)
 async def help(client: Client, message: Message):
 
     await message.reply_photo(
-        photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
-        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
+        photo=f"https://graph.org/file/462ea653de0a313f8302a.jpg",
+        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://t.me/learningbots79"
                     )
                 ]
             ]
@@ -67,16 +67,16 @@ async def help(client: Client, message: Message):
     )
 
 
-@Client.on_message(filters.command("repo") & filters.private)
+@Client.on_message(filters.command("king") & filters.private)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://graph.org/file/2fd9703e31548f7a1aaaa.jpg",
-        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
+         photo=f"https://graph.org/file/462ea653de0a313f8302a.jpg",
+        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "🌱 𝐒𝐎𝐔𝐑𝐂𝐄 🌱", url=f"https://t.me/learningbots79"
                     )
                 ]
             ]

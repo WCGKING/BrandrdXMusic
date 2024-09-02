@@ -7,26 +7,15 @@ from pyrogram import filters
 
 load_dotenv()
 
-# Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", None))
-API_HASH = getenv("API_HASH", None)
-
-# Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", None)
-
-# Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://Branded:Brandedking82@branded.kauagbt.mongodb.net/?retryWrites=true&w=majority")
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", None)
-PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
-
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 900))
-
-# Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", None))
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002198719573"))
-
-# Get this value from @BRANDRD_ROBOT on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "7250012103"))
+API_ID = 26268653
+API_HASH = "fe49634b55eea98671533859d04ea81d"
+BOT_TOKEN = "5759235328:AAEoLcxz0eQLZ7bXMoIwLIYiW3dUMhRbo3c"
+MONGO_DB_URI = "mongodb+srv://Yash1:Yash1@cluster0.jvuxh49.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 120))
+MUSIC_BOT_NAME = "˹ʟʙ ✘ ᴍᴜꜱɪᴄ˼"
+LOGGER_ID = -1001861619812
+LOG_GROUP_ID = -1001861619812
+OWNER_ID = 5016109398
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -36,15 +25,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/WCGKING/BrandrdXMusic",
+    "https://github.com/Visionx-x/BrandrdXMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/BRANDRD_BOT")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/BRANDED_WORLD")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/learningbots79")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/learning_bots")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -73,8 +62,8 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 # Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
 
 
-# Get your pyrogram v2 session from @BRANDEDSTRINGSESSION_BOT on Telegram
-STRING1 = getenv("STRING_SESSION",  None)
+# Get your pyrogram v2 session
+STRING1 = "BQFFG-oApXkGj_tiIAYuZ_q5L3jSNKMo0iXzky0wILFmwVhoj_0_4IQjzIQMKiptyMW5JyRt9JIcKkE0iXBYUNwJdxA5WXbDDkJKklKAlrkQA4FjvEG3y_E4Kg7DJJUTBipsND7iGWP74j-yfLrdEvslAaVLQAbRzSeeGCLplCFjImaOksQwbUrra1NVyBzeFZZEhUty7yCOEjlgaAx10mbsPvhI7DNnXqEiO-g5UbQTsHwP548SuZrrAsdMMKXCy3wDRGGPh3rs5ckl2_6y47TOvKN0Hg54rHwnF829dSO0uWwrVJE1q5GQxMv7K8qFUlOS-IoE_IB2h2NNyVb6Zb64NikerwAAAAF-tP5GAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -90,22 +79,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://te.legra.ph/file/62c76ac2095332a0ede75.jpg"
+    "START_IMG_URL", "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://te.legra.ph/file/4f59fb748e1990acfa297.jpg"
+    "PING_IMG_URL", "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
 )
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/14eb59ea7d31229d8d751.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/4310ea5f523520b2b765b.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/923c1faac33d8c70335dc.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6c66f8b192532fe758e82.jpg"
-STREAM_IMG_URL = "https://te.legra.ph/file/ebc4dc6357be06e08a3ed.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/d339f390ec168c19879c6.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/ee0cd53ab73f08f4a3627.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/5f9fb5bba66021c782d96.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/affe0afec5c7ad63676a4.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/3c446e8dee78ed0ca62ff.jpg"
-
+PLAYLIST_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+STATS_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+TELEGRAM_AUDIO_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+TELEGRAM_VIDEO_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+STREAM_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+SOUNCLOUD_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+YOUTUBE_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/cc290ee58069d09a1ade7.jpg"
 
 def time_to_seconds(time):
     stringt = str(time)
