@@ -52,16 +52,6 @@
         "value": "",
         "required": false
       },
-       "AUTO_GCAST": {
-        "description": "Fill here [True] for on auto gcast/broadcast message, (Leave Blank This Field & skip To Disbale Auto Gcast/Broadcast.)",
-        "value": "True",
-        "required": false
-      },
-      "AUTO_GCAST_MSG": {
-        "description": "Fill here auto broadcast message which will be auto broadcast twice in a day. ( any type of message you can copy and paste here )",
-        "value": "",
-        "required": false
-      }, 
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Don't Add Channel's ID.",
         "value": "",
