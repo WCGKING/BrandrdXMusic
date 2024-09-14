@@ -9,6 +9,7 @@ asyncio==3.4.3
 beautifulsoup4
 blackpink
 deepai
+gTTS
 pytube
 dnspython==2.3.0
 ffmpeg-python
