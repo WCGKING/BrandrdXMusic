@@ -5,7 +5,7 @@ from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
 from BrandrdXMusic import app
-from config import OWNER_ID
+from BrandrdXMusic.misc import SUDOERS
 from BrandrdXMusic.utils.database import (
     get_active_chats,
     get_authuser_names,
@@ -20,13 +20,9 @@ from config import adminlist
 IS_BROADCASTING = False
 
 
-@app.on_message(filters.command("broadcast"))
+@app.on_message(filters.command("broadcast") & SUDOERS)
 @language
 async def braodcast_message(client, message, _):
-    if message.from_user.id != OWNER_ID:
-        return await message.reply_text(
-            "» **sɪʀғ ʏᴇʜ @BRANDRD_BOT ʙʀᴏᴀᴅᴄᴀsᴛ ᴋᴀʀ sᴀᴋᴛᴀ ʜᴀɪ 😏**\n» ᴊᴏɪɴ @BRANDED_WORLD ғᴏʀ ᴘʀᴏᴍᴏ"
-        )
     global IS_BROADCASTING
     if message.reply_to_message:
         x = message.reply_to_message.id
@@ -121,7 +117,7 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_5"])
         text = _["broad_6"]
-        from BrandrdXMusic.core.userbot import assistants
+        from AnonXMusic.core.userbot import assistants
 
         for num in assistants:
             sent = 0
