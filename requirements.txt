@@ -7,6 +7,8 @@ pornhub-api==0.2.0
 aiohttp==3.9.3
 asyncio==3.4.3
 beautifulsoup4
+httpx[http2]
+uvloop
 blackpink
 deepai
 gTTS
