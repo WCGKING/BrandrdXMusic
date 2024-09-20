@@ -399,6 +399,7 @@ class YouTubeAPI:
                     downloaded_file = stdout.decode().split("\n")[0]
                     direct = False
                 else:
+                    
                   direct = True
                    downloaded_file = await loop.run_in_executor(None, video_dl)
         else:
