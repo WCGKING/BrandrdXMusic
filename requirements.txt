@@ -19,7 +19,7 @@ Faker
 pydub
 pycountry
 heroku3
-motor==3.3.2
+motor
 pillow==9.5.0
 psutil
 wget
@@ -43,14 +43,10 @@ spotipy
 tgcrypto
 telegraph==2.2.0
 unidecode
-yt-dlp
-#git+https://github.com/joetats/youtube_search@master
-#git+https://github.com/alexmercerind/youtube-search-python@main
-https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.23.zip
+yt-dlp==2023.10.13
 gtts
 youtube_search
 youtube-search-python
-git+https://github.com/AsmSafone/SafoneAPI
 lexica-api==1.4.7
 httpx==0.25.2
 gpytranslate
@@ -58,3 +54,7 @@ openai==0.28.0
 mpv
 moviepy
 lyricsgenius
+#git+https://github.com/joetats/youtube_search@master
+#git+https://github.com/alexmercerind/youtube-search-python@main
+https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.23.zip
+git+https://github.com/AsmSafone/SafoneAPI
