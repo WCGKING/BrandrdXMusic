@@ -19,7 +19,7 @@ Faker
 pydub
 pycountry
 heroku3
-motor
+motor==3.3.2
 pillow==9.5.0
 psutil
 wget
