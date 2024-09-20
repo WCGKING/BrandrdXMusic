@@ -43,7 +43,7 @@ spotipy
 tgcrypto
 telegraph==2.2.0
 unidecode
-yt-dlp==2023.10.13
+yt-dlp
 gtts
 youtube_search
 youtube-search-python
