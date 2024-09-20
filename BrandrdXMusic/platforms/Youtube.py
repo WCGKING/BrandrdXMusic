@@ -400,8 +400,8 @@ class YouTubeAPI:
                     direct = False
                 else:
                     
-                  direct = True
-                  downloaded_file = await loop.run_in_executor(None, video_dl)
+                    direct = True
+                    downloaded_file = await loop.run_in_executor(None, video_dl)
         else:
             direct = True
             downloaded_file = await loop.run_in_executor(None, audio_dl)
