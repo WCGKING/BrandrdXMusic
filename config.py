@@ -42,6 +42,9 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
+# Your Github Repo.. Will be shown on /start Command
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/WCGKING/BrandrdXMusic")
+
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/BRANDRD_BOT")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/BRANDED_WORLD")
 
