@@ -14,6 +14,7 @@ wget
 qrcode
 future==0.18.3
 search_engine_parser
+speedtest
 py-tgcalls==1.2.9
 MukeshAPI
 ntgcalls==1.1.2
