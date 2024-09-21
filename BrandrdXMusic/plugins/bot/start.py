@@ -28,12 +28,12 @@ from strings import get_string
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
-    await message.react("❤ 🕊")
+    await message.react("❤")
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            await message.reply_sticker("CAACAgUAAxkBAAEQI1BlTLmx7PtOO3aPNshEU2gCy7iAFgACNQUAApqMuVeA6eJ50VbvmDME")
+            await message.reply_sticker("AgACAgUAAxkBAAEUtBRm7VVRpFlqS4ZKIoYR_2OgTv1jSgACAsIxG_gXaFcwAU816UGg0AEAAwIAA3gAAzYE")
             return await message.reply_photo(
                 photo=config.START_IMG_URL,
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
