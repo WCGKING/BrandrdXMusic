@@ -27,6 +27,7 @@ yt-dlp
 lexica-api==1.4.7
 httpx==0.25.2
 lyricsgenius
+spotipy
 SafoneAPI
 youtube_search
 youtube-search-python
