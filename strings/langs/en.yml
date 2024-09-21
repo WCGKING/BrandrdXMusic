@@ -225,7 +225,9 @@ stream_3 : "➲ <b>Mᴀᴅᴇ ʙʏ ➠ [ʙʀᴀɴᴅᴇᴅ](https://t.me/BRANDED
 #General
 CLOSE_BUTTON  : "↻ ᴄʟᴏsᴇ ↻"
 CLOSEMENU_BUTTON  : "↻ ᴄʟᴏsᴇ ↻"
-BACK_BUTTON : "◁"
+BACK_BUTTON : "↻ ʙᴀᴄᴋ ↻"
+NEXT_PAGE: "▷"
+BACK_PAGE: "◁"
 UNBAN_BUTTON : "• ᴜɴʙᴀɴ •"
 
 #Lyrics
