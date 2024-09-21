@@ -24,7 +24,7 @@ def private_panel(_):
                 url=f"https://t.me/{app.username}?startgroup=true",
             )
         ],
-        [url=f"https://t.me/{BOT_USERNAME}?startgroup=true",],
+        [url=f"https://t.me/{BOT_USERNAME}?startgroup=true"],
         [
             InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
             InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
