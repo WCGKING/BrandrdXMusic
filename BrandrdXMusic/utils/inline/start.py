@@ -2,7 +2,7 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
 
-from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_CHAT 
 from BrandrdXMusic import app
 
 
@@ -16,11 +16,11 @@ def start_pannel(_):
             InlineKeyboardButton(text=_["S_B_2"], callback_data="settings_helper"),
         ],
     ]
-    if SUPPORT_CHANNEL and SUPPORT_GROUP:
+    if SUPPORT_CHANNEL and SUPPORT_CHAT:
         buttons.append(
             [
                 InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
-                InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}"),
+                InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
             ]
         )
     else:
@@ -28,9 +28,9 @@ def start_pannel(_):
             buttons.append(
                 [InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}")]
             )
-        if SUPPORT_GROUP:
+        if SUPPORT_CHAT:
             buttons.append(
-                [InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}")]
+                [InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}")]
             )
     return buttons
 
@@ -39,11 +39,11 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [InlineKeyboardButton(text=_["S_B_8"], callback_data="settings_back_helper")]
     ]
-    if SUPPORT_CHANNEL and SUPPORT_GROUP:
+    if SUPPORT_CHANNEL and SUPPORT_CHAT:
         buttons.append(
             [
                 InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
-                InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}"),
+                InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT }"),
             ]
         )
     else:
@@ -51,9 +51,9 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             buttons.append(
                 [InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}")]
             )
-        if SUPPORT_GROUP:
+        if SUPPORT_CHAT:
             buttons.append(
-                [InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}")]
+                [InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}")]
             )
     buttons.append(
         [
@@ -95,7 +95,7 @@ def alive_panel(_):
             InlineKeyboardButton(
                 text="✿︎ ᴀᴅᴅ ᴍᴇ ✿︎", url=f"https://t.me/{app.username}?startgroup=true"
             ),
-            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
         ],
     ]
     return buttons
