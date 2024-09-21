@@ -10,7 +10,8 @@ from BrandrdXMusic.utils.decorators.language import LanguageStart, languageCB
 from BrandrdXMusic.utils.inline.help import help_back_markup, private_help_panel
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
 from strings import get_string, helpers
-
+from BrandrdXMusic.utils.stuffs.buttons import BUTTONS
+from BrandrdXMusic.utils.stuffs.helper import Helper
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
 @app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
@@ -107,7 +108,7 @@ async def helper_cb(client, CallbackQuery, _):
 
 @app.on_callback_query(filters.regex("mbot_cb") & ~BANNED_USERS)
 async def helper_cb(client, CallbackQuery):
-    await CallbackQuery.edit_message_text(helpers.HELP_M, reply_markup=InlineKeyboardMarkup(BUTTONS.MBUTTON))
+    await CallbackQuery.edit_message_text(Helper.HELP_M, reply_markup=InlineKeyboardMarkup(BUTTONS.MBUTTON))
 
 
 @app.on_callback_query(filters.regex('managebot123'))
