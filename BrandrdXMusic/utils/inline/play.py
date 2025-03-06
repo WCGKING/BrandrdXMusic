@@ -68,10 +68,10 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ပိုင်ရှင် ❥", url=f"https://t.me/naynay11122211"
+                text="⛦ Owner ❥", url=f"https://t.me/naynay11122211"
             ),
             InlineKeyboardButton(
-                text="⛦ ရည်းစားရှာရန် ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
+                text="⛦ ချစ်သူ ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
             ),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -90,10 +90,10 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ပိုင်ရှင် ❥", url=f"https://t.me/naynay11122211"
+                text="⛦ Owner ❥", url=f"https://t.me/naynay11122211"
             ),
             InlineKeyboardButton(
-                text="⛦ ရည်းစားရှာရန် ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
+                text="⛦ ချစ်သူ ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
             ),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -179,76 +179,7 @@ def telegram_markup(_, chat_id):
         [
             InlineKeyboardButton(
                 text="Next",
-                callback_data=f"PanelMarkup None|{chat_id}",
-            ),
-            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
-        ],
-    ]
-    return buttons
-
-
-## Queue Markup
-
-
-def queue_markup(_, videoid, chat_id):
-
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="II ᴘᴀᴜsᴇ",
-                callback_data=f"ADMIN Pause|{chat_id}",
-            ),
-            InlineKeyboardButton(text="▢ sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(
-                text="sᴋɪᴘ ‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="▷ ʀᴇsᴜᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="ʀᴇᴘʟᴀʏ ↺", callback_data=f"ADMIN Replay|{chat_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⛦ ᴍᴏʀᴇ ❥",
-                callback_data=f"PanelMarkup None|{chat_id}",
-            ),
-        ],
-    ]
-
-    return buttons
-
-
-def stream_markup2(_, chat_id):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
-        ],
-[
-            InlineKeyboardButton(
-                text="⛦ ပိုင်ရှင် ❥", url=f"https://t.me/naynay11122211"
-            ),
-            InlineKeyboardButton(
-                text="⛦ ရည်းစားရှာရန် ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
+                callback_data=f"PanelMarkup None|ချစ်သူ ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
             ),
         ],
 
