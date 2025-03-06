@@ -68,10 +68,10 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/naynay11122211"
+                text="⛦ ပိုင်ရှင် ❥", url=f"https://t.me/naynay11122211"
             ),
             InlineKeyboardButton(
-                text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/gittahlaing_chat"
+                text="⛦ ရည်းစားရှာရန် ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
             ),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -90,10 +90,10 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/naynay11122211"
+                text="⛦ ပိုင်ရှင် ❥", url=f"https://t.me/naynay11122211"
             ),
             InlineKeyboardButton(
-                text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/gittahlaing_chat"
+                text="⛦ ရည်းစားရှာရန် ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
             ),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -245,10 +245,10 @@ def stream_markup2(_, chat_id):
         ],
 [
             InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/naynay11122211"
+                text="⛦ ပိုင်ရှင် ❥", url=f"https://t.me/naynay11122211"
             ),
             InlineKeyboardButton(
-                text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/gittahlaing_chat"
+                text="⛦ ရည်းစားရှာရန် ❥", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
             ),
         ],
 
