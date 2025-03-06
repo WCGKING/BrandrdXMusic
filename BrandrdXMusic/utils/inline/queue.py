@@ -76,7 +76,7 @@ def aq_markup(_, chat_id):
                 text="⛦ ပိုင်ရှင်⛦", url=f"https://t.me/naynay11122211"
             ),
             InlineKeyboardButton(
-                text="🥀 ရည်းစားရှာရန် 🥀", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
+                text="🥀 ချစ်သူ 🥀", url=f"https://t.me/+qq47Q98lKzU4OGQ1"
             ),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
