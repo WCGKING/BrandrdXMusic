@@ -1,59 +1,12 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import os
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
 
-options = Options()
-
-prefs = {'exit_type': 'Normal'}
-options.add_experimental_option("prefs", {'profile': prefs})
-options.add_argument(f"user-data-dir={os.getcwd()}/chrome")
-options.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
-options.add_argument("no-sandbox")
-options.add_argument('start-maximized')
-options.add_argument('disable-infobars')
-options.add_argument("--autoplay-policy=no-user-gesture-required")
-options.add_experimental_option("excludeSwitches", ['enable-automation'])
-
-
-driver = webdriver.Chrome(options=options)
-
-def save_cookies_to_netscape_file(cookies, output_file):
-    with open(output_file, 'w') as f:
-        f.write("# Netscape HTTP Cookie File\n")
-        f.write("# This is a generated file! Do not edit.\n\n")
-        f.write("# domain  include_subdomains  path  secure  expiration_date  name  value\n")
-        
-        for cookie in cookies:
-            # Determine the correct attribute name for expiry based on Selenium version or browser
-            expiry = cookie.get('expiry') or cookie.get('expires') or 0
-            
-            f.write(f"{cookie['domain']}\t")
-            f.write("TRUE\t")  # include_subdomains
-            f.write(f"{cookie['path']}\t")
-            f.write("TRUE\t" if cookie.get('secure') else "FALSE\t")
-            f.write(f"{int(expiry)}\t")  # expiration_date
-            f.write(f"{cookie['name']}\t{cookie['value']}\n")
-
-    return f"Cookies have been saved to {output_file}"
-
-while True:
- user_input = input("Login to your YouTube account play a video [Completed] (Y/N)")
- if user_input == "Y":
-   break
-  
-print(f'Hello, Logged in to your account..!')
-
-
-while True:
- user_input = input("enter a name for your cookies file: ")
- if user_input:
-   output_file = f"{user_input}.txt"
-   break
-
-cookies = driver.get_cookies()
-output_file = f"{os.getcwd()}/{output_file}"
-save_cookies_to_netscape_file(cookies, output_file)
-print("Cookies saved to:",output_file)
-
-
-driver.quit()
+.youtube.com	TRUE	/	TRUE	1741527422	GPS	1
+.youtube.com	TRUE	/	TRUE	1776085624	PREF	tz=Asia.Rangoon
+.youtube.com	TRUE	/	TRUE	1773061623	__Secure-1PSIDTS	sidts-CjIBEJ3XVyA81NskuI3_hthJNQXSwPl0CAM-lNOSpLEqQ5rnTgVfU6phI73LoPRcNvjlQhAA
+.youtube.com	TRUE	/	TRUE	1773061623	__Secure-3PSIDTS	sidts-CjIBEJ3XVyA81NskuI3_hthJNQXSwPl0CAM-lNOSpLEqQ5rnTgVfU6phI73LoPRcNvjlQhAA
+.youtube.com	TRUE	/	TRUE	1776085623	__Secure-3PAPISID	oFytI_ZeDpgwEKyj/APd0rJ_53ZMf_MYGB
+.youtube.com	TRUE	/	TRUE	1776085623	__Secure-3PSID	g.a000twiljjZJpv_3koonVNBPEE-UrsH6HYb-ZKlntsGrF9bwSfzDTSIygio5d1mTFFEbTVwbEQACgYKAUYSARcSFQHGX2MiHkts18giDDWuNjXnHIG4NRoVAUF8yKq_c_z4NUXbU1XLqyjGQ7920076
+.youtube.com	TRUE	/	TRUE	1776085623	LOGIN_INFO	AFmmF2swRQIhALKdB0sSoSHN_yRaJm11nZ1JpQhP4okrRL2rOxo6jwDPAiA3qHUc_DOpSET2x880Phe435wI_WMHoS4qYZtBItnziA:QUQ3MjNmd19PZUtWdmFzci1EZnpzRjNCWlRrcFZRSktvbEM4eFVfcWFPUlVkeTI1Y1Fqc3NMZDRRYzVqRER3Z0VaOEY0MHptb01GTVJIZWtFZ1E5Qi01eE1Fa1lJejNQUklXeGg3cWxCWFlYNDJMVWdhUlpqSkh5R2ZyXzNaYWVEMVliZVd2N0lzaVZiVEdRRGVkSTVra0htTXV3NU50LTZB
+.youtube.com	TRUE	/	TRUE	1773061779	__Secure-3PSIDCC	AKEyXzWdKkh_vHVBJYJgtnIosY0H1FusYgSJPkwSBwPrlu-EktnJc2zOpKhzd6OHogetp7fZ
