@@ -40,7 +40,7 @@ async def init():
     await userbot.start()
     await Hotty.start()
     try:
-        await Hotty.stream_call("https://graph.org/file/e999c40cb700e7c684b75.mp4")
+        await Hotty.stream_call("https://files.catbox.moe/snt2bi.mp4")
     except NoActiveGroupCall:
         LOGGER("Princess-Music").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
@@ -49,9 +49,7 @@ async def init():
     except:
         pass
     await Hotty.decorators()
-    LOGGER("Princess-Music").info(
-        "ᴅʀᴏᴘ ʏᴏᴜʀ ɢɪʀʟꜰʀɪᴇɴᴅ'ꜱ ɴᴜᴍʙᴇʀ ᴀᴛ 
- ᴊᴏɪɴ@FANTASIEST_SUPPORTꜰᴏʀ ᴀɴʏ ɪꜱꜱᴜᴇꜱ"@FANTASIEST_PRINCE"
+    LOGGER("Princess-Music").info"(ᴅʀᴏᴘ ʏᴏᴜʀ ɢɪʀʟꜰʀɪᴇɴᴅ'ꜱ ɴᴜᴍʙᴇʀ ᴀᴛ ᴊᴏɪɴ")' @FANTASIEST_SUPPORTꜰᴏʀ ᴀɴʏ ɪꜱꜱᴜᴇꜱ"@FANTASIEST_PRINCE)"
     )
     await idle()
     await app.stop()
