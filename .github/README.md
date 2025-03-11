@@ -106,13 +106,7 @@
 <a href="https://t.me/FANTASIEST_SUPPORT_BOT"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
-- <b> {ᴅᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋᴅ ᴛᴏ}
 
-[ᴛᴇᴀᴍ ꜰᴀɴᴛᴀꜱɪᴇᴅᴛ]
-
--  [ғᴀɴᴛᴀsɪᴇsᴛ ᴍᴜsɪᴄ ʙᴏᴛ])_(</b>
-
-
-- <b> [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ]-(https://t.me/FANTASIEST_PRINCE)-_</b>
-  
-- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ꜰᴀɴᴛᴀꜱɪʀꜱᴛ](https://github.com/FANTASIEST/) ғᴏʀ [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ](
+- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ
+[ꜰᴀɴᴛᴀꜱɪʀꜱᴛ]
+( [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ](https://t.me/FANTASIEST_PRINCE)_</b>
