@@ -111,4 +111,4 @@
 
 [ꜰᴀɴᴛᴀꜱɪʀꜱᴛ ᴀɴʏ ʀᴇᴘᴏ]
 
-( [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ](https://t.me/FANTASIEST_PRINCE)_</b>
+ [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ](https://t.me/FANTASIEST_PRINCE)_</b>
