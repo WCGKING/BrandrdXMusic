@@ -1,8 +1,7 @@
 import random
 from typing import Dict, List, Union
-
-from BrandrdXMusic import userbot
-from BrandrdXMusic.core.mongo import mongodb, pymongodb
+Princess-Music import userbot
+from Princess-Music.core.mongo import mongodb, pymongodb
 
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser
