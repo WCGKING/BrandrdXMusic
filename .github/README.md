@@ -32,7 +32,7 @@
 
 </p>
 
-**𝙏𝙀𝙎𝙏 𝘽𝙊𝙏 ➣ [❛ .𝁘ໍ ˹𝐏ʀɪɴᴄᴇꜱꜱꭙ 𝐌ᴜꜱɪᴄ˹𓆪ִֶָ ֺ⎯꯭‌ 𓆩💗𓆪𓈒](https://t.me/princess_musics_bot)**
+**𝙏𝙀𝙎𝙏 𝘽𝙊𝙏 ➣ [˹𝐏ʀɪɴᴄᴇꜱꜱꭙ 𝐌ᴜꜱɪᴄ˹𓈒](https://t.me/princess_musics_bot)**
 
 
 
@@ -111,4 +111,6 @@
 [ᴛᴇᴀᴍ ꜰᴀɴᴛᴀꜱɪᴇᴅᴛ]
 
 -  [ғᴀɴᴛᴀsɪᴇsᴛ ᴍᴜsɪᴄ ʙᴏᴛ])_(</b>
-(https://t.me/princess_musics_bot)
+
+[✦ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ✦]
+https://t.me/FANTASIEST_PRINCE
