@@ -112,5 +112,6 @@
 
 -  [ғᴀɴᴛᴀsɪᴇsᴛ ᴍᴜsɪᴄ ʙᴏᴛ])_(</b>
 
-[✦ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ✦]
-https://t.me/FANTASIEST_PRINCE
+
+- <b> [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ]
+(https://t.me/FANTASIEST_PRINCE)-_</b>
