@@ -1,12 +1,12 @@
 {
-    "name": "⛦ 𝐁𝐫𝐚𝐧𝐝𝐫𝐝 𝐗 𝐌𝐮𝐬𝐢𝐜 ⛦",
+    "name": "⛦ 𝐏𝐫𝐢𝐧𝐜𝐞𝐬𝐬-𝐌𝐮𝐬𝐢𝐜 ⛦",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/62fa7c81c56c1ae31c844.jpg",
+    "logo": "https:https://files.catbox.moe/yh6ebv.jpg",
     "keywords": [
     "python3",
     "telegram",
     "bot",
-    "Brandrd",
+    "Fantasirst",
     "MusicBot",
     "telegram-bot",
     "pyrogram"
