@@ -106,5 +106,8 @@
 <a href="https://t.me/FANTASIEST_SUPPORT_BOT"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
-- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴛᴇᴀᴍ ғᴀɴᴛᴀsɪᴇsᴛ]
--( ) ғᴏʀ [ғᴀɴᴛᴀsɪᴇsᴛ ᴍᴜsɪᴄ ʙᴏᴛ]( )_</b>
+- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ 
+
+[ᴛᴇᴀᴍ ғᴀɴᴛᴀsɪᴇsᴛ]
+
+-  [ғᴀɴᴛᴀsɪᴇsᴛ ᴍᴜsɪᴄ ʙᴏᴛ]( )_</b>(</b>
