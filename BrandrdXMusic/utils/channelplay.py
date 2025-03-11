@@ -1,5 +1,5 @@
-from BrandrdXMusic import app
-from BrandrdXMusic.utils.database import get_cmode
+from Princess-Music import app
+from Princess-Music.utils.database import get_cmode
 
 
 async def get_channeplayCB(_, command, CallbackQuery):
