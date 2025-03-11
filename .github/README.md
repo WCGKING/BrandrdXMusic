@@ -115,4 +115,4 @@
 
 - <b> [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ]-(https://t.me/FANTASIEST_PRINCE)-_</b>
   
-- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ꜰᴀɴᴛᴀꜱɪʀꜱᴛ](https://github.com/FANTASIEST/) ғᴏʀ [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ](https://t.me/FANTASIEST_PRINCE)_</b>
+- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ꜰᴀɴᴛᴀꜱɪʀꜱᴛ](https://github.com/FANTASIEST/) ғᴏʀ [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴏɴᴡᴇʀ](
