@@ -1,5 +1,5 @@
 from pyrogram import filters
-from BrandrdXMusic.utils.admin_check import admin_check
+from PrincessMusic.utils.admin_check import admin_check
 
 
 USE_AS_BOT = True
