@@ -7,7 +7,7 @@ import asyncio
 from pyrogram import client, filters
 from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
-from BrandrdXMusic.utils.database import get_assistant
+from PrincessMusici.utils.database import get_assistant
 import config
 from PrincessMusici.mport Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from PrincessMusici.core.call import Hotty
@@ -24,7 +24,7 @@ from PrincessMusici.utils.inline import (
     slider_markup,
     track_markup,
 )
-from BrandrdXMusic.utils.database import (
+from PrincessMusici.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
