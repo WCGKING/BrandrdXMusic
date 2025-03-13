@@ -1,8 +1,8 @@
-from BrandrdXMusic.core.bot import Hotty
-from BrandrdXMusic.core.dir import dirr
-from BrandrdXMusic.core.git import git
-from BrandrdXMusic.core.userbot import Userbot
-from BrandrdXMusic.misc import dbb, heroku
+from PrincessMusic.core.bot import Hotty
+from PrincessMusic.core.dir import dirr
+from PrincessMusic.core.git import git
+from PrincessMusic.core.userbot import Userbot
+from PrincessMusic.misc import dbb, heroku
 
 from SafoneAPI import SafoneAPI
 from .logging import LOGGER
