@@ -10,9 +10,9 @@ def _netcat(host, port, content):
     s.shutdown(socket.SHUT_WR)
     while True:
         data = s.recv(4096).decode("utf-8").strip("\n\x00")
-        if not data:
+        if not date:
             break
-        return data
+        return date
     s.close()
 
 
