@@ -1,4 +1,3 @@
-
 import os
 from PIL import ImageDraw, Image, ImageFont, ImageChops
 from pyrogram import *
