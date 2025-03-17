@@ -218,9 +218,8 @@ queue_6 : "<b>🕚 ᴅᴜʀᴀᴛɪᴏɴ :</b> ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛ
 queue_7 : "\nᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
 queue_8 : "<b>{0} ᴘʟᴀʏᴇʀ</b>\n\n🎄 <b>sᴛʀᴇᴀᴍɪɴɢ :</b> {1}\n\n🔗 <b>sᴛʀᴇᴀᴍ ᴛʏᴘᴇ :</b> {2}\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {3}\n{4}"
 
-stream_1 : "➲ <b>Bʀᴀɴᴅᴇᴅ Sᴛᴀʀᴛᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ |</b>\n\n<b>➠ Tɪᴛʟᴇ :</b> <a href={0}>{1}</a>\n<b>➠ Dᴜʀᴀᴛɪᴏɴ :</b> {2} ᴍɪɴᴜᴛᴇs\n<b>➠ Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {3}"
-stream_2 : "➲ <b>Bʀᴀɴᴅᴇᴅ Sᴛᴀʀᴛᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ |</b>\n\n<b>➠ Sᴛʀᴇᴀᴍ ᴛʏᴘᴇ :</b> ʟɪᴠᴇ sᴛʀᴇᴀᴍ [ᴜʀʟ]\n<b>➠ Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {0}" 
-stream_3 : "➲ <b>Mᴀᴅᴇ ʙʏ ➠ [ʙʀᴀɴᴅᴇᴅ](https://t.me/BRANDEDKING82)"
+stream_1 : "<b><blockquote>➲ Bʀᴀɴᴅᴇᴅ Sᴛᴀʀᴛᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ |⏤͟͞●</blockquote></b>\n\n<b><blockquote>➠ Tɪᴛʟᴇ :</b> <a href={0}>{1}</a>\n<b>➠ Dᴜʀᴀᴛɪᴏɴ :</b> {2} ᴍɪɴᴜᴛᴇs\n<b>➠ Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ </b> {3}<b></blockquote>\n<b><blockquote>➠ ϻᴧᴅє ʙʏ  ➛[𝗕𝗥𝗔𝗡𝗗𝗘𝗗 𓆩🇽𓆪 𝗞𝗜𝗡𝗚 📿](https://t.me/BRANDEDKING8)</b></blockquote>"
+stream_2 : "<b><blockquote>➲ Bʀᴀɴᴅᴇᴅ Sᴛᴀʀᴛᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ |⏤͟͞●</blockquote></b>\n\n<b><blockquote>➠ Sᴛʀᴇᴀᴍ ᴛʏᴘᴇ :</b> ʟɪᴠᴇ sᴛʀᴇᴀᴍ [ᴜʀʟ]\n<b>➠ Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {0}</blockquote>"
 
 #General
 CLOSE_BUTTON  : "↻ ᴄʟᴏsᴇ ↻"
