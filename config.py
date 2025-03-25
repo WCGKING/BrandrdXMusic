@@ -8,24 +8,24 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", None))
-API_HASH = getenv("API_HASH", None)
+API_ID = "24542160"
+API_HASH = "143ef5efcaf0f2b259dcd0ea2cfaf336"
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", None)
+BOT_TOKEN = "7643915863:AAEqo5PJCI1K13iJliOFr9epYkWTr3jywAM"
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = "mongodb://anshganava4444:anshganava4444@cluster0-shard-00-00.4eott.mongodb.net:27017,cluster0-shard-00-01.4eott.mongodb.net:27017,cluster0-shard-00-02.4eott.mongodb.net:27017/?replicaSet=atlas-jkh5an-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=Cluster0"
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", None)
 PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 900))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", None))
+LOGGER_ID = "-1002035748224"
 
-# Get this value from @BRANDRD_ROBOT on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "7250012103"))
+# Get this value from @Eternal_society on Telegram by /id
+OWNER_ID = "5031182800"
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -42,8 +42,9 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/BRANDRD_BOT")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/BRANDED_WORLD")
+SUPPORT_CHANNEL = "https://t.me/et_bot_logs"
+SUPPORT_CHAT = "https://t.me/sorcerers_680"
+                                                 
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -73,7 +74,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @BRANDEDSTRINGSESSION_BOT on Telegram
-STRING1 = getenv("STRING_SESSION",  None)
+STRING1 = "BQF2e9AAvzU0MWYTricZt9y2mMnUZu55Gwt8GotIZ7npPEtCTB8qyR32nPHBo5WF_hSkt6TZf5-E4h6EYHmAz2MGjjq5BGJIfyrbj-Pizdln7byUKAqWRN7N5QwOyCKA-R55CZc0mBlOP9ILXgrlAr1VlTku9BNaHc_hv6o4cJGtcBVoDJSyeUfLRMp_3uaqBrWSF9i-8qVNfB2veHagwACVKRfjhru1vGJfHN_HebeJDveLzWDprY4bvtGZcP9LGpuwXlwiRkjNId87tBTGorj2yS86qfV19vrWOcaQICsULrMuUzZ8BkTRpzND_ZXqQs8e3nX1_FqLOu9luU7zotpE3ut6DgAAAAEr4cHQAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -88,22 +89,22 @@ autoclean = []
 confirmer = {}
 
 
-START_IMG_URL = getenv(
+START_IMG_URL = "https://i.ibb.co/23X2SMdq/1fa2ead78035.jpg"
     "START_IMG_URL", "https://te.legra.ph/file/62c76ac2095332a0ede75.jpg"
 )
-PING_IMG_URL = getenv(
+PING_IMG_URL = "https://i.ibb.co/C32LkWrx/ec3cb5d8cce0.jpg"
     "PING_IMG_URL", "https://te.legra.ph/file/4f59fb748e1990acfa297.jpg"
 )
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/14eb59ea7d31229d8d751.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/4310ea5f523520b2b765b.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/923c1faac33d8c70335dc.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6c66f8b192532fe758e82.jpg"
-STREAM_IMG_URL = "https://te.legra.ph/file/ebc4dc6357be06e08a3ed.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/d339f390ec168c19879c6.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/ee0cd53ab73f08f4a3627.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/5f9fb5bba66021c782d96.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/affe0afec5c7ad63676a4.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/3c446e8dee78ed0ca62ff.jpg"
+PLAYLIST_IMG_URL = "https://i.ibb.co/C32LkWrx/ec3cb5d8cce0.jpg"
+STATS_IMG_URL = "https://i.ibb.co/C32LkWrx/ec3cb5d8cce0.jpg"
+TELEGRAM_AUDIO_URL = "https://i.ibb.co/C32LkWrx/ec3cb5d8cce0.jpg"
+TELEGRAM_VIDEO_URL = "https://i.ibb.co/C32LkWrx/ec3cb5d8cce0.jpg"
+STREAM_IMG_URL = "https://i.ibb.co/C32LkWrx/ec3cb5d8cce0.jpg"
+SOUNCLOUD_IMG_URL = "https://i.ibb.co/C32LkWrx/ec3cb5d8cce0.jpg"
+YOUTUBE_IMG_URL = "https://i.ibb.co/C32LkWrx/ec3cb5d8cce0.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://i.ibb.co/7JfhcMnv/37ff54f50ea1.jp"
+SPOTIFY_ALBUM_IMG_URL = "https://i.ibb.co/7JfhcMnv/37ff54f50ea1.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://i.ibb.co/7JfhcMnv/37ff54f50ea1.jpg"
 
 
 def time_to_seconds(time):
