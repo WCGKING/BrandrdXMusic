@@ -8,8 +8,8 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = "24542160"
-API_HASH = "143ef5efcaf0f2b259dcd0ea2cfaf336"
+API_ID = "20950160"
+API_HASH = "24c06eafb05962f12f2eb301c0f9d017"
 
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = "7643915863:AAEqo5PJCI1K13iJliOFr9epYkWTr3jywAM"
@@ -74,7 +74,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @BRANDEDSTRINGSESSION_BOT on Telegram
-STRING1 = "BQF2e9AAvzU0MWYTricZt9y2mMnUZu55Gwt8GotIZ7npPEtCTB8qyR32nPHBo5WF_hSkt6TZf5-E4h6EYHmAz2MGjjq5BGJIfyrbj-Pizdln7byUKAqWRN7N5QwOyCKA-R55CZc0mBlOP9ILXgrlAr1VlTku9BNaHc_hv6o4cJGtcBVoDJSyeUfLRMp_3uaqBrWSF9i-8qVNfB2veHagwACVKRfjhru1vGJfHN_HebeJDveLzWDprY4bvtGZcP9LGpuwXlwiRkjNId87tBTGorj2yS86qfV19vrWOcaQICsULrMuUzZ8BkTRpzND_ZXqQs8e3nX1_FqLOu9luU7zotpE3ut6DgAAAAEr4cHQAA"
+STRING1 = "BQE_rJAARKZYJGjHbpn2rpzGotfTrxcJRatVv9Vyyoe73JxV79TGr23Vx_CkXD3gu3xxnOnZlQQxYmuSc5_rebRn_-VrFo3ENJnamCjujEMNIiO2wK22UhOfeCQhoVtTEvUiDIn-WN7vvu9fJcDJSF1PjmldrAni2q2SifAv45LfDbgmEa1yabzDXnMwHD5mD1Bp2otTIeuLn3JYuIk0sIgoQVbyuEpDr5H7JwwzvBfQsLTc3JWyp_we9pKPhq3g1IIjbukydj7PWY7RYE5laH4JTPcFTqa6gWzb16hofTENO3vjCWDD8OKbXm2Knh4QNUGWtRYhS8Vswdia9NyyeD7HlKz7XAAAAAG2CFg5AA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
