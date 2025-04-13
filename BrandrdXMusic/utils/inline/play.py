@@ -68,7 +68,7 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/kilingmachin3"
+                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/Killingmachin3"
             ),
             InlineKeyboardButton(
                 text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/gundayrules"
@@ -90,7 +90,7 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/kilingmachin3"
+                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/Killingmachin3"
             ),
             InlineKeyboardButton(
                 text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/gundayrules"
@@ -245,7 +245,7 @@ def stream_markup2(_, chat_id):
         ],
 [
             InlineKeyboardButton(
-                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/kilingmachin3"
+                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/Killingmachin3"
             ),
             InlineKeyboardButton(
                 text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/gundayrules"
