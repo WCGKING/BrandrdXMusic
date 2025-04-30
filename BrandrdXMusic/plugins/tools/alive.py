@@ -9,21 +9,21 @@ from config import MUSIC_BOT_NAME
 @app.on_message(filters.command(["alive"]))
 async def start(client: Client, message: Message):
     await message.reply_video(
-        video=f"https://graph.org/file/e999c40cb700e7c684b75.mp4",
-        caption=f"❤️ ʜᴇʏ {message.from_user.mention}\n\n🔮 ɪ ᴀᴍ {MUSIC_BOT_NAME}\n\n✨ ɪ ᴀᴍ ғᴀsᴛ ᴀɴᴅ ᴩᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴩʟᴀʏᴇʀ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ғᴇᴀᴛᴜʀᴇs.\n\n💫 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ ᴊᴏɪɴ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ🤍...\n\n━━━━━━━━━━━━━━━━━━❄",
+        video=f"https://t.me/melodysongss/4",
+        caption=f"❤️ Hello Everyone \n\n🔮 ɪ ᴀᴍ Melody Music\n\n✨ မင်းတို့ရဲ့ Group မှာထည့်ပြီး သီချင်းဖွင့်နိုင်ပါတယ်။\n\n💫 တစ်ခုခုမေးချင်ရင် အုံနာကို ဆက်သွယ်နိုင်ပါတယ်။🤍...\n\n━━━━━━━━━━━━━━━━━━❄",
         reply_markup=InlineKeyboardMarkup(
             [
                [
             InlineKeyboardButton(
-                text="☆ ʙʀᴀɴᴅᴇᴅ 💗 ", url=f"https://t.me/BRANDRDKING82"
+                text="☆ Owner 💗 ", url=f"https://t.me/nnaynay1112221"
             ),
             InlineKeyboardButton(
-                text="☆ ꜱᴜᴘᴘᴏʀᴛ 💗", url=f"https://t.me/BRANDED_WORLD"
+                text="☆ ꜱᴜᴘᴘᴏʀᴛ 💗", url=f"https://t.me/melody_cchat"
             ),
         ],
                 [
             InlineKeyboardButton(
-                text="☆ ᴄʜᴀɴɴᴇʟ💗", url=f"https://t.me/BRANDRD_BOT"
+                text="☆ ADD💗", url=f"https://t.me/melodm_bot?startgroup=true"
             ),
                 ],
                 [
