@@ -15,7 +15,7 @@ POLICE = [
     [
         InlineKeyboardButton(
             text="ရည်းစားရှာရန်  🥀",
-            url=f"https://t.me/+qq47Q98lKzU4OGQ1",
+            url=f"https://t.me/melody_cchat",
         ),
     ],
 ]
@@ -106,11 +106,11 @@ async def ctest(_, message):
          img.save(f'test_{cid}.png')
     
          TXT = f"""
-**ᴛᴏᴅᴀʏ's ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ :
+**အတွဲတွေဖြစ်သွားကြပါပြီ :
 
-{N1} + {N2} = 💚
+{N1} + {N2} = ❤️
 
-ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs ᴡɪʟʟ ʙᴇ sᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
+အောက်ကအဖွဲ့မှာရည်းစားလာရှာပါ။ {tomorrow} !!**
 """
     
          await message.reply_photo(f"test_{cid}.png", caption=TXT, reply_markup=InlineKeyboardMarkup(POLICE),
