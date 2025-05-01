@@ -37,12 +37,12 @@ async def join_watcher(_, message):
                     message.chat.username if message.chat.username else "𝐏ʀɪᴠᴀᴛᴇ 𝐆ʀᴏᴜᴘ"
                 )
                 msg = (
-                    f"**🌺Music Bot ကိုအဖွဲ့တစ်ခုတွင်ထည့်ခဲ့သည်။**\n\n"
-                    f"**📌အဖွဲ့နာမည်:** {message.chat.title}\n"
-                    f"**🍂အဖွဲ့အိုင်ဒီ:** {message.chat.id}\n"
-                    f"**🔐အဖွဲ့ယူဆာနိမ်း:** @{username}\n"
-                    f"**📈မန်ဘာအရေအတွက်:** {count}\n"
-                    f"**🤔ထည့်သူ:** {message.from_user.mention}"
+                    f"**📝𝐌ᴜsɪᴄ 𝐁ᴏᴛ 𝐀ᴅᴅᴇᴅ 𝐈ɴ 𝐀 #𝐍ᴇᴡ_𝐆ʀᴏᴜᴘ**\n\n"
+                    f"**📌𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ:** {message.chat.title}\n"
+                    f"**🍂𝐂ʜᴀᴛ 𝐈ᴅ:** {message.chat.id}\n"
+                    f"**🔐𝐂ʜᴀᴛ 𝐔sᴇʀɴᴀᴍᴇ:** @{username}\n"
+                    f"**📈𝐆ʀᴏᴜᴘ 𝐌ᴇᴍʙᴇʀs:** {count}\n"
+                    f"**🤔𝐀ᴅᴅᴇᴅ 𝐁ʏ:** {message.from_user.mention}"
                 )
                 await app.send_photo(
                     LOG_GROUP_ID,
@@ -62,4 +62,3 @@ async def join_watcher(_, message):
                 await userbot.join_chat(f"{username}")
     except Exception as e:
         print(f"Error: {e}")
-                
