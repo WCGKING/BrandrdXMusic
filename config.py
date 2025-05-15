@@ -43,7 +43,7 @@ GIT_TOKEN = getenv(
 )  # Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/All_super_music")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+o8Q98BM17W42NjRl")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+9ng59fkHF0JmYjQ1")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -89,13 +89,13 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://files.catbox.moe/g2na35.jpg"
+    "START_IMG_URL", "https://files.catbox.moe/a51y5u.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://files.catbox.moe/g2na35.jpg"
+    "PING_IMG_URL", "https://files.catbox.moe/a51y5u.jpg"
 )
-PLAYLIST_IMG_URL = "https://files.catbox.moe/g2na35.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/g2na35.jpg"
+PLAYLIST_IMG_URL = "https://files.catbox.moe/a51y5u.jpg"
+STATS_IMG_URL = "https://files.catbox.moe/a51y5u.jpg"
 TELEGRAM_AUDIO_URL = "https://files.catbox.moe/g2na35.jpg"
 TELEGRAM_VIDEO_URL = "https://files.catbox.moe/g2na35.jpg"
 STREAM_IMG_URL = "https://files.catbox.moe/g2na35.jpg"
