@@ -81,14 +81,7 @@ def stream_markup(_, videoid, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        [
-            InlineKeyboardButton(
-                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/ANURAGMOD"
-            ),
-            InlineKeyboardButton(
-                text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/+o8Q98BM17W42NjRl"
-            ),
-        ],
+     [InlineKeyboardButton(text="🥂  ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🥂", url=f"https://t.me/MR_BEAST_MUSIC_BOT?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users")],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
@@ -236,15 +229,7 @@ def stream_markup2(_, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-[
-            InlineKeyboardButton(
-                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/ANURAGMOD"
-            ),
-            InlineKeyboardButton(
-                text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/+o8Q98BM17W42NjRl"
-            ),
-        ],
-
+[InlineKeyboardButton(text="🥂  ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🥂", url=f"https://t.me/MR_BEAST_MUSIC_BOT?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users")],
         [
             InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
         ],
