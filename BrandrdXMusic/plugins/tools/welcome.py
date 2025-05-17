@@ -89,8 +89,11 @@ async def greet_group(_, member: ChatMemberUpdated):
 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {member.chat.title}
 ➖➖➖➖➖➖➖➖➖➖➖
 ๏ 𝗡𝗔𝗠𝗘 ➠ {user.mention}
+
 ๏ 𝗜𝗗 ➠ {user.id}
+
 ๏ 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 ➠ @{user.username}
+
 ๏ 𝐌𝐀𝐃𝐄 𝐁𝐘 ➠ [ㅤᎪɴᴜʀᴀɢㅤㅤ](https://t.me/ANURAG_ABOUT)
 ➖➖➖➖➖➖➖➖➖➖➖
 """,
