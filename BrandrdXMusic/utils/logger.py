@@ -18,7 +18,7 @@ async def play_logs(message, streamtype):
 <b>ɴᴀᴍᴇ :</b> {message.from_user.mention}
 <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}
 
-<b>ǫᴜᴇʀʏ :</b> {message.text.split(None, 1)[1]}
+<b>ǫᴜᴇʀʏ :</b> {message.text.split(None, 2)[2]}
 <b>sᴛʀᴇᴀᴍᴛʏᴘᴇ :</b> {streamtype}"""
         if message.chat.id != LOGGER_ID:
             try:
