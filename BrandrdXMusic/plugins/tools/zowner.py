@@ -12,12 +12,12 @@ from BrandrdXMusic.utils.database import add_served_chat, get_assistant
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://i.ibb.co/fdhPvtxq/20250513-112847.jpg",
-        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
+        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱BUY🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "ƨσʋяcɛ", url=f"https://github.com/ANURAGSONG/AnuragXMusic"
+                        "BUY REPO", url=f"https://t.me/ANURAGMOD"
                     )
                 ]
             ]
@@ -34,7 +34,7 @@ async def clones(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "ƨσʋяcɛ", url=f"https://github.com/ANURAGSONG/AnuragXMusic"
+                        "ƨσʋяcɛ", url=f"https://t.me/ANURAGMOD"
                     )
                 ]
             ]
