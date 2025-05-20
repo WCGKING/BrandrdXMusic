@@ -89,34 +89,12 @@ async def start_pm(client, message: Message, _):
             out = private_panel(_)
             lol = await message.reply_text("𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐁𝐚𝐛𝐲 ꨄ︎ {}.. ❣️".format(message.from_user.mention))
             await lol.edit_text("𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐁𝐚𝐛𝐲 ꨄ {}.. 🥳".format(message.from_user.mention))
-            await lol.edit_text("𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐁𝐚𝐛𝐲 ꨄ {}.. 💥".format(message.from_user.mention))
-            await lol.edit_text("𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐁𝐚𝐛𝐲 ꨄ {}.. 🤩".format(message.from_user.mention))
-            await lol.edit_text("𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐁𝐚𝐛𝐲 ꨄ {}.. 💌".format(message.from_user.mention))
-            await lol.edit_text("𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐁𝐚𝐛𝐲 ꨄ {}.. 😘".format(message.from_user.mention))
+            
                
             await lol.delete()
             lols = await message.reply_text("**💞ѕ**")
             await asyncio.sleep(0.1)
-            await lols.edit_text("💞ѕт")        
-            await asyncio.sleep(0.1)
-            await lols.edit_text("**💞ѕтα**")
-            await asyncio.sleep(0.1)
-            await lols.edit_text("**💞ѕтαя**")
-            await asyncio.sleep(0.1)
-            await lols.edit_text("**💞ѕтαят**")
-            await asyncio.sleep(0.1)
-            await lols.edit_text("**💞ѕтαятι**")
-            await asyncio.sleep(0.1)
-            await lols.edit_text("**💞ѕтαятιи**")
-            await asyncio.sleep(0.1)
-            await lols.edit_text("**💞ѕтαятιиg**")
-            await asyncio.sleep(0.1)
             await lols.edit_text("**💞ѕтαятιиg.**")
-
-            await lols.edit_text("**💞ѕтαятιиg....**")
-
-            await lols.edit_text("**💞ѕтαятιиg.**")
-            await lols.edit_text("**💞ѕтαятιиg....**")
             m = await message.reply_sticker("CAACAgUAAxkBAAEQI1BlTLmx7PtOO3aPNshEU2gCy7iAFgACNQUAApqMuVeA6eJ50VbvmDME")
             if message.chat.photo:
 
