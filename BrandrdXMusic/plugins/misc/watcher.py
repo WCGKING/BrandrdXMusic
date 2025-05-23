@@ -4,7 +4,7 @@ from pyrogram.types import Message
 from BrandrdXMusic import app
 from BrandrdXMusic.core.call import Hotty
 
-welcome = 20
+welcome = 50
 close = 30
 
 

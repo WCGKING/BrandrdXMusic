@@ -86,15 +86,18 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption=f"""
-𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {member.chat.title}
-➖➖➖➖➖➖➖➖➖➖➖
+✰   🇼𝐄𝐋𝐂❍𝐌𝐄   ✰ {member.chat.title}
+▬▬▬▬▬▬▬▬▬▬▬▬▬
 ๏ 𝗡𝗔𝗠𝗘 ➠ {user.mention}
+
 ๏ 𝗜𝗗 ➠ {user.id}
+
 ๏ 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 ➠ @{user.username}
-๏ 𝐌𝐀𝐃𝐄 𝐁𝐘 ➠ [𝗕𝗥𝗔𝗡𝗗𝗘𝗗 𓆩🇽𓆪 𝗞𝗜𝗡𝗚 📿](https://t.me/BRANDEDKING8)
-➖➖➖➖➖➖➖➖➖➖➖
+▬▬▬▬▬▬▬▬▬▬▬▬▬
+आपका स्वागत करने हम सब मिलकर आये हैं चेहरे पर मुस्कान और हाथों में फूलों की माला लाये है
+▬▬▬▬▬▬▬▬▬▬▬▬▬
 """,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/Sustumm_music_bot?startgroup=true")]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/MAHI_X_MUSIC_BOT?startgroup=true")]])
         )
     except Exception as e:
         LOGGER.error(e)
