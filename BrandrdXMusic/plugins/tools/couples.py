@@ -14,8 +14,8 @@ from BrandrdXMusic.mongo.couples_db import _get_image, get_couple
 POLICE = [
     [
         InlineKeyboardButton(
-            text="ရည်းစားရှာရန် 🥀",
-            url=f"https://t.me/melody_cchat",
+            text=" Music Date 🥀",
+            url=f"https://t.me/BSHmusic12",
         ),
     ],
 ]
@@ -49,7 +49,7 @@ async def ctest(_, message):
     try:
      #  is_selected = await get_couple(cid, today)
      #  if not is_selected:
-         msg = await message.reply_text("👼")
+         msg = await message.reply_text("🫶")
          #GET LIST OF USERS
          list_of_users = []
 
