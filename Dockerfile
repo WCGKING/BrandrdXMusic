@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.10-nodejs19
+FROM debian:bullseye
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ffmpeg \
