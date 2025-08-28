@@ -6,8 +6,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /app/
-WORKDIR /app/
-RUN python3 -m pip install --upgrade pip setuptools
-RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+WORKDIR /app0/
+
+RUN pip install -U uv && uv pip install --system -e .
 
 CMD python3 -m BrandrdXMusic
