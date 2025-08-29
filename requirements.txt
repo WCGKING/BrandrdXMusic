@@ -2,7 +2,7 @@ opencv-python-headless==4.10.0.84
 telethon==1.36.0
 aiofiles
 apscheduler
-aiohttp==3.10.4
+aiohttp==3.10.11
 asyncio==3.4.3
 gTTS
 dnspython==2.6.1
@@ -13,7 +13,7 @@ pillow==10.4.0
 psutil
 wget
 qrcode
-future==1.0.0
+future==0.14.0
 search_engine_parser
 speedtest
 py-tgcalls==2.0.2
