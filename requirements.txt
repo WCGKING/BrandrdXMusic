@@ -8,7 +8,8 @@ gTTS
 dnspython==2.6.1
 hachoir
 heroku3
-motor==3.5.1
+motor==3.4.0
+pymongo==4.5.0
 pillow==10.4.0
 psutil
 wget
@@ -29,7 +30,6 @@ yt-dlp
 lexica-api==1.5.9
 httpx==0.27.0
 openai==1.41.0
-pymongo
 lyricsgenius
 spotipy
 SafoneAPI
