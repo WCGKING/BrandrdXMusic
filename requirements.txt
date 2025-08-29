@@ -30,7 +30,8 @@ yt-dlp
 lexica-api==1.5.9
 httpx==0.27.0
 openai==1.41.0
-lyricsgenius
+python==3.11.9
+lyricsgenius==3.0.1
 spotipy
 SafoneAPI
 youtube_search
