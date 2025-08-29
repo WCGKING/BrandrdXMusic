@@ -3,7 +3,6 @@ telethon==1.36.0
 aiofiles
 apscheduler
 aiohttp==3.10.4
-pornhub-api==0.3.0
 asyncio==3.4.3
 gTTS
 dnspython==2.6.1
