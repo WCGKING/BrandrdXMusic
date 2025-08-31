@@ -3,7 +3,7 @@ telethon==1.36.0
 aiofiles
 apscheduler
 aiohttp==3.10.11
-asyncio==3.4.3
+asyncio==4.0.0
 gTTS
 dnspython==2.6.1
 hachoir
