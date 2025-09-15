@@ -32,7 +32,7 @@
 
 </p>
 
-**𝙏𝙀𝙎𝙏 𝘽𝙊𝙏 ➣ [˹𝐁ʀᴀɴᴅᴇᴅ ꭙ 𝐂ʀᴇᴡ ꭙ 𝐌ᴜꜱɪᴄ™ ˹ʙꜱ](https://t.me/CrewMusic_bot)**
+**𝙏𝙀𝙎𝙏 𝘽𝙊𝙏 ➣ [˹ꜱʏꜱᴛᴜᴍ ꭙ ᴍᴜꜱɪᴄ˼𓆩𔘓⃭𓆪](https://t.me/Systumm_music_bot)**
 
 
 
@@ -102,7 +102,7 @@
 </p>
 
 <p align="center">
-<a href="https://t.me/BRANDRD_BOT"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/BRANDED_PAID_CC"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
-- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴛᴇᴀᴍ ʙʀᴀɴᴅᴇᴅ](https://github.com/WCGKING) ғᴏʀ [ʙʀᴀɴᴅᴇᴅ ᴍᴜsɪᴄ ʙᴏᴛ](https://t.me/BRANDRD_BOT)_</b>
+- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴛᴇᴀᴍ ʙʀᴀɴᴅᴇᴅ](https://github.com/WCGKING) ғᴏʀ [ʙʀᴀɴᴅᴇᴅ ᴍᴜsɪᴄ ʙᴏᴛ](https://t.me/BRANDED_PAID_CC)_</b>
