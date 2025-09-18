@@ -1,6 +1,6 @@
 import asyncio
 from typing import Union
-from pyrogram import Client, client
+
 from BrandrdXMusic.misc import db
 from BrandrdXMusic.utils.formatters import check_duration, seconds_to_min
 from config import autoclean, time_to_seconds
@@ -88,4 +88,4 @@ async def put_queue_index(
             db[chat_id] = []
             db[chat_id].append(put)
     else:
-        db[chat_id].append(put)
+        db[chat_id].append(put
