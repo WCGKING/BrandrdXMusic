@@ -23,6 +23,8 @@ def track_markup(_, videoid, user_id, channel, fplay):
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
+    ]
+    return buttons
 
 
 def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
