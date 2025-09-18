@@ -17,13 +17,6 @@ from BrandrdXMusic.utils.channelplay import get_channeplayCB
 from BrandrdXMusic.utils.decorators.language import languageCB
 from BrandrdXMusic.utils.decorators.play import PlayWrapper
 from BrandrdXMusic.utils.formatters import formats
-from BrandrdXMusic.utils.inline import (
-    botplaylist_markup,
-    livestream_markup,
-    playlist_markup,
-    slider_markup,
-    track_markup,
-)
 from BrandrdXMusic.utils.database import (
     add_served_chat,
     add_served_user,
@@ -55,11 +48,8 @@ from BrandrdXMusic.utils.database import add_active_video_chat, is_active_chat
 from BrandrdXMusic.utils.exceptions import AssistantErr
 from BrandrdXMusic.utils.inline import (
     aq_markup,
-    queuemarkup,
     close_markup,
     stream_markup,
-    stream_markup2,
-    panel_markup_4,
 )
 from BrandrdXMusic.utils.pastebin import HottyBin
 from BrandrdXMusic.utils.stream.queue import put_queue, put_queue_index
