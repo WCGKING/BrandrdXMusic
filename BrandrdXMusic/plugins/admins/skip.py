@@ -7,7 +7,7 @@ from BrandrdXMusic.core.call import Hotty
 from BrandrdXMusic.misc import db
 from BrandrdXMusic.utils.database import get_loop
 from BrandrdXMusic.utils.decorators import AdminRightsCheck
-from BrandrdXMusic.utils.inline import close_markup, stream_markup, stream_markup2
+from BrandrdXMusic.utils.inline import close_markup, stream_markup
 from BrandrdXMusic.utils.stream.autoclear import auto_clean
 from BrandrdXMusic.utils.thumbnails import get_thumb
 from config import BANNED_USERS
