@@ -1,9 +1,7 @@
-class AssistantError(Exception):
-    """Custom exception class for assistant-related errors."""
+class AssistantErr(Exception):
+    def __init__(self, errr: str):
+        super().__init__(errr)
 
-    def __init__(self, error: str):
-        self.error = error
-        super().__init__(error)
 
-    def __str__(self):
-        return f"AssistantError: {self.error}"
+class UnableToFetchCarbon(Exception):
+    pass
