@@ -5,3 +5,4 @@ class AssistantErr(Exception):
 
 class UnableToFetchCarbon(Exception):
     pass
+
