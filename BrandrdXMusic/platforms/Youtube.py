@@ -16,8 +16,7 @@ import random
 import logging
 import aiohttp
 import config
-from urllib.parse import quote_plus
-from config import API_URL, API_KEY
+from BrandrdXMusic import LOGGER
 
 API_URL = "https://teaminflex.xyz"  # Change to your API server URL
 API_KEY = "INFLEX15502228D"
