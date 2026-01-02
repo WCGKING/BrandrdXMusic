@@ -29,6 +29,10 @@ OWNER_ID = int(getenv("OWNER_ID", "7250012103"))
 
 LOG = int(getenv("LOG", True))
 
+API_URL = getenv("API_URL", 'https://api.thequickearn.xyz')
+VIDEO_API_URL = getenv("VIDEO_API_URL", 'https://api.video.thequickearn.xyz')
+API_KEY = getenv("API_KEY", 'NxGBNexGenBots6c30dd')
+
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
