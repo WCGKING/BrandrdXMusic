@@ -1,4 +1,4 @@
-opencv-python-headless==4.10.0.84
+opencv-python-headless==4.13.0.90
 telethon==1.36.0
 aiofiles
 apscheduler
