@@ -13,154 +13,245 @@ from BrandrdXMusic import LOGGER
 from BrandrdXMusic.utils import NexGenApi
 
 
-
-class YouTube:
+class YouTubeAPI:
     def __init__(self):
-        self.api = None
         self.base = "https://www.youtube.com/watch?v="
-        self.cookies = []
-        self.checked = False
-        self.cookie_dir = "cookies"
-        self.warned = False
-        self.regex = re.compile(
-            r"(https?://)?(www\.|m\.|music\.)?"
-            r"(youtube\.com/(watch\?v=|shorts/|playlist\?list=)|youtu\.be/)"
-            r"([A-Za-z0-9_-]{11}|PL[A-Za-z0-9_-]+)([&?][^\s]*)?"
-        )
-        self.iregex = re.compile(
-            r"https?://(?:www\.|m\.|music\.)?(?:youtube\.com|youtu\.be)"
-            r"(?!/(watch\?v=[A-Za-z0-9_-]{11}|shorts/[A-Za-z0-9_-]{11}"
-            r"|playlist\?list=PL[A-Za-z0-9_-]+|[A-Za-z0-9_-]{11}))\S*"
-        )
-        if config.API_URL and config.VIDEO_API_URL and config.API_KEY:
-            self.api = NexGenApi(
-                config.API_URL,
-                config.API_KEY,
-                config.VIDEO_API_URL
-            )
+        self.regex = r"(?:youtube\.com|youtu\.be)"
+        self.listbase = "https://youtube.com/playlist?list="
 
-    def get_cookies(self):
-        if not self.checked:
-            for file in os.listdir(self.cookie_dir):
-                if file.endswith(".txt"):
-                    self.cookies.append(f"{self.cookie_dir}/{file}")
-            self.checked = True
-        if not self.cookies:
-            if not self.warned:
-                self.warned = True
-                logger.warning("Cookies are missing; downloads might fail.")
-            return None
-        return random.choice(self.cookies)
+    async def exists(self, link: str, videoid: Union[bool, str] = None) -> bool:
+        if videoid:
+            link = self.base + link
+        return bool(re.search(self.regex, link))
 
-    async def save_cookies(self, urls: list[str]) -> None:
-        logger.info("Saving cookies from urls...")
-        async with aiohttp.ClientSession() as session:
-            for url in urls:
-                name = url.split("/")[-1]
-                link = "https://batbin.me/raw/" + name
-                async with session.get(link) as resp:
-                    resp.raise_for_status()
-                    with open(f"{self.cookie_dir}/{name}.txt", "wb") as fw:
-                        fw.write(await resp.read())
-        logger.info(f"Cookies saved in {self.cookie_dir}.")
-
-    def valid(self, url: str) -> bool:
-        return bool(re.match(self.regex, url))
-
-    def invalid(self, url: str) -> bool:
-        return bool(re.match(self.iregex, url))
-
-    async def search(self, query: str, m_id: int, video: bool = False) None:
-        try:
-            _search = VideosSearch(query, limit=1, with_live=False)
-            results = await _search.next()
-        except Exception:
-            return None
-        if results and results["result"]:
-            data = results["result"][0]
-            return Track(
-                id=data.get("id"),
-                channel_name=data.get("channel", {}).get("name"),
-                duration=data.get("duration"),
-                duration_sec=utils.to_seconds(data.get("duration")),
-                message_id=m_id,
-                title=data.get("title")[:25],
-                thumbnail=data.get("thumbnails", [{}])[-1].get("url").split("?")[0],
-                url=data.get("link"),
-                view_count=data.get("viewCount", {}).get("short"),
-                video=video,
-            )
+    async def url(self, message_1: Message) -> Union[str, None]:
+        messages = [message_1]
+        if message_1.reply_to_message:
+            messages.append(message_1.reply_to_message)
+        
+        for message in messages:
+            if message.entities:
+                for entity in message.entities:
+                    if entity.type == MessageEntityType.URL:
+                        text = message.text or message.caption
+                        url = text[entity.offset:entity.offset + entity.length]
+                        return url.split("?si=")[0] if "?si=" in url else url
+            elif message.caption_entities:
+                for entity in message.caption_entities:
+                    if entity.type == MessageEntityType.TEXT_LINK:
+                        return entity.url
         return None
 
-    async def playlist(self, limit: int, user: str, url: str, video: bool) -> list[None]:
-        tracks = []
+    async def details(self, link: str, videoid: Union[bool, str] = None):
+        if videoid:
+            link = self.base + link
+        link = link.split("&")[0]
+        
+        results = VideosSearch(link, limit=1)
+        for result in (await results.next())["result"]:
+            title = result["title"]
+            duration_min = result["duration"]
+            thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+            vidid = result["id"]
+            duration_sec = int(time_to_seconds(duration_min)) if duration_min != "None" else 0
+        
+        return title, duration_min, duration_sec, thumbnail, vidid
+
+    async def title(self, link: str, videoid: Union[bool, str] = None) -> str:
+        if videoid:
+            link = self.base + link
+        link = link.split("&")[0]
+        
+        results = VideosSearch(link, limit=1)
+        for result in (await results.next())["result"]:
+            return result["title"]
+        return "Unknown"
+
+    async def duration(self, link: str, videoid: Union[bool, str] = None) -> str:
+        if videoid:
+            link = self.base + link
+        link = link.split("&")[0]
+        
+        results = VideosSearch(link, limit=1)
+        for result in (await results.next())["result"]:
+            return result["duration"]
+        return "0:00"
+
+    async def thumbnail(self, link: str, videoid: Union[bool, str] = None) -> str:
+        if videoid:
+            link = self.base + link
+        link = link.split("&")[0]
+        
+        results = VideosSearch(link, limit=1)
+        for result in (await results.next())["result"]:
+            return result["thumbnails"][0]["url"].split("?")[0]
+        return ""
+
+    async def video(self, link: str, videoid: Union[bool, str] = None):
+        if videoid:
+            link = self.base + link
+        link = link.split("&")[0]
+        
+        downloaded_file = await VibeApi.download_video(link)
+        if downloaded_file:
+            return 1, downloaded_file
+        
+        return await VibeApi.get_video_url(link)
+
+    async def playlist(self, link, limit, user_id, videoid: Union[bool, str] = None):
+        if videoid:
+            link = self.listbase + link
+        
         try:
-            plist = await Playlist.get(url)
-            for data in plist["videos"][:limit]:
-                track = Track(
-                    id=data.get("id"),
-                    channel_name=data.get("channel", {}).get("name", ""),
-                    duration=data.get("duration"),
-                    duration_sec=utils.to_seconds(data.get("duration")),
-                    title=data.get("title")[:25],
-                    thumbnail=data.get("thumbnails")[-1].get("url").split("?")[0],
-                    url=data.get("link").split("&list=")[0],
-                    user=user,
-                    view_count="",
-                    video=video,
-                )
-                tracks.append(track)
-        except Exception:
-            pass
-        return tracks
+            plist = await Playlist.get(link)
+        except:
+            return []
 
-    async def download(self, video_id: str, video: bool = False) -> str | None:
-        if self.api:
-            print(0)
-            if file_path := await self.api.download(video_id, video):
-                print(1)
-                return file_path
+        videos = plist.get("videos") or []
+        ids = []
+        for data in videos[:limit]:
+            if data and data.get("id"):
+                ids.append(data["id"])
+        return ids
 
-        url = self.base + video_id
-        ext = "mp4" if video else "webm"
-        filename = f"downloads/{video_id}.{ext}"
-
-        if Path(filename).exists():
-            return filename
-
-        cookie = self.get_cookies()
-        base_opts = {
-            "outtmpl": "downloads/%(id)s.%(ext)s",
-            "quiet": True,
-            "noplaylist": True,
-            "geo_bypass": True,
-            "no_warnings": True,
-            "overwrites": False,
-            "nocheckcertificate": True,
-            "cookiefile": cookie,
-        }
-
-        if video:
-            ydl_opts = {
-                **base_opts,
-                "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio)",
-                "merge_output_format": "mp4",
+    async def track(self, link: str, videoid: Union[bool, str] = None):
+        if videoid:
+            link = self.base + link
+        link = link.split("&")[0]
+        
+        results = VideosSearch(link, limit=1)
+        for result in (await results.next())["result"]:
+            track_details = {
+                "title": result["title"],
+                "link": result["link"],
+                "vidid": result["id"],
+                "duration_min": result["duration"],
+                "thumb": result["thumbnails"][0]["url"].split("?")[0],
             }
-        else:
-            ydl_opts = {
-                **base_opts,
-                "format": "bestaudio[ext=webm][acodec=opus]",
-            }
+            return track_details, result["id"]
+        return None, None
 
-        def _download():
-            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                try:
-                    ydl.download([url])
-                except (yt_dlp.utils.DownloadError, yt_dlp.utils.ExtractorError):
-                    return None
-                except Exception as ex:
-                    logger.warning("Download failed: %s", ex)
-                    return None
-            return filename
+    async def formats(self, link: str, videoid: Union[bool, str] = None):
+        if videoid:
+            link = self.base + link
+        link = link.split("&")[0]
+        
+        cookie_file = VibeApi.get_cookie_file()
+        if not cookie_file:
+            return [], link
+        
+        ytdl_opts = {"quiet": True, "cookiefile": cookie_file}
+        ydl = yt_dlp.YoutubeDL(ytdl_opts)
+        
+        with ydl:
+            formats_available = []
+            r = ydl.extract_info(link, download=False)
+            
+            for fmt in r["formats"]:
+                if "dash" in str(fmt.get("format", "")).lower():
+                    continue
+                
+                required_keys = ["format", "filesize", "format_id", "ext", "format_note"]
+                if all(k in fmt for k in required_keys):
+                    formats_available.append({
+                        "format": fmt["format"],
+                        "filesize": fmt["filesize"],
+                        "format_id": fmt["format_id"],
+                        "ext": fmt["ext"],
+                        "format_note": fmt["format_note"],
+                        "yturl": link,
+                    })
+        
+        return formats_available, link
 
-        return await asyncio.to_thread(_download)          
+    async def slider(self, link: str, query_type: int, videoid: Union[bool, str] = None):
+        if videoid:
+            link = self.base + link
+        link = link.split("&")[0]
+        
+        a = VideosSearch(link, limit=10)
+        result = (await a.next()).get("result")
+        
+        data = result[query_type]
+        return (
+            data["title"],
+            data["duration"],
+            data["thumbnails"][0]["url"].split("?")[0],
+            data["id"]
+        )
+
+    async def download(
+        self,
+        link: str,
+        mystic,
+        video: Union[bool, str] = None,
+        videoid: Union[bool, str] = None,
+        songaudio: Union[bool, str] = None,
+        songvideo: Union[bool, str] = None,
+        format_id: Union[bool, str] = None,
+        title: Union[bool, str] = None,
+    ) -> tuple:
+        if videoid:
+            link = self.base + link
+        
+        is_video = bool(video or songvideo)
+        is_audio = bool(songaudio or not video)
+        
+        try:
+            if is_video:
+                file_path = await VibeApi.download_video(link)
+                if file_path:
+                    return file_path, True
+            elif is_audio:
+                file_path = await VibeApi.download_song(link)
+                if file_path:
+                    return file_path, True
+        except Exception as e:
+            logger.error(f"Download failed: {e}")
+        
+        cookie_file = VibeApi.get_cookie_file()
+        if not cookie_file:
+            logger.error("No cookies found")
+            return None, False
+        
+        loop = asyncio.get_running_loop()
+        
+        def _ytdlp_download():
+            if is_video:
+                ydl_opts = {
+                    "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
+                    "outtmpl": "downloads/%(id)s.%(ext)s",
+                    "geo_bypass": True,
+                    "quiet": True,
+                    "cookiefile": cookie_file,
+                    "no_warnings": True,
+                }
+            else:
+                ydl_opts = {
+                    "format": "bestaudio/best",
+                    "outtmpl": "downloads/%(id)s.%(ext)s",
+                    "geo_bypass": True,
+                    "quiet": True,
+                    "cookiefile": cookie_file,
+                    "no_warnings": True,
+                }
+            
+            x = yt_dlp.YoutubeDL(ydl_opts)
+            info = x.extract_info(link, False)
+            file_path = os.path.join("downloads", f"{info['id']}.{info['ext']}")
+            
+            if not os.path.exists(file_path):
+                x.download([link])
+            
+            return file_path
+        
+        try:
+            file_path = await loop.run_in_executor(None, _ytdlp_download)
+            return file_path, True
+        except Exception as e:
+            logger.error(f"Fallback failed: {e}")
+            return None, False
+
+
+
+            
