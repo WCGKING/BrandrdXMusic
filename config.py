@@ -29,7 +29,7 @@ OWNER_ID = int(getenv("OWNER_ID", "7250012103"))
 
 LOG = int(getenv("LOG", True))
 
-API_URL = getenv("API_URL", 'https://pvtz.nexgenbots.xyz')
+API_URL = getenv("API_URL", 'https://console.nexgenbots.xyz/')
 VIDEO_API_URL = getenv("VIDEO_API_URL", 'https://api.video.nexgenbots.xyz')
 API_KEY = getenv("API_KEY", '30DxNexGenBots431c89')
 
