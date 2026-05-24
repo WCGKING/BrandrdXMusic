@@ -1,16 +1,18 @@
-import asyncio
-import os
 import re
-from typing import Union
+import os
+import asyncio
 import yt_dlp
+import logging
+from typing import Union
+
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
-from youtubesearchpython.__future__ import VideosSearch
-from BrandrdXMusic.utils.formatters import time_to_seconds
-import aiohttp
-from BrandrdXMusic import LOGGER
+from py_yt import VideosSearch, Playlist
 
-from BrandrdXMusic.utils import NexGenApi
+from BrandrdXMusic.utils.downloader import VibeApi
+from BrandrdXMusic.utils.formatters import time_to_seconds
+
+logger = logging.getLogger(__name__)
 
 
 class YouTubeAPI:
@@ -251,7 +253,3 @@ class YouTubeAPI:
         except Exception as e:
             logger.error(f"Fallback failed: {e}")
             return None, False
-
-
-
-            
