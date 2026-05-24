@@ -10,7 +10,6 @@ import requests
 import yt_dlp
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
-from urllib3.util.retry import Retry
 from ytSearch import VideosSearch, Playlist
 from BrandrdXMusic import LOGGER
 from BrandrdXMusic.utils.database import is_on_off
