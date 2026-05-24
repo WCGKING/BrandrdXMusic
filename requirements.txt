@@ -39,6 +39,7 @@ unidecode
 https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.23.zip
 bing_image_downloader
 yt-dlp
+py-yt-search
 youtube-search
 youtube-search-python
 
