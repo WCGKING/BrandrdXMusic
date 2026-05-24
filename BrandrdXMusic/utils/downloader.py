@@ -6,6 +6,8 @@ import random
 import logging
 import aiohttp
 import asyncio
+from typing import Optional
+
 
 from config import API_URL, API_KEY
 
