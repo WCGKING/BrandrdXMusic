@@ -70,7 +70,7 @@ class YouTube:
     def invalid(self, url: str) -> bool:
         return bool(re.match(self.iregex, url))
 
-    async def search(self, query: str, m_id: int, video: bool = False) -> Track | None:
+    async def search(self, query: str, m_id: int, video: bool = False) None:
         try:
             _search = VideosSearch(query, limit=1, with_live=False)
             results = await _search.next()
@@ -92,7 +92,7 @@ class YouTube:
             )
         return None
 
-    async def playlist(self, limit: int, user: str, url: str, video: bool) -> list[Track | None]:
+    async def playlist(self, limit: int, user: str, url: str, video: bool) -> list[None]:
         tracks = []
         try:
             plist = await Playlist.get(url)
