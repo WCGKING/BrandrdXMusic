@@ -7,7 +7,7 @@ from typing import Union
 
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
-from py_yt import VideosSearch, Playlist
+
 
 from BrandrdXMusic.utils.downloader import VibeApi
 from BrandrdXMusic.utils.formatters import time_to_seconds
