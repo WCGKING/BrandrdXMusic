@@ -42,4 +42,4 @@ yt-dlp
 yt-search-py==1.0.0
 youtube-search
 youtube-search-python
-
+lpy_yt
