@@ -25,12 +25,6 @@ LOGGER_ID = int(getenv("LOGGER_ID", None))
 # Get this value from @BRANDRD_ROBOT on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", "7250012103"))
 
-LOG = int(getenv("LOG", True))
-
-# Vars For API End Pont.
-YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com') ## xBit Music Endpoint
-YT_API_KEY = getenv("YT_API_KEY" , 'xbit_me1MgUhJhrDfkcDFCt4WgNRgucI9kqOq') ## Your API key like: xbit_10000000xx0233 Get from  https://t.me/tgmusic_apibot
-
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
