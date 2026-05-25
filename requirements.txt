@@ -19,7 +19,7 @@ search_engine_parser
 speedtest
 py-tgcalls==1.2.9
 MukeshAPI
-ntgcalls==2.0.9
+ntgcalls==1.0.2
 gitpython
 pykeyboard
 python-dotenv
