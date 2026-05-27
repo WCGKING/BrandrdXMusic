@@ -1,5 +1,5 @@
 opencv-python-headless==4.10.0.84
-telethon==1.36.0
+telethon==1.42.0
 aiofiles
 apscheduler
 aiohttp==3.10.11
