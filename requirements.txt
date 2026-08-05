@@ -29,7 +29,7 @@ telegraph==2.2.0
 lexica-api==1.5.9
 httpx>=0.28.1
 openai==1.41.0
-lyricsgenius==3.0.0
+lyricsgenius==3.7.5
 spotipy
 SafoneAPI
 googlesearch-python
