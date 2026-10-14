@@ -2,7 +2,6 @@ opencv-python-headless==4.10.0.84
 telethon==1.36.0
 aiofiles>=24.1.0
 apscheduler
-aiohttp==3.12.0
 asyncio==3.4.3
 gTTS
 dnspython==2.6.1
