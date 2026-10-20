@@ -14,6 +14,7 @@ from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
 from strings import get_string, helpers
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
 async def helper_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
