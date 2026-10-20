@@ -10,7 +10,7 @@ httpx[http2]
 heroku3
 speedtest
 motor 
-pillow==9.5.0
+pillow==12.3.0
 psutil
 py-tgcalls==3.0.0
 python-dotenv
