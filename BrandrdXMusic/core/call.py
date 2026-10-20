@@ -39,7 +39,6 @@ from BrandrdXMusic.utils.exceptions import AssistantErr
 from BrandrdXMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
 from BrandrdXMusic.utils.inline.play import stream_markup
 from BrandrdXMusic.utils.stream.autoclear import auto_clean
-from BrandrdXMusic.utils.stream.history import record_played
 from BrandrdXMusic.utils.thumbnails import get_thumb
 from strings import get_string
 
