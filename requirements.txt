@@ -24,7 +24,6 @@ yt-dlp
 py-yt-search
 gpytranslate
 python-telegram-bot
-pycryptodome
 opencv-python
 ntgcalls==3.0.3
 lyricsgenius==3.0.0
