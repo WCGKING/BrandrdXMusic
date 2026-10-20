@@ -6,18 +6,17 @@ from typing import Union
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
 from ntgcalls import TelegramServerError
-from pytgcalls import PyTgCalls
-from pytgcalls.exceptions import (
-    AlreadyJoinedError,
-    NoActiveGroupCall,
-)
+from pytgcalls import PyTgCalls, filters
+from pytgcalls.exceptions import NoActiveGroupCall
 from pytgcalls.types import (
-    MediaStream,
     AudioQuality,
-    VideoQuality,
+    ChatUpdate,
+    GroupCallConfig,
+    MediaStream,
+    StreamEnded,
     Update,
+    VideoQuality,
 )
-from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from BrandrdXMusic import LOGGER, YouTube, app
@@ -43,6 +42,27 @@ from strings import get_string
 
 autoend = {}
 counter = {}
+
+AUDIO_QUALITY = AudioQuality.HIGH
+VIDEO_QUALITY = VideoQuality.SD_360p
+
+
+def _audio_stream(path, ffmpeg_parameters=None):
+    return MediaStream(
+        path,
+        audio_parameters=AUDIO_QUALITY,
+        video_flags=MediaStream.Flags.IGNORE,
+        ffmpeg_parameters=ffmpeg_parameters,
+    )
+
+
+def _video_stream(path, ffmpeg_parameters=None):
+    return MediaStream(
+        path,
+        audio_parameters=AUDIO_QUALITY,
+        video_parameters=VIDEO_QUALITY,
+        ffmpeg_parameters=ffmpeg_parameters,
+    )
 
 async def _clear_(chat_id):
     db[chat_id] = []
