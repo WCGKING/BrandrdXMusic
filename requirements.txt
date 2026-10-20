@@ -25,5 +25,5 @@ py-yt-search
 gpytranslate
 python-telegram-bot
 opencv-python
-ntgcalls==3.0.3
+ntgcalls==3.0.4
 lyricsgenius==3.0.0
