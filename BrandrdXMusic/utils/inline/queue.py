@@ -1,6 +1,13 @@
-from typing import Union
+#https://github.com/WCGKING/BrandrdXMusic
 
+from typing import Union
+from BrandrdXMusic import app
+
+from pyrogram.enums import ButtonStyle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
+
+COLORS = (ButtonStyle.PRIMARY, ButtonStyle.SUCCESS, ButtonStyle.DANGER)
 
 
 def queue_markup(
@@ -16,10 +23,12 @@ def queue_markup(
             InlineKeyboardButton(
                 text=_["QU_B_1"],
                 callback_data=f"GetQueued {CPLAY}|{videoid}",
+                style=COLORS[0],
             ),
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
                 callback_data="close",
+                style=COLORS[2],
             ),
         ]
     ]
@@ -28,16 +37,19 @@ def queue_markup(
             InlineKeyboardButton(
                 text=_["QU_B_2"].format(played, dur),
                 callback_data="GetTimer",
+                style=COLORS[0],
             )
         ],
         [
             InlineKeyboardButton(
                 text=_["QU_B_1"],
                 callback_data=f"GetQueued {CPLAY}|{videoid}",
+                style=COLORS[1],
             ),
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
                 callback_data="close",
+                style=COLORS[2],
             ),
         ],
     ]
@@ -52,10 +64,12 @@ def queue_back_markup(_, CPLAY):
                 InlineKeyboardButton(
                     text=_["BACK_BUTTON"],
                     callback_data=f"queue_back_timer {CPLAY}",
+                    style=COLORS[0],
                 ),
                 InlineKeyboardButton(
                     text=_["CLOSE_BUTTON"],
                     callback_data="close",
+                    style=COLORS[2],
                 ),
             ]
         ]
@@ -66,20 +80,34 @@ def queue_back_markup(_, CPLAY):
 def aq_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"ADMIN Resume|{chat_id}",
+                style=COLORS[1],
+            ),
+            InlineKeyboardButton(
+                text="⏸️",
+                callback_data=f"ADMIN Pause|{chat_id}",
+                style=COLORS[0],
+            ),
+            InlineKeyboardButton(
+                text="⏭️",
+                callback_data=f"ADMIN Skip|{chat_id}",
+                style=COLORS[1],
+            ),
+            InlineKeyboardButton(
+                text="⏹️",
+                callback_data=f"ADMIN Stop|{chat_id}",
+                style=COLORS[2],
+            ),
         ],
         [
             InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ⛦", url=f"https://t.me/BRANDEDKING8"
-            ),
-            InlineKeyboardButton(
-                text="🥀 ꜱᴜᴘᴘᴏʀᴛ 🥀", url=f"https://t.me/BRANDED_WORLD"
-            ),
+                text=_["CLOSE_BUTTON"],
+                callback_data="close",
+                style=COLORS[2],
+            )
         ],
-        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -92,28 +120,43 @@ def queuemarkup(_, vidid, chat_id):
             InlineKeyboardButton(
                 text=_["S_B_5"],
                 url=f"https://t.me/{app.username}?startgroup=true",
+                style=COLORS[1],
             ),
         ],
         [
             InlineKeyboardButton(
                 text="ᴘᴀᴜsᴇ",
                 callback_data=f"ADMIN Pause|{chat_id}",
+                style=COLORS[0],
             ),
-            InlineKeyboardButton(text="sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="sᴋɪᴘ", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(
+                text="sᴛᴏᴘ",
+                callback_data=f"ADMIN Stop|{chat_id}",
+                style=COLORS[2],
+            ),
+            InlineKeyboardButton(
+                text="sᴋɪᴘ",
+                callback_data=f"ADMIN Skip|{chat_id}",
+                style=COLORS[1],
+            ),
         ],
         [
             InlineKeyboardButton(
-                text="ʀᴇsᴜᴍ", callback_data=f"ADMIN Resume|{chat_id}"
+                text="ʀᴇsᴜᴍ",
+                callback_data=f"ADMIN Resume|{chat_id}",
+                style=COLORS[1],
             ),
             InlineKeyboardButton(
-                text="ʀᴇᴘʟᴀ", callback_data=f"ADMIN Replay|{chat_id}"
+                text="ʀᴇᴘʟᴀ",
+                callback_data=f"ADMIN Replay|{chat_id}",
+                style=COLORS[0],
             ),
         ],
         [
             InlineKeyboardButton(
                 text="๏ ᴍᴏʀᴇ ๏",
-                url="https://t.me/BRANDED_WORLD",
+                url="https://t.me/BRANDED_PAID_CC",
+                style=COLORS[0],
             ),
         ],
     ]
