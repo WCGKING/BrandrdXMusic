@@ -7,7 +7,7 @@ from BrandrdXMusic.core.call import Hotty
 from BrandrdXMusic.misc import db
 from BrandrdXMusic.utils.database import get_loop
 from BrandrdXMusic.utils.decorators import AdminRightsCheck
-from BrandrdXMusic.utils.inline import close_markup, stream_markup
+from BrandrdXMusic.utils.inline import close_markup, stream_markup, stream_markup2
 from BrandrdXMusic.utils.stream.autoclear import auto_clean
 from BrandrdXMusic.utils.thumbnails import get_thumb
 from config import BANNED_USERS
@@ -203,7 +203,7 @@ async def skip(cli, message: Message, _, chat_id):
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
         elif videoid == "soundcloud":
-            button = stream_markup(_, chat_id)
+            button = stream_markup2(_, chat_id)
             run = await message.reply_photo(
                 photo=config.SOUNCLOUD_IMG_URL
                 if str(streamtype) == "audio"
