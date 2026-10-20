@@ -2,13 +2,10 @@
 
 from typing import Union
 from BrandrdXMusic import app
-
 from pyrogram.enums import ButtonStyle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-
 COLORS = (ButtonStyle.PRIMARY, ButtonStyle.SUCCESS, ButtonStyle.DANGER)
-
 
 def queue_markup(
     _,
