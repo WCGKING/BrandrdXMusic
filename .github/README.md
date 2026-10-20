@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⛦ 𝗕𝗥𝗔𝗡𝗗𝗥𝗗 ✘ 𝗠𝗨𝗦𝗜𝗖 ⛦
+#  𝗕𝗥𝗔𝗡𝗗𝗥𝗗 ✘ 𝗠𝗨𝗦𝗜𝗖 
 
 ### 🎧 Your Music. Your Vibe. Your Voice Chat.
 
@@ -142,8 +142,9 @@ Distributed under the [GNU General Public License v3.0](LICENSE). Retain the lic
 
 **If you enjoy BrandrdXMusic, give the repository a ⭐!**
 
-[GitHub](https://github.com/WCGKING/BrandrdXMusic) • [Telegram Community](https://t.me/+G8BMvoJtqOM5ZTE1)
+[GitHub](https://github.com/WCGKING/BrandrdXMusic) • [Telegram Community](https://t.me/BRANDEDKING8)
+[Telegram Channel](https://t.me/BRANDED_PAID_CC)   • [Developer](https://t.me/I_feeling_like_king)
 
-**⛦ 𝗕𝗥𝗔𝗡𝗗𝗥𝗗 ✘ 𝗠𝗨𝗦𝗜𝗖 ⛦**
+** 𝗕𝗥𝗔𝗡𝗗𝗥𝗗 ✘ 𝗠𝗨𝗦𝗜𝗖 **
 
 </div>
