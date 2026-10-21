@@ -11,7 +11,6 @@ from pyrogram.types import (
     InputMediaPhoto,
     InputMediaVideo,
 )
-
 from BrandrdXMusic import app
 from BrandrdXMusic.utils.database import (
     add_nonadmin_chat,
