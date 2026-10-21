@@ -405,14 +405,14 @@ class Call(PyTgCalls):
         await assistant.play(chat_id, stream)
 
     async def stream_call(self, link):
-        assistant = await group_assistant(self, config.LOG_GROUP_ID)
+        assistant = await group_assistant(self, config.LOGGER_ID)
         await assistant.play(
-            config.LOG_GROUP_ID,
+            config.LOGGER_ID,
             _video_stream(link),
             config=GroupCallConfig(auto_start=False),
         )
         await asyncio.sleep(0.2)
-        await assistant.leave_call(config.LOG_GROUP_ID)
+        await assistant.leave_call(config.LOGGER_ID)
 
     async def join_call(
         self,
@@ -739,26 +739,35 @@ class Call(PyTgCalls):
             await self.five.start()
 
     async def decorators(self):
-        clients = [self.one, self.two, self.three, self.four, self.five]
+        @self.one.on_kicked()
+        @self.two.on_kicked()
+        @self.three.on_kicked()
+        @self.four.on_kicked()
+        @self.five.on_kicked()
+        @self.one.on_closed_voice_chat()
+        @self.two.on_closed_voice_chat()
+        @self.three.on_closed_voice_chat()
+        @self.four.on_closed_voice_chat()
+        @self.five.on_closed_voice_chat()
+        @self.one.on_left()
+        @self.two.on_left()
+        @self.three.on_left()
+        @self.four.on_left()
+        @self.five.on_left()
+        async def stream_services_handler(_, chat_id: int):
+            await self.stop_stream(chat_id)
 
-        async def stream_services_handler(_, update: Update):
-            await self.stop_stream(update.chat_id)
-
-        async def stream_end_handler(client, update: StreamEnded):
+        @self.one.on_stream_end()
+        @self.two.on_stream_end()
+        @self.three.on_stream_end()
+        @self.four.on_stream_end()
+        @self.five.on_stream_end()
+        async def stream_end_handler1(client, update: Update):
+            if not isinstance(update, StreamAudioEnded):
+                return
             if update.chat_id in self._prejoin_tasks:
                 return
             await self.change_stream(client, update.chat_id)
-
-        services_filter = filters.chat_update(
-            ChatUpdate.Status.KICKED
-            | ChatUpdate.Status.LEFT_GROUP
-            | ChatUpdate.Status.CLOSED_VOICE_CHAT
-        )
-        stream_end_filter = filters.stream_end(StreamEnded.Type.AUDIO)
-
-        for client in clients:
-            client.add_handler(stream_services_handler, services_filter)
-            client.add_handler(stream_end_handler, stream_end_filter)
 
 
 Hotty = Call()
