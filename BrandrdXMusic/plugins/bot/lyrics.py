@@ -3,12 +3,10 @@
 import random
 import re
 import string
-
 import lyricsgenius as lg
 from requests.exceptions import HTTPError, RequestException
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-
 from BrandrdXMusic import app
 from BrandrdXMusic.utils.decorators.language import language
 from config import BANNED_USERS, lyrical
