@@ -358,7 +358,9 @@ async def ctest(_, message):
         TXT = f"""<b><blockquote>
 ᴛᴏᴅᴀʏ's sᴇʟᴇᴄᴛᴇᴅ ᴄᴏᴜᴘʟᴇs 🎉
 ━━━━━━━━━━━━━━━━━━
-<a href="tg://openmessage?user_id={c1_id}">{c1_name}</a> + <a href="tg://openmessage?user_id={c2_id}">{c2_name}</a> 
+<a href="tg://openmessage?user_id={c1_id}">{c1_name}</a> 
+                           +
+<a href="tg://openmessage?user_id={c2_id}">{c2_name}</a> 
 ━━━━━━━━━━━━━━━━━━
 ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs ᴡɪʟʟ ʙᴇ
 sᴇʟᴇᴄᴛᴇᴅ ᴏɴ: {tomorrow}
