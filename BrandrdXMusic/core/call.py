@@ -725,19 +725,18 @@ class Call(PyTgCalls):
         return str(round(sum(pings) / len(pings), 3))
 
 async def start(self):
-    LOGGER(__name__).info("Starting PyTgCalls Clients...")
+        LOGGER(__name__).info("Starting PyTgCalls Client...\n")
 
-    clients = [
-        client
-        for session, client in [
-            (config.STRING1, self.one),
-            (config.STRING2, self.two),
-            (config.STRING3, self.three),
-            (config.STRING4, self.four),
-            (config.STRING5, self.five),
-        ]
-        if session
-    ]
+        if config.STRING1:
+            await self.one.start()
+        if config.STRING2:
+            await self.two.start()
+        if config.STRING3:
+            await self.three.start()
+        if config.STRING4:
+            await self.four.start()
+        if config.STRING5:
+            await self.five.start()
 
     async def decorators(self):
         clients = [self.one, self.two, self.three, self.four, self.five]
