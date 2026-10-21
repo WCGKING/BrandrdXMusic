@@ -739,8 +739,6 @@ async def start(self):
         if session
     ]
 
-    await asyncio.gather(*(client.start() for client in clients))
-
     async def decorators(self):
         clients = [self.one, self.two, self.three, self.four, self.five]
 
