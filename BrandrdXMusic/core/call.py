@@ -724,50 +724,34 @@ class Call(PyTgCalls):
 
         return str(round(sum(pings) / len(pings), 3))
 
-    async def start(self):
-        LOGGER(__name__).info("Starting PyTgCalls Client...\n")
+async def start(self):
+    LOGGER(__name__).info("Starting PyTgCalls Clients...")
 
-        if config.STRING1:
-            await self.one.start()
-        if config.STRING2:
-            await self.two.start()
-        if config.STRING3:
-            await self.three.start()
-        if config.STRING4:
-            await self.four.start()
-        if config.STRING5:
-            await self.five.start()
+    clients = [
+        client
+        for session, client in [
+            (config.STRING1, self.one),
+            (config.STRING2, self.two),
+            (config.STRING3, self.three),
+            (config.STRING4, self.four),
+            (config.STRING5, self.five),
+        ]
+        if session
+    ]
+
+    await asyncio.gather(*(client.start() for client in clients))
 
     async def decorators(self):
-        @self.one.on_kicked()
-        @self.two.on_kicked()
-        @self.three.on_kicked()
-        @self.four.on_kicked()
-        @self.five.on_kicked()
-        @self.one.on_closed_voice_chat()
-        @self.two.on_closed_voice_chat()
-        @self.three.on_closed_voice_chat()
-        @self.four.on_closed_voice_chat()
-        @self.five.on_closed_voice_chat()
-        @self.one.on_left()
-        @self.two.on_left()
-        @self.three.on_left()
-        @self.four.on_left()
-        @self.five.on_left()
-        async def stream_services_handler(_, chat_id: int):
-            await self.stop_stream(chat_id)
+        clients = [self.one, self.two, self.three, self.four, self.five]
 
-        @self.one.on_stream_end()
-        @self.two.on_stream_end()
-        @self.three.on_stream_end()
-        @self.four.on_stream_end()
-        @self.five.on_stream_end()
-        async def stream_end_handler1(client, update: Update):
-            if not isinstance(update, StreamAudioEnded):
-                return
+        async def stream_services_handler(_, update: Update):
+            await self.stop_stream(update.chat_id)
+
+        async def stream_end_handler(client, update: StreamEnded):
             if update.chat_id in self._prejoin_tasks:
                 return
             await self.change_stream(client, update.chat_id)
 
+        
 
 Hotty = Call()
