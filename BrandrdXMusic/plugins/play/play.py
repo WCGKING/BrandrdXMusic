@@ -1,3 +1,5 @@
+#https://github.com/WCGKING/BrandrdXMusic
+
 import random
 import string
 
