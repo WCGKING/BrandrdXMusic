@@ -39,7 +39,7 @@ MESSAGE_EFFECTS = [
 async def start_pm(client, message: Message, _):
     effect_id = random.choice(MESSAGE_EFFECTS)
     await add_served_user(message.from_user.id)
-    await message.react("❤")
+    await message.react("🎉")
 
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
