@@ -2,10 +2,8 @@
 
 import os
 from io import BytesIO
-
 import aiohttp
 from PIL import Image
-
 from config import YOUTUBE_IMG_URL
 
 _SOURCES = ("maxresdefault", "sddefault", "hqdefault", "mqdefault")
