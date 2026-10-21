@@ -1,8 +1,8 @@
-import random
+#https://github.com/WCGKING/BrandrdXMusic
 
+import random
 from pyrogram import filters
 from pyrogram.types import Message
-
 from BrandrdXMusic import app
 from BrandrdXMusic.misc import db
 from BrandrdXMusic.utils.decorators import AdminRightsCheck
