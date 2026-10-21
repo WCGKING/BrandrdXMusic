@@ -724,7 +724,7 @@ class Call(PyTgCalls):
 
         return str(round(sum(pings) / len(pings), 3))
 
-async def start(self):
+    async def start(self):
         LOGGER(__name__).info("Starting PyTgCalls Client...\n")
 
         if config.STRING1:
@@ -750,5 +750,4 @@ async def start(self):
             await self.change_stream(client, update.chat_id)
 
         
-
 Hotty = Call()
