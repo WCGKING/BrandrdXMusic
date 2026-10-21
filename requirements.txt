@@ -1,7 +1,6 @@
 aiofiles
 aiohttp 
 asyncio
-python-whois
 dnspython
 ffmpeg-python
 gitpython
@@ -22,8 +21,6 @@ telegraph
 unidecode
 yt-dlp
 py-yt-search
-gpytranslate
-python-telegram-bot
 opencv-python
 ntgcalls==3.0.3
 lyricsgenius==3.0.0
