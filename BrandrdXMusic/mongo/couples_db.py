@@ -1,3 +1,5 @@
+#https://github.com/WCGKING/BrandrdXMusic
+
 from BrandrdXMusic.utils.mongo import db
 
 coupledb = db.couple
