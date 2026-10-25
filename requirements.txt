@@ -22,5 +22,5 @@ unidecode
 yt-dlp
 py-yt-search
 opencv-python
-ntgcalls==3.0.3
+ntgcalls==3.0.5
 lyricsgenius==3.0.0
