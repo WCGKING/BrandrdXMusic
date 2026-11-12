@@ -14,7 +14,7 @@ psutil
 py-tgcalls==3.0.0
 python-dotenv
 pyyaml==6.0.1
-kurigram==2.2.26
+kurigram==2.2.27
 spotipy
 tgcrypto
 telegraph
