@@ -11,7 +11,7 @@ speedtest
 motor 
 pillow==9.5.0
 psutil
-py-tgcalls==3.0.0
+py-tgcalls==3.0.1
 python-dotenv
 pyyaml==6.0.1
 kurigram==2.2.26
